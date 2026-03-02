@@ -615,5 +615,21 @@ input:focus, select:focus, textarea:focus{
   .topbar{
     font-size:11px;
   }
+   /* Refined mobile brand balance */
+
+@media (max-width: 600px){
+
+  .header-inner{
+    padding: 12px 0;
+  }
+
+  .brand{
+    font-size: 17px;
+    letter-spacing: .04em;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+}
 
 }
