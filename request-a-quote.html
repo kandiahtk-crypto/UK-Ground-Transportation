@@ -15,77 +15,76 @@
 
 <body>
 
-  <!-- Shared Header -->
   <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        UK Inbound Ground Transport
-      </a>
 
-      <nav class="nav-desktop" aria-label="Primary">
-        <a href="services.html">Services</a>
-        <a href="fleet.html">Fleet</a>
-        <a href="coverage.html">Coverage</a>
-        <a href="trade-partners.html">Trade Partners</a>
-        <a href="compliance-safety.html">Compliance</a>
-        <a href="contact.html">Contact</a>
-        <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
-      </nav>
-
-      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileNav">☰ Menu</button>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <div class="topbar-center">
+          <a class="topbar-item" href="tel:+442086292776">+44 20 8629 2776</a>
+          <span class="topbar-sep">•</span>
+          <a class="topbar-item" href="mailto:info@ukinboundgroundtransport.com">info@ukinboundgroundtransport.com</a>
+        </div>
+      </div>
     </div>
 
-    <div class="container">
-      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
-        <a href="services.html">Services</a>
-        <a href="fleet.html">Fleet</a>
-        <a href="coverage.html">Coverage</a>
-        <a href="trade-partners.html">Trade Partners</a>
-        <a href="compliance-safety.html">Compliance</a>
-        <a href="contact.html">Contact</a>
-        <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
-      </nav>
+    <div class="mainbar">
+      <div class="container header-inner">
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+          <span class="hamburger"></span>
+        </button>
+
+        <a href="index.html" class="brand" aria-label="Home">UK Inbound Ground Transport</a>
+        <a href="contact.html" class="icon-btn contact-icon" aria-label="Contact">✉</a>
+
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="fleet.html">Fleet</a>
+          <a href="coverage.html">Coverage</a>
+          <a href="trade-partners.html">Trade Partners</a>
+          <a href="compliance-safety.html">Compliance</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
+        </nav>
+      </div>
+
+      <div class="container">
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="fleet.html">Fleet</a>
+          <a href="coverage.html">Coverage</a>
+          <a href="trade-partners.html">Trade Partners</a>
+          <a href="compliance-safety.html">Compliance</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
+        </nav>
+      </div>
     </div>
+
   </header>
 
   <main class="container">
 
-    <!-- Hero -->
     <section class="hero">
       <div class="kicker">Trade enquiries</div>
       <h1 style="margin-top:10px;">Request a Trade Quote</h1>
       <p class="lead" style="margin-top:14px;">
-        Provide movement details or a programme summary. Your information will be reviewed for timing feasibility and vehicle suitability,
+        Provide movement details or upload a programme summary. Your information will be reviewed for timing feasibility and vehicle suitability,
         and a clear quotation will be returned with defined specification.
       </p>
-
-      <div class="pills">
-        <span class="pill">Structured itinerary review</span>
-        <span class="pill">Defined vehicle specification</span>
-        <span class="pill">Nationwide UK delivery</span>
-        <span class="pill">Operational contact support</span>
-      </div>
     </section>
 
-    <!-- Form -->
     <section class="section">
       <div class="form">
-
         <div class="form-head">
-          <div class="kicker">Enquiry details</div>
-          <h2 style="margin-top:10px;">Provide the programme requirements</h2>
-          <p style="margin-top:10px; max-width: 95ch;">
-            This form is intended for tour operators and DMCs. If you are submitting a multi-day itinerary, you may provide a brief summary
-            and share the full programme by email after submission.
+          <h2>Enquiry details</h2>
+          <p style="margin-top:10px; max-width: 90ch;">
+            This form is intended for tour operators and DMCs. If you are submitting a multi-day itinerary, you may provide a brief summary and attach
+            the programme via email after submission.
           </p>
-
-          <div class="divider"></div>
-
-          <p style="font-size:14px; color: var(--muted-2); line-height:1.6; max-width: 70ch;">
-            <strong style="color: var(--ink);">Response standards:</strong>
-            typical response <strong style="color: var(--ink);">[X] working hours</strong>.
-            For urgent movements, please use the <strong style="color: var(--ink);">Contact</strong> page.
+          <p style="margin-top:10px; font-size: 13px; color: rgba(100,116,139,.95);">
+            Typical response: <strong>[X] working hours</strong>. Urgent movements: use Contact.
           </p>
         </div>
 
@@ -112,7 +111,7 @@
               <div>
                 <label for="phone">Phone / WhatsApp</label>
                 <input id="phone" name="phone" type="text" placeholder="+44 … / international number">
-                <div class="hint">Optional, but recommended for live movements and time-sensitive clarification.</div>
+                <div class="hint">Optional, but recommended for live movements and urgent clarification.</div>
               </div>
             </div>
 
@@ -182,27 +181,20 @@
             <div style="margin-top:16px;">
               <label for="notes">Programme notes / itinerary summary</label>
               <textarea id="notes" name="notes" placeholder="Include key cities, number of days, hotel names (if known), guide seat requirement, accessibility requirements, and any timing constraints."></textarea>
-              <div class="hint">
-                If you prefer, submit a brief summary here and email a full itinerary after submission.
-              </div>
+              <div class="hint">If you prefer, submit a brief summary here and email a full itinerary after submission.</div>
             </div>
 
-            <!-- spam honeypot (invisible to humans) -->
+            <!-- spam honeypot -->
             <div style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">
               <label>Do not fill this out</label>
               <input type="text" name="website" tabindex="-1" autocomplete="off">
             </div>
 
-            <div class="divider"></div>
-
-            <div class="grid grid-2">
-              <div>
-                <p style="font-size:12px; color: var(--muted-2); line-height: 1.5; max-width: 70ch;">
-                  Trade enquiries only. By submitting this form, you confirm the information provided is accurate to the best of your knowledge.
-                  If dates or timings are subject to change, please indicate this in the notes.
-                </p>
-              </div>
-              <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end; align-items:center;">
+            <div class="hero-actions" style="justify-content: space-between; align-items:center; margin-top:16px;">
+              <p style="font-size:12px; color: rgba(100,116,139,.95); max-width: 68ch;">
+                Trade enquiries only. If dates or timings are subject to change, please indicate this in the notes.
+              </p>
+              <div style="display:flex; gap:10px; flex-wrap:wrap;">
                 <button class="btn btn-primary" type="submit">Submit enquiry</button>
                 <a class="btn" href="contact.html">Contact Operations</a>
               </div>
@@ -219,7 +211,6 @@
 
   </main>
 
-  <!-- Shared Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -227,8 +218,8 @@
           <h3>Evershine Transport Limited</h3>
           <p style="margin-top:10px;">
             United Kingdom<br>
-            Trade enquiries: <strong>[your email]</strong><br>
-            Operations: <strong>[your phone number]</strong>
+            Trade enquiries: <strong>info@ukinboundgroundtransport.com</strong><br>
+            Operations: <strong>02086292776</strong>
           </p>
         </div>
         <div>
@@ -249,23 +240,20 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    // Shows a success message after submit (works even before you connect Formspree)
-    (function () {
-      const form = document.getElementById("quoteForm");
-      const success = document.getElementById("successMsg");
-      if (!form || !success) return;
+    // Optional: Show success message even before endpoint is connected
+    const form = document.getElementById("quoteForm");
+    const success = document.getElementById("successMsg");
 
-      form.addEventListener("submit", function (event) {
-        const action = form.getAttribute("action") || "";
-        if (action === "YOUR_FORMSPREE_ENDPOINT" || action === "#") {
-          event.preventDefault();
-          success.style.display = "block";
-          form.scrollIntoView({ behavior: "smooth", block: "start" });
-        } else {
-          success.style.display = "block";
-        }
-      });
-    })();
+    form.addEventListener("submit", function (event) {
+      const action = form.getAttribute("action");
+      if (!action || action === "YOUR_FORMSPREE_ENDPOINT" || action === "#") {
+        event.preventDefault();
+        success.style.display = "block";
+        success.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        success.style.display = "block";
+      }
+    });
   </script>
 
 </body>
