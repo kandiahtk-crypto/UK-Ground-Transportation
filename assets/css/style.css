@@ -682,3 +682,179 @@ input:focus, select:focus, textarea:focus{
   font-size: 19px;
   letter-spacing: .05em;
 }
+/* =========================================================
+   HEADER SYSTEM (SINGLE SOURCE OF TRUTH)
+   Matches your HTML:
+   .header > .topbar + .mainbar
+   .mainbar .header-inner contains: #menuBtn, .brand, .contact-icon, .nav-desktop
+   Then: #mobileNav (.mobile-nav)
+   ========================================================= */
+
+/* Top bar */
+.topbar{
+  background:#0c1a2e;
+  color:rgba(255,255,255,.9);
+  font-size:11px;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+}
+.topbar-inner{ padding:10px 0; }
+.topbar-center{
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.topbar-item{ color:rgba(255,255,255,.88); }
+.topbar-sep{ opacity:.55; }
+
+/* Header wrapper */
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 60;
+}
+
+/* Main bar */
+.mainbar{
+  background: rgba(251,251,249,.96);
+  border-bottom: 1px solid rgba(15,23,42,.10);
+  backdrop-filter: blur(10px);
+}
+
+/* MOBILE FIRST layout: 3 columns (menu | brand | contact) */
+.mainbar .header-inner{
+  display:grid;
+  grid-template-columns: 44px minmax(0,1fr) 44px;
+  align-items:center;
+  gap:12px;
+  padding:14px 0;
+  min-width:0;
+}
+
+/* Brand centered */
+.mainbar .brand{
+  justify-self:center;
+  text-align:center;
+  font-family:"Fraunces", ui-serif, Georgia, serif;
+  font-weight:600;
+  font-size:18px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:#0f172a;
+
+  min-width:0;
+  max-width:100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+/* Icon buttons (hamburger + contact) */
+.mainbar .icon-btn{
+  width:44px;
+  height:44px;
+  border-radius:999px;
+  border:1px solid rgba(15,23,42,.18);
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  padding:0;
+  box-shadow:0 10px 22px rgba(15,23,42,.07);
+}
+.mainbar .icon-btn:hover{ background: rgba(15,23,42,.04); }
+.mainbar .icon-btn:focus{
+  outline:none;
+  box-shadow:0 0 0 4px rgba(15,23,42,.10), 0 10px 22px rgba(15,23,42,.07);
+}
+
+/* Hamburger lines */
+.mainbar .hamburger{
+  width:18px;
+  height:2px;
+  background:#0f172a;
+  border-radius:999px;
+  position:relative;
+  display:block;
+}
+.mainbar .hamburger::before,
+.mainbar .hamburger::after{
+  content:"";
+  position:absolute;
+  left:0;
+  width:18px;
+  height:2px;
+  background:#0f172a;
+  border-radius:999px;
+}
+.mainbar .hamburger::before{ top:-6px; }
+.mainbar .hamburger::after{ top:6px; }
+
+/* Mobile dropdown nav */
+.mobile-nav{
+  display:none;
+  padding:12px 0 16px;
+  border-top:1px solid rgba(15,23,42,.08);
+}
+.mobile-nav.open{ display:block; }
+
+.mobile-nav a{
+  display:block;
+  padding:12px 12px;
+  border-radius:14px;
+  font-size:14px;
+  color:rgba(15,23,42,.88);
+}
+.mobile-nav a:hover{ background:rgba(15,23,42,.04); }
+.mobile-nav .btn.btn-primary{
+  margin-top:10px;
+  width:100%;
+  justify-content:center;
+}
+
+/* =========================================================
+   DESKTOP LAYOUT (fixes your desktop menu)
+   ========================================================= */
+@media (min-width: 981px){
+  /* Desktop: brand left, nav right (no overlap) */
+  .mainbar .header-inner{
+    grid-template-columns: minmax(0, 320px) 1fr;
+    padding:16px 0;
+  }
+
+  /* Hide mobile icon buttons on desktop */
+  #menuBtn{ display:none !important; }
+  .contact-icon{ display:none !important; }
+
+  /* Brand left */
+  .mainbar .brand{
+    justify-self:start;
+    text-align:left;
+    font-size:18px;
+    white-space:nowrap;
+  }
+
+  /* Desktop nav sits on the right */
+  .nav-desktop{
+    display:flex !important;
+    justify-content:flex-end;
+    align-items:center;
+    gap:16px;
+
+    position:static !important;
+    transform:none !important;
+  }
+}
+
+/* Tiny phones: allow brand to wrap */
+@media (max-width: 420px){
+  .mainbar .brand{
+    font-size:16px;
+    letter-spacing:.04em;
+    white-space:normal;
+    line-height:1.15;
+  }
+}
