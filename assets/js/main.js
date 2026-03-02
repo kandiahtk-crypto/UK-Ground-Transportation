@@ -1,6 +1,6 @@
 // assets/js/main.js
 (function () {
-  // --- Mobile menu (matches your HTML: #menuBtn + #mobileNav) ---
+  // Mobile menu (matches your HTML: #menuBtn + #mobileNav)
   const toggle = document.getElementById("menuBtn");
   const panel = document.getElementById("mobileNav");
 
@@ -10,15 +10,9 @@
       toggle.setAttribute("aria-expanded", "false");
     };
 
-    const openMenu = () => {
-      panel.classList.add("open");
-      toggle.setAttribute("aria-expanded", "true");
-    };
-
     toggle.addEventListener("click", () => {
-      const isOpen = panel.classList.contains("open");
-      if (isOpen) closeMenu();
-      else openMenu();
+      const isOpen = panel.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
     });
 
     // Close when clicking a link
@@ -27,26 +21,28 @@
       if (a) closeMenu();
     });
 
-    // Close when clicking outside the menu
-    document.addEventListener("click", (e) => {
-      if (!panel.classList.contains("open")) return;
-      const clickedInsidePanel = panel.contains(e.target);
-      const clickedToggle = toggle.contains(e.target);
-      if (!clickedInsidePanel && !clickedToggle) closeMenu();
-    });
-
     // Close on Escape
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closeMenu();
     });
 
-    // Close when returning to desktop (match CSS breakpoint 900px)
+    // Close when returning to desktop
     window.addEventListener("resize", () => {
       if (window.innerWidth > 900) closeMenu();
     });
   }
 
-  // --- Footer year ---
+  // Active link highlight
+  const path = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll('a[href]').forEach((a) => {
+    const href = a.getAttribute("href");
+    if (href && href.endsWith(".html") && href === path) {
+      a.classList.add("active");
+      a.setAttribute("aria-current", "page");
+    }
+  });
+
+  // Footer year
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 })();
