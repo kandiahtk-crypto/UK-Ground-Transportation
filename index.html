@@ -1,281 +1,188 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UK Inbound Ground Transport for Tour Operators and DMCs</title>
-<meta name="description" content="UK inbound ground transport for tour operators and DMCs. Nationwide coverage, structured planning and professional delivery.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UK Inbound Ground Transport for Tour Operators and DMCs</title>
+  <meta name="description" content="UK inbound ground transport for tour operators and DMCs. Nationwide coverage, structured planning and professional delivery." />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-<style>
-
-/* ===== DESIGN SYSTEM ===== */
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #fbfbf9;
-  color: #0f172a;
-  -webkit-font-smoothing: antialiased;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 24px;
-}
-
-h1, h2 {
-  font-family: 'Fraunces', serif;
-  letter-spacing: -0.02em;
-}
-
-h1 {
-  font-size: clamp(34px, 5vw, 54px);
-  line-height: 1.1;
-}
-
-h2 {
-  font-size: 28px;
-}
-
-p {
-  color: #475569;
-  line-height: 1.7;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* ===== HEADER ===== */
-
-header {
-  border-bottom: 1px solid rgba(15,23,42,0.1);
-  background: rgba(251,251,249,0.8);
-  backdrop-filter: blur(8px);
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 0;
-}
-
-.nav-links {
-  display: flex;
-  gap: 22px;
-  align-items: center;
-}
-
-.nav-links a {
-  font-size: 14px;
-  color: #334155;
-}
-
-.nav-links a:hover {
-  color: black;
-}
-
-.button-primary {
-  background: #0f172a;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 12px;
-  font-size: 14px;
-}
-
-/* ===== HERO ===== */
-
-.hero {
-  padding: 80px 0 50px;
-}
-
-.hero p {
-  max-width: 650px;
-  font-size: 18px;
-  margin-top: 18px;
-}
-
-.hero-buttons {
-  margin-top: 30px;
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.button-secondary {
-  border: 1px solid rgba(15,23,42,0.2);
-  padding: 10px 16px;
-  border-radius: 12px;
-  font-size: 14px;
-  color: #0f172a;
-}
-
-/* ===== SECTIONS ===== */
-
-.section {
-  padding: 70px 0;
-}
-
-.grid {
-  display: grid;
-  gap: 20px;
-}
-
-.grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.card {
-  background: white;
-  padding: 22px;
-  border-radius: 18px;
-  border: 1px solid rgba(15,23,42,0.08);
-  box-shadow: 0 15px 35px rgba(15,23,42,0.05);
-}
-
-.card h3 {
-  margin-top: 0;
-  font-size: 18px;
-}
-
-/* ===== CTA ===== */
-
-.cta {
-  background: #0f172a;
-  color: white;
-  padding: 60px 30px;
-  border-radius: 24px;
-  text-align: center;
-}
-
-.cta h2 {
-  color: white;
-}
-
-.cta p {
-  color: rgba(255,255,255,0.85);
-}
-
-.cta a {
-  background: white;
-  color: #0f172a;
-  padding: 12px 20px;
-  border-radius: 14px;
-  font-weight: 500;
-  display: inline-block;
-  margin-top: 20px;
-}
-
-/* ===== FOOTER ===== */
-
-footer {
-  margin-top: 80px;
-  padding: 40px 0;
-  border-top: 1px solid rgba(15,23,42,0.1);
-  font-size: 14px;
-  color: #475569;
-}
-
-footer strong {
-  color: #0f172a;
-}
-
-</style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-<header>
-  <div class="container nav">
-    <div><strong>UK Inbound Ground Transport</strong></div>
-    <div class="nav-links">
-      <a href="services.html">Services</a>
-<a href="fleet.html">Fleet</a>
-<a href="coverage.html">Coverage</a>
-<a href="trade-partners.html">Trade Partners</a>
-<a href="compliance-safety.html">Compliance</a>
-<a href="contact.html">Contact</a>
-<a href="request-a-quote.html" class="button-primary">Request a Quote</a>
+  <!-- Shared Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        UK Inbound Ground Transport
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="services.html">Services</a>
+        <a href="fleet.html">Fleet</a>
+        <a href="coverage.html">Coverage</a>
+        <a href="trade-partners.html">Trade Partners</a>
+        <a href="compliance-safety.html">Compliance</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
+      </nav>
+
+      <!-- Mobile button -->
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileNav">☰ Menu</button>
     </div>
-  </div>
-</header>
 
-<main class="container">
-
-<section class="hero">
-  <h1>UK Inbound Ground Transport for Tour Operators and DMCs</h1>
-  <p>
-    You manage complex itineraries, contracted departures, and high client expectations.
-    Your ground transport partner should deliver structured planning, disciplined coordination,
-    and dependable nationwide coverage across the United Kingdom.
-  </p>
-
-  <div class="hero-buttons">
-    <a href="#" class="button-primary">Request a Trade Quote</a>
-    <a href="#" class="button-secondary">Speak to Operations</a>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Services Supporting Inbound Programmes</h2>
-  <div class="grid grid-3" style="margin-top:30px;">
-    <div class="card">
-      <h3>Airport & Port Transfers</h3>
-      <p>Structured group arrivals and departures with clear coordination and timing control.</p>
+    <!-- Mobile nav -->
+    <div class="container">
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+        <a href="services.html">Services</a>
+        <a href="fleet.html">Fleet</a>
+        <a href="coverage.html">Coverage</a>
+        <a href="trade-partners.html">Trade Partners</a>
+        <a href="compliance-safety.html">Compliance</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
+      </nav>
     </div>
-    <div class="card">
-      <h3>Multi-Day UK Touring</h3>
-      <p>Operational support across England, Scotland and Wales with itinerary planning.</p>
-    </div>
-    <div class="card">
-      <h3>MICE & Conference Movements</h3>
-      <p>Time-sensitive transport delivery aligned with event scheduling requirements.</p>
-    </div>
-  </div>
-</section>
+  </header>
 
-<section class="section">
-  <h2>Our Approach</h2>
-  <div class="grid grid-3" style="margin-top:30px;">
-    <div class="card">
-      <h3>1. Itinerary Review</h3>
-      <p>Routing, access, and driver hours compliance assessed prior to confirmation.</p>
+  <main class="container">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="kicker">Trade-only • Tour operators • DMCs</div>
+      <h1 style="margin-top:10px;">UK Inbound Ground Transport for Tour Operators and DMCs</h1>
+
+      <p class="lead" style="margin-top:14px;">
+        You manage complex itineraries, contracted departures, and high client expectations.
+        Your ground transport partner should deliver structured planning, disciplined coordination,
+        and dependable nationwide coverage across the United Kingdom.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="request-a-quote.html">Request a Trade Quote</a>
+        <a class="btn" href="contact.html">Speak to Operations</a>
+      </div>
+
+      <div class="pills">
+        <span class="pill">Nationwide UK service delivery</span>
+        <span class="pill">Structured itinerary review</span>
+        <span class="pill">Live operational contact</span>
+        <span class="pill">Trade-focused communication</span>
+      </div>
+    </section>
+
+    <!-- Services preview -->
+    <section class="section">
+      <div class="panel">
+        <div class="kicker">Service scope</div>
+        <h2 style="margin-top:10px;">Services supporting inbound programmes</h2>
+        <p style="margin-top:10px; max-width: 92ch;">
+          Services are structured to support programme delivery requirements, including realistic routing, access constraints,
+          driver hours compliance and consistent presentation standards.
+        </p>
+      </div>
+
+      <div class="grid grid-3" style="margin-top:16px;">
+        <div class="card">
+          <h3>Airport &amp; Port Transfers</h3>
+          <p style="margin-top:10px;">Structured arrivals and departures with clear pickup coordination and timing control.</p>
+        </div>
+        <div class="card">
+          <h3>Multi-day UK Touring</h3>
+          <p style="margin-top:10px;">Operational support across England, Scotland and Wales with itinerary planning.</p>
+        </div>
+        <div class="card">
+          <h3>MICE &amp; Conference Movements</h3>
+          <p style="margin-top:10px;">Time-sensitive transport delivery aligned with event scheduling requirements.</p>
+        </div>
+      </div>
+
+      <div class="hero-actions" style="margin-top:16px;">
+        <a class="btn" href="services.html">View all services</a>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section class="section">
+      <div class="section-tight">
+        <div class="kicker">How we work</div>
+        <h2 style="margin-top:10px;">Operational support, delivered with discipline</h2>
+        <p style="margin-top:10px; max-width: 95ch;">
+          Inbound programmes require consistency. Itinerary feasibility, access constraints, driver hours compliance,
+          and presentation standards must be managed with discipline. Our role is to support your operational framework —
+          calmly and professionally.
+        </p>
+      </div>
+
+      <div class="grid grid-3" style="margin-top:16px;">
+        <div class="card">
+          <h3>1. Itinerary review</h3>
+          <p style="margin-top:10px;">Routing feasibility, access and timing considerations assessed prior to confirmation.</p>
+        </div>
+        <div class="card">
+          <h3>2. Clear quotation</h3>
+          <p style="margin-top:10px;">Transparent pricing with defined vehicle specification and service scope.</p>
+        </div>
+        <div class="card">
+          <h3>3. Live operational support</h3>
+          <p style="margin-top:10px;">Direct operational communication during movements to protect programme integrity.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="cta">
+        <div class="kicker" style="color:rgba(255,255,255,.65)">Trade enquiries</div>
+        <h2 style="margin-top:10px;">Discuss your upcoming UK programme</h2>
+        <p style="margin-top:10px;">
+          Provide itinerary details for structured review and a clear quotation with defined specification.
+        </p>
+
+        <div class="cta-actions">
+          <a class="btn btn-light" href="request-a-quote.html">Request a Trade Quote</a>
+          <a class="btn btn-outline-light" href="trade-partners.html">International partnerships</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer (company name only here) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Evershine Transport Limited</h3>
+          <p style="margin-top:10px;">
+            United Kingdom<br>
+            Trade enquiries: <strong>[your email]</strong><br>
+            Operations: <strong>[your phone number]</strong>
+          </p>
+        </div>
+        <div>
+          <h3>Trade Partners</h3>
+          <p style="margin-top:10px;">China • United States • India • Europe</p>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <p style="margin-top:10px;">
+            Company Registration Number: <strong>[add]</strong><br>
+            © <span id="year"></span> Evershine Transport Limited
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <h3>2. Clear Quotation</h3>
-      <p>Transparent pricing with defined vehicle specification and service scope.</p>
-    </div>
-    <div class="card">
-      <h3>3. Live Operational Support</h3>
-      <p>Direct communication during movements to protect programme integrity.</p>
-    </div>
-  </div>
-</section>
+  </footer>
 
-<section class="cta">
-  <h2>Discuss Your Upcoming UK Programme</h2>
-  <p>Provide itinerary details for structured review and clear quotation.</p>
-  <a href="#">Request a Trade Quote</a>
-</section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <strong>Evershine Transport Limited</strong><br><br>
-    United Kingdom<br>
-    Trade enquiries: [your email]<br>
-    Operations: [your phone number]<br><br>
-    © 2026 Evershine Transport Limited
-  </div>
-</footer>
-
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
