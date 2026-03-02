@@ -653,3 +653,32 @@ input:focus, select:focus, textarea:focus{
     line-height:1.15;
   }
 }
+/* =========================
+   HEADER POLISH (FINAL)
+   ========================= */
+
+/* Stronger hamburger contrast */
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+  background: #0f172a !important;
+}
+
+/* Sharper icon buttons */
+.icon-btn{
+  border: 1px solid rgba(15,23,42,.20) !important;
+  background: #ffffff !important;
+  box-shadow: 0 8px 18px rgba(15,23,42,.08) !important;
+}
+
+/* Make envelope darker */
+.contact-icon{
+  font-size: 16px;
+  color: #0f172a !important;
+}
+
+/* Slight brand refinement */
+.brand{
+  font-size: 19px;
+  letter-spacing: .05em;
+}
