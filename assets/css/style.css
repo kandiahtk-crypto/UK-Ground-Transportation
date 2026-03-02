@@ -506,3 +506,150 @@ input:focus, select:focus, textarea:focus{
     display: none !important;
   }
 }
+/* =========================================================
+   HEADER FIX (FINAL OVERRIDE)
+   Put this at the VERY BOTTOM of assets/css/style.css
+   Works with your current HTML exactly as-is.
+   ========================================================= */
+
+/* Topbar */
+.topbar{
+  background: #0c1a2e;
+  color: rgba(255,255,255,.9);
+  font-size: 11px;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+.topbar-inner{ padding: 10px 0; }
+.topbar-center{
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.topbar-item{ color: rgba(255,255,255,.88); }
+.topbar-sep{ opacity:.55; }
+
+/* Mainbar */
+.mainbar{
+  background: rgba(251,251,249,.96);
+  border-bottom: 1px solid rgba(15,23,42,.08);
+  backdrop-filter: blur(10px);
+}
+
+/* Your header grid (left menu | brand | right icon) */
+.header .header-inner{
+  display:grid !important;
+  grid-template-columns: 44px minmax(0,1fr) 44px;
+  align-items:center;
+  gap: 12px;
+  padding: 14px 0;
+  min-width: 0;
+}
+
+/* Brand (centered, no clipping) */
+.header .brand{
+  justify-self:center;
+  text-align:center;
+  font-family: "Fraunces", ui-serif, Georgia, serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+
+  color:#0f172a;
+  min-width:0;
+  max-width:100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+/* Icon buttons (menu + mail) */
+.header .icon-btn{
+  width:44px;
+  height:44px;
+  border-radius:999px;
+  border:1px solid rgba(15,23,42,.18);
+  background:#fff;
+  display:flex !important;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  padding:0;
+  box-shadow: 0 10px 22px rgba(15,23,42,.07);
+}
+.header .icon-btn:hover{ background: rgba(15,23,42,.04); }
+.header .icon-btn:focus{
+  outline:none;
+  box-shadow: 0 0 0 4px rgba(15,23,42,.10), 0 10px 22px rgba(15,23,42,.07);
+}
+
+/* Make the hamburger ALWAYS visible/clear */
+.header .hamburger{
+  width:18px;
+  height:2px;
+  background:#0f172a;
+  border-radius:999px;
+  position:relative;
+  display:block;
+}
+.header .hamburger::before,
+.header .hamburger::after{
+  content:"";
+  position:absolute;
+  left:0;
+  width:18px;
+  height:2px;
+  background:#0f172a;
+  border-radius:999px;
+}
+.header .hamburger::before{ top:-6px; }
+.header .hamburger::after{ top:6px; }
+
+/* Desktop nav placement */
+.header .nav-desktop{
+  position:absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+@media (max-width: 980px){
+  .header .nav-desktop{ display:none !important; }
+}
+
+/* Mobile dropdown */
+.header .mobile-nav{
+  display:none;
+  padding: 12px 0 16px;
+  border-top: 1px solid rgba(15,23,42,.08);
+}
+.header .mobile-nav.open{ display:block; }
+
+.header .mobile-nav a{
+  display:block;
+  padding:12px 12px;
+  border-radius:14px;
+  font-size:14px;
+  color: rgba(15,23,42,.88);
+}
+.header .mobile-nav a:hover{ background: rgba(15,23,42,.04); }
+.header .mobile-nav .btn.btn-primary{
+  margin-top:10px;
+  width:100%;
+  justify-content:center;
+}
+
+/* Small screens: allow brand to wrap slightly if needed */
+@media (max-width: 420px){
+  .header .brand{
+    font-size:16px;
+    letter-spacing:.04em;
+    white-space:normal;
+    line-height:1.15;
+  }
+}
