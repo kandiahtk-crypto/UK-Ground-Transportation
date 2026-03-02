@@ -656,3 +656,18 @@ html, body { overflow-x: hidden; }
     transition: none !important;
   }
 }
+.brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #0f172a;
+
+  min-width: 0;          /* IMPORTANT */
+  max-width: 100%;
+  flex: 1 1 auto;        /* allow shrink */
+}
