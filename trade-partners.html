@@ -10,171 +10,180 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    body{margin:0;font-family:'Inter',sans-serif;background:#fbfbf9;color:#0f172a;-webkit-font-smoothing:antialiased}
-    .container{max-width:1100px;margin:auto;padding:0 24px}
-    h1,h2{font-family:'Fraunces',serif;letter-spacing:-.02em;margin:0}
-    h1{font-size:clamp(34px,5vw,52px);line-height:1.1}
-    h2{font-size:28px;line-height:1.2}
-    p{color:#475569;line-height:1.7;margin:0}
-    a{text-decoration:none;color:inherit}
-    header{border-bottom:1px solid rgba(15,23,42,.1);background:rgba(251,251,249,.8);backdrop-filter:blur(8px)}
-    .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:16px}
-    .brand{font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#0f172a}
-    .nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
-    .nav-links a{font-size:14px;color:#334155;padding:8px 10px;border-radius:10px}
-    .nav-links a:hover{color:#0f172a;background:rgba(15,23,42,.04)}
-    .button-primary{background:#0f172a;color:#fff;padding:10px 16px;border-radius:12px;font-size:14px;display:inline-block}
-    .button-primary:hover{filter:brightness(.96)}
-    .hero{padding:70px 0 40px}
-    .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#64748b}
-    .lead{max-width:820px;font-size:18px;margin-top:14px}
-    .section{padding:55px 0}
-    .grid{display:grid;gap:18px}
-    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .card{background:#fff;padding:22px;border-radius:18px;border:1px solid rgba(15,23,42,.08);box-shadow:0 15px 35px rgba(15,23,42,.05)}
-    .card h3{margin:0;font-size:18px}
-    .card p{margin-top:10px;font-size:14px}
-    .pill{display:inline-block;font-size:13px;color:#0f172a;background:rgba(138,106,47,.08);border:1px solid rgba(138,106,47,.18);padding:8px 12px;border-radius:999px}
-    .cta{background:#0f172a;color:#fff;padding:55px 28px;border-radius:24px;text-align:left}
-    .cta h2{color:#fff}
-    .cta p{color:rgba(255,255,255,.85);max-width:70ch;margin-top:10px}
-    .cta-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}
-    .button-light{background:#fff;color:#0f172a;padding:12px 18px;border-radius:14px;font-weight:600;display:inline-block}
-    .button-ghost{border:1px solid rgba(255,255,255,.22);color:#fff;padding:12px 18px;border-radius:14px;font-weight:600;display:inline-block;background:rgba(255,255,255,.06)}
-    footer{margin-top:80px;padding:40px 0;border-top:1px solid rgba(15,23,42,.1);font-size:14px;color:#475569}
-    footer strong{color:#0f172a}
-    @media (max-width: 900px){
-      .grid-3{grid-template-columns:1fr}
-      .grid-2{grid-template-columns:1fr}
-      .nav-links{gap:10px}
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
-<header>
-  <div class="container nav">
-    <div class="brand">UK Inbound Ground Transport</div>
-    <nav class="nav-links" aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="fleet.html">Fleet</a>
-      <a href="coverage.html">Coverage</a>
-      <a href="trade-partners.html">Trade Partners</a>
-      <a href="compliance-safety.html">Compliance</a>
-      <a href="contact.html">Contact</a>
-      <a href="request-a-quote.html" class="button-primary">Request a Quote</a>
-    </nav>
-  </div>
-</header>
-
-<main class="container">
-
-  <section class="hero">
-    <div class="kicker">International partnerships</div>
-    <h1 style="margin-top:10px;">Trade Partners</h1>
-    <p class="lead">
-      Many inbound programmes are managed across time zones and delivered under contracted expectations.
-      This page provides a clear pathway for international tour operators and DMCs to access relevant information
-      and request proposals for UK ground transport services.
-    </p>
-
-    <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
-      <span class="pill">Trade-only communication</span>
-      <span class="pill">Structured itinerary review</span>
-      <span class="pill">Nationwide UK service delivery</span>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="grid grid-3">
-      <a class="card" href="trade-partners-china.html">
-        <h3>China</h3>
-        <p>Support for structured touring programmes, consistent daily delivery, and clear coordination from arrival to departure.</p>
+  <!-- Shared Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        UK Inbound Ground Transport
       </a>
 
-      <a class="card" href="trade-partners-united-states.html">
-        <h3>United States</h3>
-        <p>Clear specification, compliance-led delivery, and accountable operational communication aligned with contracting requirements.</p>
-      </a>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="services.html">Services</a>
+        <a href="fleet.html">Fleet</a>
+        <a href="coverage.html">Coverage</a>
+        <a href="trade-partners.html">Trade Partners</a>
+        <a href="compliance-safety.html">Compliance</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
+      </nav>
 
-      <a class="card" href="trade-partners-india.html">
-        <h3>India</h3>
-        <p>Capacity planning, timing discipline, and nationwide coverage for group itineraries and multi-destination programmes.</p>
-      </a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileNav">☰ Menu</button>
     </div>
 
-    <div class="grid grid-2" style="margin-top:18px;">
-      <a class="card" href="trade-partners-europe.html">
-        <h3>Europe</h3>
-        <p>Operational precision suited to contracted series, regulated transport expectations, and multi-day touring requirements.</p>
-      </a>
-
-      <div class="card">
-        <h3>Consistent service framework</h3>
-        <p>
-          Regardless of source market, delivery is approached with the same priorities:
-          itinerary feasibility, disciplined scheduling, professional presentation, and clear communication during live movements.
-        </p>
-      </div>
+    <div class="container">
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+        <a href="services.html">Services</a>
+        <a href="fleet.html">Fleet</a>
+        <a href="coverage.html">Coverage</a>
+        <a href="trade-partners.html">Trade Partners</a>
+        <a href="compliance-safety.html">Compliance</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <section class="section">
-    <div class="grid grid-2">
-      <div class="card">
-        <h3>Typical scope of work</h3>
-        <p>
-          Airport and port transfers • multi-day UK touring • MICE movements • London touring and regional excursions • series departures.
-        </p>
-        <p style="margin-top:12px;">
-          Where required, supporting documentation can be provided for contracting, risk assessment, or compliance review.
-        </p>
-      </div>
+  <main class="container">
 
-      <div class="card">
-        <h3>How to engage</h3>
-        <p>
-          Share itinerary details or movement requirements. We will review timing feasibility and vehicle suitability, then respond with a clear proposal.
-        </p>
-        <p style="margin-top:12px;">
-          For operational queries, use the contact page to reach the appropriate channel.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="cta">
-      <div class="kicker" style="color:rgba(255,255,255,.65)">Trade enquiries</div>
-      <h2 style="margin-top:10px;">Request a trade proposal</h2>
-      <p>
-        Provide itinerary details (or upload a programme). A structured review will be completed and a quotation returned with defined specification.
+    <!-- Hero -->
+    <section class="hero">
+      <div class="kicker">International partnerships</div>
+      <h1 style="margin-top:10px;">Trade Partners</h1>
+      <p class="lead" style="margin-top:14px;">
+        Many inbound programmes are managed across time zones and delivered under contracted expectations.
+        This page provides a clear pathway for international tour operators and DMCs to access relevant information
+        and request proposals for UK ground transport services.
       </p>
-      <div class="cta-actions">
-        <a href="request-a-quote.html" class="button-light">Request a Trade Quote</a>
-        <a href="contact.html" class="button-ghost">Contact Operations</a>
+
+      <div class="pills">
+        <span class="pill">Trade-only communication</span>
+        <span class="pill">Structured itinerary review</span>
+        <span class="pill">Nationwide UK service delivery</span>
+      </div>
+    </section>
+
+    <!-- Markets -->
+    <section class="section">
+      <div class="grid grid-3">
+        <a class="card card-link" href="trade-partners-china.html">
+          <h3>China</h3>
+          <p style="margin-top:10px;">
+            Support for structured touring programmes, consistent daily delivery, and clear coordination from arrival to departure.
+          </p>
+        </a>
+
+        <a class="card card-link" href="trade-partners-united-states.html">
+          <h3>United States</h3>
+          <p style="margin-top:10px;">
+            Clear specification, compliance-led delivery, and accountable operational communication aligned with contracting requirements.
+          </p>
+        </a>
+
+        <a class="card card-link" href="trade-partners-india.html">
+          <h3>India</h3>
+          <p style="margin-top:10px;">
+            Capacity planning, timing discipline, and nationwide coverage for group itineraries and multi-destination programmes.
+          </p>
+        </a>
+      </div>
+
+      <div class="grid grid-2" style="margin-top:16px;">
+        <a class="card card-link" href="trade-partners-europe.html">
+          <h3>Europe</h3>
+          <p style="margin-top:10px;">
+            Operational precision suited to contracted series, regulated transport expectations, and multi-day touring requirements.
+          </p>
+        </a>
+
+        <div class="card">
+          <h3>Consistent service framework</h3>
+          <p style="margin-top:10px;">
+            Regardless of source market, delivery is approached with the same priorities:
+            itinerary feasibility, disciplined scheduling, professional presentation, and clear communication during live movements.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to engage -->
+    <section class="section">
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Typical scope of work</h3>
+          <p style="margin-top:10px;">
+            Airport and port transfers, multi-day UK touring, MICE movements, London touring and regional excursions, and series departures.
+          </p>
+          <p style="margin-top:10px;">
+            Where required, supporting documentation can be provided for contracting, risk assessment, or compliance review.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>How to engage</h3>
+          <p style="margin-top:10px;">
+            Share itinerary details or movement requirements. We will review timing feasibility and vehicle suitability, then respond with a clear proposal.
+          </p>
+          <p style="margin-top:10px;">
+            For operational queries, use the contact page to reach the appropriate channel.
+          </p>
+          <div class="hero-actions" style="margin-top:14px;">
+            <a class="btn btn-primary" href="request-a-quote.html">Request a Trade Quote</a>
+            <a class="btn" href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="cta">
+        <div class="kicker" style="color:rgba(255,255,255,.65)">Trade enquiries</div>
+        <h2 style="margin-top:10px;">Request a trade proposal</h2>
+        <p style="margin-top:10px;">
+          Provide itinerary details (or a programme summary). A structured review will be completed and a quotation returned with defined specification.
+        </p>
+        <div class="cta-actions">
+          <a class="btn btn-light" href="request-a-quote.html">Request a Trade Quote</a>
+          <a class="btn btn-outline-light" href="contact.html">Contact Operations</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Evershine Transport Limited</h3>
+          <p style="margin-top:10px;">
+            United Kingdom<br>
+            Trade enquiries: <strong>[your email]</strong><br>
+            Operations: <strong>[your phone number]</strong>
+          </p>
+        </div>
+        <div>
+          <h3>Trade Partners</h3>
+          <p style="margin-top:10px;">China • United States • India • Europe</p>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <p style="margin-top:10px;">
+            Company Registration Number: <strong>[add]</strong><br>
+            © <span id="year"></span> Evershine Transport Limited
+          </p>
+        </div>
       </div>
     </div>
-  </section>
+  </footer>
 
-</main>
-
-<footer>
-  <div class="container">
-    <strong>Evershine Transport Limited</strong><br><br>
-    United Kingdom<br>
-    Trade enquiries: <strong>[your email]</strong><br>
-    Operations: <strong>[your phone number]</strong><br><br>
-    © <span id="year"></span> Evershine Transport Limited
-  </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
