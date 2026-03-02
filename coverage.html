@@ -1,10 +1,11 @@
+<!-- coverage.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Coverage | UK Inbound Ground Transport</title>
-  <meta name="description" content="Nationwide UK ground transport coverage for tour operators and DMCs. Supporting itineraries across England, Scotland and Wales including London movements." />
+  <meta name="description" content="Nationwide UK inbound ground transport coverage across England, Scotland and Wales. Trade-only operational delivery for tour operators and DMCs." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,179 +16,222 @@
 
 <body>
 
-  <!-- Shared Header -->
+  <!-- Shared Header (matches your current header system + JS: #menuBtn + #mobileNav) -->
   <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        UK Inbound Ground Transport
-      </a>
 
-      <nav class="nav-desktop" aria-label="Primary">
-        <a href="services.html">Services</a>
-        <a href="fleet.html">Fleet</a>
-        <a href="coverage.html">Coverage</a>
-        <a href="trade-partners.html">Trade Partners</a>
-        <a href="compliance-safety.html">Compliance</a>
-        <a href="contact.html">Contact</a>
-        <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
-      </nav>
-
-      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileNav">☰ Menu</button>
+    <!-- Top Contact Bar -->
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <div class="topbar-center">
+          <a class="topbar-item" href="tel:+442086292776">+44 20 8629 2776</a>
+          <span class="topbar-sep">•</span>
+          <a class="topbar-item" href="mailto:info@ukinboundgroundtransport.com">info@ukinboundgroundtransport.com</a>
+        </div>
+      </div>
     </div>
 
-    <div class="container">
-      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
-        <a href="services.html">Services</a>
-        <a href="fleet.html">Fleet</a>
-        <a href="coverage.html">Coverage</a>
-        <a href="trade-partners.html">Trade Partners</a>
-        <a href="compliance-safety.html">Compliance</a>
-        <a href="contact.html">Contact</a>
-        <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
-      </nav>
+    <!-- Main Navigation Bar -->
+    <div class="mainbar">
+      <div class="container header-inner">
+
+        <!-- Mobile Menu Button -->
+        <button class="icon-btn menu-btn"
+                id="menuBtn"
+                type="button"
+                aria-expanded="false"
+                aria-controls="mobileNav"
+                aria-label="Open menu">
+          <span class="hamburger"></span>
+        </button>
+
+        <!-- Brand -->
+        <a href="index.html" class="brand" aria-label="Home">
+          UK Inbound Ground Transport
+        </a>
+
+        <!-- Right Icon (contact shortcut) -->
+        <a href="contact.html" class="icon-btn contact-icon" aria-label="Contact">✉</a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="fleet.html">Fleet</a>
+          <a href="coverage.html">Coverage</a>
+          <a href="trade-partners.html">Trade Partners</a>
+          <a href="compliance-safety.html">Compliance</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
+        </nav>
+
+      </div>
+
+      <!-- Mobile Navigation Dropdown -->
+      <div class="container">
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="fleet.html">Fleet</a>
+          <a href="coverage.html">Coverage</a>
+          <a href="trade-partners.html">Trade Partners</a>
+          <a href="compliance-safety.html">Compliance</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
+        </nav>
+      </div>
     </div>
+
   </header>
 
   <main class="container">
 
     <!-- Hero -->
     <section class="hero">
-      <div class="kicker">Nationwide service delivery</div>
+      <div class="kicker">Nationwide coverage</div>
       <h1 style="margin-top:10px;">Coverage</h1>
+
       <p class="lead" style="margin-top:14px;">
-        UK inbound programmes require consistent delivery standards across multiple regions.
-        Services are coordinated throughout England, Scotland and Wales, including London movements and
-        multi-city touring itineraries.
+        UK-wide service delivery across England, Scotland and Wales, structured for single movements and multi-day touring programmes.
+        For itinerary planning, postcode-level pickup and drop-off detail is recommended.
       </p>
 
       <div class="pills">
         <span class="pill">England • Scotland • Wales</span>
         <span class="pill">London movements supported</span>
-        <span class="pill">Multi-city touring</span>
-        <span class="pill">Series departures</span>
+        <span class="pill">Touring + multi-city routing</span>
+        <span class="pill">Trade-only delivery</span>
       </div>
     </section>
 
-    <!-- Map + routing -->
-    
-        <!-- Map + routing -->
-<section class="section">
-<div class="grid grid-2">
+    <!-- Map + Routing -->
+    <section class="section">
+      <div class="grid grid-2">
 
-<!-- Left panel -->
-<div class="panel">
-<div class="kicker">Coordination</div>
-<h2 style="margin-top:10px;">UK-wide coordination</h2>
-<p style="margin-top:10px; max-width:85ch;">
-Coordination is structured for both single movements and multi-day touring programmes.
-For itinerary planning, postcode-level pickup and drop-off detail is recommended.
-</p>
+        <!-- Map panel -->
+        <div class="panel">
+          <div class="kicker">Coverage map</div>
+          <h2 style="margin-top:10px;">UK service coverage</h2>
+          <p style="margin-top:10px; max-width: 85ch;">
+            This map is used as a visual reference for coverage across the United Kingdom.
+            If you update your map file, keep the filename consistent with the image path below.
+          </p>
 
-<div style="margin-top:16px;" class="card">
-<h3>Coverage map</h3>
-<img src="assets/img/map-uk.png.png"
-alt="United Kingdom coverage map"
-class="coverage-map">
-<p style="margin-top:10px;">
-UK-wide service delivery across England, Scotland and Wales,
-including London movements and multi-city touring.
-</p>
-</div>
-</div>
+          <div class="card" style="margin-top:16px;">
+            <!-- ✅ IMPORTANT:
+                 Put your map image in: assets/img/
+                 Recommended filename: map-uk.png
+                 Then keep this line exactly as-is.
+            -->
+            <img
+              src="assets/img/map-uk.png"
+              alt="United Kingdom coverage map"
+              class="coverage-map"
+            />
+          </div>
 
-<!-- Right panel -->
-<div class="card">
-<h3>Typical inbound routing requirements</h3>
-<p style="margin-top:10px;">
-Common routing patterns we support include:
-</p>
+          <p style="margin-top:12px; font-size: 13px; color: rgba(100,116,139,.95);">
+            Tip: If your file currently shows as <strong>map-uk.png.png</strong>, rename it locally to <strong>map-uk.png</strong>
+            and upload again (or delete the double-extension file in GitHub and re-upload the correct one).
+          </p>
+        </div>
 
-<ul class="list">
-<li>London arrivals and departures (airports, hotels, venues)</li>
-<li>London – Oxford – Cambridge – Bath – Stonehenge</li>
-<li>London – Cotswolds – Stratford-upon-Avon</li>
-<li>Manchester / Liverpool movements and touring</li>
-<li>Scotland touring programmes (including multi-city routing)</li>
-<li>Wales touring programmes and regional excursions</li>
-</ul>
-</div>
+        <!-- Routing panel -->
+        <div class="panel">
+          <div class="kicker">Coordination</div>
+          <h2 style="margin-top:10px;">UK-wide coordination</h2>
+          <p style="margin-top:10px; max-width: 92ch;">
+            Coordination is structured for both single movements and multi-day touring programmes.
+            For itinerary planning, postcode-level pickup and drop-off detail is recommended.
+          </p>
 
-</div>
-</section>
+          <div class="divider"></div>
 
+          <h3>Typical inbound routing requirements</h3>
+          <ul class="list">
+            <li>London arrivals and departures (airports, hotels, venues)</li>
+            <li>London → Oxford / Cambridge / Bath / Stonehenge</li>
+            <li>London → Cotswolds → Stratford-upon-Avon</li>
+            <li>Manchester / Liverpool movements and touring</li>
+            <li>Scotland touring programmes (including multi-city routing)</li>
+            <li>Wales touring programmes and regional excursions</li>
+          </ul>
 
-      
-      
+          <div class="divider"></div>
+
+          <h3>Planning notes</h3>
+          <ul class="list">
+            <li>Access constraints and set-down rules vary by city and venue.</li>
+            <li>Driver hours compliance must be reflected in touring structure.</li>
+            <li>Clear timings reduce on-the-day disruption for groups.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
 
     <!-- Regions -->
     <section class="section">
-      <div class="grid grid-3">
+      <div class="panel">
+        <div class="kicker">Regions</div>
+        <h2 style="margin-top:10px;">Coverage by area</h2>
+        <p style="margin-top:10px; max-width: 95ch;">
+          Services are delivered across major touring regions with structured routing and operational support.
+          Please share itinerary detail for feasibility review and accurate quoting.
+        </p>
+      </div>
+
+      <div class="grid grid-3" style="margin-top:16px;">
         <div class="card">
           <h3>England</h3>
           <p style="margin-top:10px;">
-            Support across major cities and touring regions, including airport arrivals, hotel movements and multi-day itineraries.
+            Support across major cities and touring regions, including airport arrivals, hotel routing and high-density attractions.
           </p>
+          <ul class="list">
+            <li>London movements and multi-day touring</li>
+            <li>Oxford / Cambridge / Bath / Stonehenge</li>
+            <li>Cotswolds / Stratford-upon-Avon / Liverpool</li>
+          </ul>
         </div>
+
         <div class="card">
           <h3>Scotland</h3>
           <p style="margin-top:10px;">
-            Touring coordination for Scotland programmes, including multi-day routing and timing feasibility considerations.
+            Touring coordination for Scotland programmes, including multi-day routing and inter-city movements.
           </p>
+          <ul class="list">
+            <li>Edinburgh / Glasgow movements</li>
+            <li>Highlands touring programmes</li>
+            <li>Multi-day touring + hotel coordination</li>
+          </ul>
         </div>
+
         <div class="card">
           <h3>Wales</h3>
           <p style="margin-top:10px;">
-            Regional touring and excursion support, planned around access constraints and realistic journey timings.
+            Regional excursions and touring delivery with timing discipline and access planning.
           </p>
+          <ul class="list">
+            <li>Cardiff and regional routing</li>
+            <li>North / South Wales touring</li>
+            <li>Touring excursions and multi-day support</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- Planning considerations -->
+    <!-- CTA -->
     <section class="section">
-      <div class="panel">
-        <div class="kicker">Important for inbound groups</div>
-        <h2 style="margin-top:10px;">Planning considerations</h2>
-        <p style="margin-top:10px; max-width:100ch;">
-          UK itineraries are influenced by access restrictions, congestion patterns, venue time windows and driver hours compliance.
-          To support accurate planning and pricing, please provide the following where possible:
-        </p>
-
-        <div class="grid grid-2" style="margin-top:16px;">
-          <div class="card">
-            <h3>Programme information</h3>
-            <ul class="list">
-              <li>Postcodes / precise locations (hotels, venues, attractions)</li>
-              <li>Passenger numbers and luggage estimate</li>
-              <li>Accessibility requirements (if applicable)</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Timing information</h3>
-            <ul class="list">
-              <li>Timing expectations and any fixed appointment times</li>
-              <li>Number of tour days and daily outline for multi-day programmes</li>
-              <li>Arrival/departure flight details where relevant</li>
-            </ul>
-          </div>
-        </div>
-
-        <p style="margin-top:12px;">
-          A structured review is then completed to confirm operational feasibility before final quotation.
-        </p>
-      </div>
-
-      <div style="margin-top:16px;" class="cta">
+      <div class="cta">
         <div class="kicker" style="color:rgba(255,255,255,.65)">Trade enquiries</div>
-        <h2 style="margin-top:10px;">Discuss coverage for your programme</h2>
+        <h2 style="margin-top:10px;">Share routing and timing for a structured review</h2>
         <p style="margin-top:10px;">
-          Share routing, dates and passenger numbers. We will review feasibility and respond with a clear quotation and defined specification.
+          Send dates, passenger numbers, pickup/drop-off postcodes, hotel list and any fixed attraction times.
+          A feasibility review and clear quotation will be returned.
         </p>
+
         <div class="cta-actions">
           <a class="btn btn-light" href="request-a-quote.html">Request a Trade Quote</a>
-          <a class="btn btn-outline-light" href="contact.html">Contact Operations</a>
+          <a class="btn btn-outline-light" href="contact.html">Speak to Operations</a>
         </div>
       </div>
     </section>
@@ -202,8 +246,8 @@ Common routing patterns we support include:
           <h3>Evershine Transport Limited</h3>
           <p style="margin-top:10px;">
             United Kingdom<br>
-            Trade enquiries: <strong>[your email]</strong><br>
-            Operations: <strong>[your phone number]</strong>
+            Trade enquiries: <strong>info@ukinboundgroundtransport.com</strong><br>
+            Operations: <strong>02086292776</strong>
           </p>
         </div>
         <div>
