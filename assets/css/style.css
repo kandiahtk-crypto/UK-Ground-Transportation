@@ -1170,3 +1170,10 @@ input:focus, select:focus, textarea:focus{
   .footer-cta__grid{ grid-template-columns: 1fr; }
   .footer-cta__top{ align-items:flex-start; }
 }
+/* Footer grid: allow 4 columns when used */
+.footer-ultra-grid--4{
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+}
+@media (max-width: 980px){
+  .footer-ultra-grid--4{ grid-template-columns: 1fr; }
+}
