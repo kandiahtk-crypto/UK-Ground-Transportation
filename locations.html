@@ -8,6 +8,7 @@
   <meta name="description" content="Key UK and Ireland touring locations supported for trade-only inbound ground transport programmes delivered for tour operators and DMCs." />
   <meta name="robots" content="index,follow" />
 
+  <!-- Canonical -->
   <link rel="canonical" href="https://www.ukinboundgroundtransport.com/locations.html" />
 
   <!-- Open Graph -->
@@ -16,11 +17,16 @@
   <meta property="og:description" content="Key UK and Ireland touring locations supported for trade-only inbound ground transport programmes delivered for tour operators and DMCs." />
   <meta property="og:url" content="https://www.ukinboundgroundtransport.com/locations.html" />
   <meta property="og:site_name" content="UK Inbound Ground Transport" />
+  <!-- Optional but recommended -->
+  <!-- <meta property="og:image" content="https://www.ukinboundgroundtransport.com/assets/img/og/locations.jpg" /> -->
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="UK Touring Locations | UK Inbound Ground Transport" />
   <meta name="twitter:description" content="Key UK and Ireland touring locations supported for trade-only inbound ground transport programmes delivered for tour operators and DMCs." />
+  <!-- If you add og:image, change twitter:card to summary_large_image and add twitter:image -->
+  <!-- <meta name="twitter:card" content="summary_large_image" /> -->
+  <!-- <meta name="twitter:image" content="https://www.ukinboundgroundtransport.com/assets/img/og/locations.jpg" /> -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,9 +34,12 @@
 
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Reinforce: no default blue links anywhere -->
+  <!-- Reinforce: no default blue links, without breaking button styles -->
   <style>
-    a { color: inherit; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { text-decoration: none; }
+    /* keep your existing button styling intact */
+    a.btn, .btn { text-decoration: none; }
   </style>
 
   <!-- JSON-LD: Organization + WebSite + WebPage + Breadcrumb -->
@@ -64,7 +73,7 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.ukinboundgroundtransport.com/index.html"
+            "item": "https://www.ukinboundgroundtransport.com/"
           },
           {
             "@type": "ListItem",
@@ -83,7 +92,8 @@
         "inLanguage": "en-GB",
         "isPartOf": { "@id": "https://www.ukinboundgroundtransport.com/#website" },
         "about": { "@id": "https://www.ukinboundgroundtransport.com/#organization" },
-        "breadcrumb": { "@id": "https://www.ukinboundgroundtransport.com/locations.html#breadcrumb" }
+        "breadcrumb": { "@id": "https://www.ukinboundgroundtransport.com/locations.html#breadcrumb" },
+        "mainEntityOfPage": "https://www.ukinboundgroundtransport.com/locations.html"
       }
     ]
   }
@@ -167,17 +177,17 @@
         </p>
 
         <div class="grid grid-3" style="margin-top:16px;">
-          <a class="card" href="locations-london.html">
+          <a class="card" href="locations-london.html" aria-label="London touring transport page">
             <h3>London</h3>
             <p style="margin-top:10px;">Gateways, hotels, theatre and attraction movements — planned with city access discipline.</p>
           </a>
 
-          <a class="card" href="locations-scotland.html">
+          <a class="card" href="locations-scotland.html" aria-label="Scotland touring transport page">
             <h3>Scotland</h3>
             <p style="margin-top:10px;">Multi-city touring and Highlands routing — feasibility-first touring structure.</p>
           </a>
 
-          <a class="card" href="locations-ireland.html">
+          <a class="card" href="locations-ireland.html" aria-label="Ireland touring transport page">
             <h3>Ireland</h3>
             <p style="margin-top:10px;">Northern Ireland + Republic of Ireland touring — cross-border routing reviewed in advance.</p>
           </a>
