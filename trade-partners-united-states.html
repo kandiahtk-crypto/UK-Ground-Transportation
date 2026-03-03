@@ -1,3 +1,4 @@
+<!-- trade-partners-united-states.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -57,7 +58,7 @@
           <a href="services.html">Services</a>
           <a href="fleet.html">Fleet</a>
           <a href="coverage.html">Coverage</a>
-          <a href="trade-partners.html">Trade Partners</a>
+          <a href="trade-partners.html" aria-current="page">Trade Partners</a>
           <a href="compliance-safety.html">Compliance</a>
           <a href="contact.html">Contact</a>
           <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
@@ -72,7 +73,7 @@
           <a href="services.html">Services</a>
           <a href="fleet.html">Fleet</a>
           <a href="coverage.html">Coverage</a>
-          <a href="trade-partners.html">Trade Partners</a>
+          <a href="trade-partners.html" aria-current="page">Trade Partners</a>
           <a href="compliance-safety.html">Compliance</a>
           <a href="contact.html">Contact</a>
           <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
@@ -185,7 +186,7 @@
 
   </main>
 
-  <!-- Ultra-Premium Footer -->
+  <!-- Ultra-Premium Footer (with Legal + Gold HQ line; NO extra quote button) -->
   <footer class="footer-ultra">
     <div class="container footer-ultra-inner">
 
@@ -199,12 +200,11 @@
         </div>
 
         <div class="footer-ultra-cta">
-          <a class="footer-ultra-btn" href="request-a-quote.html">Request a Trade Quote</a>
           <a class="footer-ultra-btn footer-ultra-btn-ghost" href="contact.html">Contact Operations</a>
         </div>
       </div>
 
-      <div class="footer-ultra-grid">
+      <div class="footer-ultra-grid footer-ultra-grid--4">
         <div>
           <div class="footer-ultra-title">Contact</div>
           <div class="footer-ultra-links">
@@ -229,19 +229,32 @@
         </div>
 
         <div>
-          <div class="footer-ultra-title">Trade Partners</div>
+          <div class="footer-ultra-title">Navigation</div>
           <div class="footer-ultra-links">
-            <a href="trade-partners-china.html">China</a>
-            <a href="trade-partners-united-states.html">United States</a>
-            <a href="trade-partners-india.html">India</a>
-            <a href="trade-partners-europe.html">Europe</a>
+            <a href="services.html">Services</a>
+            <a href="fleet.html">Fleet</a>
+            <a href="coverage.html">Coverage</a>
+            <a href="trade-partners.html">Trade Partners</a>
+            <a href="compliance-safety.html">Compliance</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-ultra-title">Legal</div>
+          <div class="footer-ultra-links">
+            <a href="gdpr-data-protection.html">GDPR &amp; Data Protection</a>
+            <a href="modern-slavery-statement.html">Modern Slavery Statement</a>
+            <a href="cookie-policy.html">Cookie Policy</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
           </div>
         </div>
       </div>
 
       <div class="footer-ultra-bottom">
         <div class="footer-ultra-small">
-          Operational delivery is structured to support itinerary feasibility, access constraints and regulated driver-hours requirements.
+          Trade-only supplier for tour operators and DMCs. Structured operations and disciplined routing across the UK and Ireland.
         </div>
       </div>
 
@@ -249,5 +262,9 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    const y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
