@@ -232,7 +232,7 @@
 
   </main>
 
-  <!-- Ultra-Premium Footer -->
+  <!-- Ultra-Premium Footer (NO Request a Quote button) -->
   <footer class="footer-ultra">
     <div class="container footer-ultra-inner">
 
@@ -246,7 +246,6 @@
         </div>
 
         <div class="footer-ultra-cta">
-          <a class="footer-ultra-btn" href="request-a-quote.html">Request a Trade Quote</a>
           <a class="footer-ultra-btn footer-ultra-btn-ghost" href="contact.html">Contact Operations</a>
         </div>
       </div>
@@ -296,5 +295,10 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    // Footer year (keeps working even if main.js also sets it)
+    const y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
