@@ -1,4 +1,4 @@
-<!-- request-a-quote.html -->
+<!-- request-a-quote.html (Web3Forms version - full page) -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -90,12 +90,18 @@
         </div>
 
         <div class="form-body">
-          <!-- Replace action with your Formspree endpoint when ready -->
-          <div class="form-body">
-          <!-- Replace action with your Formspree endpoint when ready -->
-          <form id="quoteForm" action="https://formspree.io/f/mlgwqwde" method="POST">
-          <input type="hidden" name="_subject" value="New Trade Quote Request - UK Inbound Ground Transport">
-  
+
+          <!-- ✅ WEB3FORMS FORM (works on GitHub Pages) -->
+          <form id="quoteForm" method="POST" novalidate>
+            <!-- REQUIRED: paste your Web3Forms access key -->
+            <input type="hidden" name="access_key" value="PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+
+            <!-- Email subject + naming -->
+            <input type="hidden" name="subject" value="New Trade Quote Request - UK Inbound Ground Transport">
+            <input type="hidden" name="from_name" value="UK Inbound Ground Transport Website">
+
+            <!-- (Optional) where confirmations should go (usually the same inbox you configured in Web3Forms dashboard) -->
+            <!-- <input type="hidden" name="to" value="info@ukinboundgroundtransport.com"> -->
 
             <div class="grid grid-2">
               <div>
@@ -189,27 +195,35 @@
               <div class="hint">If you prefer, submit a brief summary here and email a full itinerary after submission.</div>
             </div>
 
-            <!-- spam honeypot -->
+            <!-- spam honeypot (bot trap) -->
             <div style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">
               <label>Do not fill this out</label>
-              <input type="text" name="website" tabindex="-1" autocomplete="off">
+              <input type="text" name="botcheck" tabindex="-1" autocomplete="off">
             </div>
 
             <div class="hero-actions" style="justify-content: space-between; align-items:center; margin-top:16px;">
               <p style="font-size:12px; color: rgba(100,116,139,.95); max-width: 68ch;">
                 Trade enquiries only. If dates or timings are subject to change, please indicate this in the notes.
               </p>
+
               <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                <button class="btn btn-primary" type="submit">Submit enquiry</button>
+                <button class="btn btn-primary" id="submitBtn" type="submit">Submit enquiry</button>
                 <a class="btn" href="contact.html">Contact Operations</a>
               </div>
             </div>
 
-            <div id="successMsg" class="success" role="status" aria-live="polite">
+            <!-- Messages -->
+            <div id="successMsg" class="success" role="status" aria-live="polite" style="display:none; margin-top:14px;">
               Thank you. Your enquiry has been received. If you have an itinerary document, you may reply to the confirmation email with the attachment.
             </div>
 
+            <div id="errorMsg" class="success" role="status" aria-live="polite" style="display:none; margin-top:14px;">
+              Sorry — something went wrong sending the form. Please try again or email us directly at
+              <a href="mailto:info@ukinboundgroundtransport.com">info@ukinboundgroundtransport.com</a>.
+            </div>
+
           </form>
+
         </div>
       </div>
     </section>
@@ -296,25 +310,15 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    // Optional: Show success message even before endpoint is connected
-    const form = document.getElementById("quoteForm");
-    const success = document.getElementById("successMsg");
-
-    form.addEventListener("submit", function (event) {
-      const action = form.getAttribute("action");
-      if (!action || action === "YOUR_FORMSPREE_ENDPOINT" || action === "#") {
-        event.preventDefault();
-        success.style.display = "block";
-        success.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        success.style.display = "block";
-      }
-    });
-
     // Footer year (keeps working even if main.js also sets it)
     const y = document.getElementById("year");
     if (y) y.textContent = new Date().getFullYear();
-  </script>
 
-</body>
-</html>
+    // ✅ Web3Forms AJAX submit (prevents redirect, shows success message)
+    const form = document.getElementById("quoteForm");
+    const successMsg = document.getElementById("successMsg");
+    const errorMsg = document.getElementById("errorMsg");
+    const submitBtn = document.getElementById("submitBtn");
+
+    form.addEventListener("submit", async (event) => {
+     
