@@ -733,3 +733,22 @@ input:focus, select:focus, textarea:focus{
     rgba(201,169,106,0) 100%
   );
 }
+/* =========================
+   Luxury Gold Button Effect
+   ========================= */
+
+.btn-primary{
+  background: linear-gradient(180deg, #c9a96a, #b89655);
+  border: none;
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+  transition: all .2s ease;
+}
+
+.btn-primary:hover{
+  transform: translateY(-1px);
+  box-shadow:
+    0 16px 34px rgba(0,0,0,.18),
+    0 0 0 2px rgba(201,169,106,.25),
+    0 0 18px rgba(201,169,106,.35);
+}
