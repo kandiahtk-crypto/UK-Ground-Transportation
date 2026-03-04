@@ -715,3 +715,21 @@ input:focus, select:focus, textarea:focus{
   }
   .footer-ultra-top{ align-items:flex-start; }
 }
+/* =========================
+   Premium Gold Header Divider
+   ========================= */
+
+.mainbar::after{
+  content:"";
+  display:block;
+  height:2px;
+  width:100%;
+  background: linear-gradient(
+    90deg,
+    rgba(201,169,106,0) 0%,
+    rgba(201,169,106,.8) 25%,
+    rgba(201,169,106,1) 50%,
+    rgba(201,169,106,.8) 75%,
+    rgba(201,169,106,0) 100%
+  );
+}
