@@ -1196,4 +1196,21 @@ input:focus, select:focus, textarea:focus{
 
 .btn-primary:hover {
   background: #b89655;
+   /* Request Quote Button */
+.btn-primary,
+.cta-button,
+.request-quote-btn {
+  background: #c9a96a;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 6px;
+  border: none;
+}
+
+.btn-primary:hover,
+.cta-button:hover,
+.request-quote-btn:hover {
+  background: #b89655;
+}
 }
