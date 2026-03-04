@@ -1185,3 +1185,15 @@ input:focus, select:focus, textarea:focus{
 .hero .lead{
   font-size: 17px;
 }
+/* CTA Button Styling */
+.btn-primary {
+  background: #c9a96a;
+  color: white;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 6px;
+}
+
+.btn-primary:hover {
+  background: #b89655;
+}
