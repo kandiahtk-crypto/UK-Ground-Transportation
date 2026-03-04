@@ -179,6 +179,10 @@ p{
 /* -------------------------
    TOP CONTACT BAR
 ------------------------- */
+/* =========================
+   TOP CONTACT BAR
+   ========================= */
+
 .topbar{
   background: var(--navy);
   color: rgba(255,255,255,.88);
@@ -192,23 +196,25 @@ p{
   justify-content:center;
   align-items:center;
   padding: 10px 0;
+  text-align:center;
 }
 
 .topbar-center{
   display:flex;
+  justify-content:center;
   align-items:center;
-  gap: 16px;
-  flex-wrap: wrap;
+  gap:14px;
+  flex-wrap:wrap;
 }
 
 .topbar-item{
-  color: rgba(255,255,255,.88);
+  color: rgba(255,255,255,.90);
   font-weight: 500;
-  transition: opacity .2s ease;
 }
-.topbar-item:hover{ opacity: 1; }
 
-.topbar-sep{ opacity: .55; }
+.topbar-sep{
+  opacity:.6;
+}
 
 /* -------------------------
    HEADER (Matches your HTML)
