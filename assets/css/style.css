@@ -1,6 +1,7 @@
 /* =========================
-   EVERSHINE SITE SYSTEM CSS
-   Clean + single header system (NO duplicates)
+   UK INBOUND GROUND TRANSPORT
+   Gold + Light Blue Theme
+   Single source of truth CSS
    ========================= */
 
 /* --- Reset / base --- */
@@ -9,8 +10,8 @@ html, body { height: 100%; }
 body{
   margin: 0;
   font-family: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: #fbfbf9;
-  color: #0f172a;
+  background: var(--bg);
+  color: var(--ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,8 +19,9 @@ img{ max-width: 100%; display: block; }
 a{ color: inherit; text-decoration: none; }
 a:hover{ text-decoration: none; }
 
-/* --- Tokens --- */
+/* --- Theme tokens --- */
 :root{
+  /* Surfaces */
   --bg: #fbfbf9;
   --surface: #ffffff;
   --ink: #0f172a;
@@ -27,14 +29,26 @@ a:hover{ text-decoration: none; }
   --muted-2: #64748b;
   --line: rgba(15, 23, 42, 0.10);
 
+  /* Brand */
+  --navy: #0c1a2e;
+  --navy-2: #070b14;
+  --gold: #c9a96a;
+  --gold-2: #b89655;
+  --sky: #86c5e8;        /* light blue */
+  --sky-2: #5aa6d6;      /* deeper light blue */
+
+  /* Radius / shadow */
   --radius-lg: 22px;
   --radius-md: 16px;
-
   --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
   --shadow-soft: 0 12px 32px rgba(15, 23, 42, 0.06);
 
-  --btn: #0f172a;
-  --btn-hover: #0b1220;
+  /* Buttons */
+  --btn: var(--gold);
+  --btn-hover: var(--gold-2);
+
+  /* Focus */
+  --focus: rgba(90, 166, 214, .18);
 }
 
 /* --- Layout --- */
@@ -64,8 +78,8 @@ h1, h2, h3{
 h1{
   font-family: "Fraunces", ui-serif, Georgia, serif;
   font-weight: 600;
-  font-size: clamp(34px, 5vw, 54px);
-  line-height: 1.08;
+  font-size: clamp(28px, 3.6vw, 44px); /* smaller hero headline */
+  line-height: 1.12;
 }
 h2{
   font-family: "Fraunces", ui-serif, Georgia, serif;
@@ -85,7 +99,7 @@ p{
   font-size: 16px;
 }
 .lead{
-  font-size: 18px;
+  font-size: 17px; /* slightly smaller */
   color: rgba(71, 85, 105, 0.96);
   max-width: 78ch;
 }
@@ -104,16 +118,39 @@ p{
   background: var(--surface);
   color: var(--ink);
   cursor: pointer;
+  transition: transform .08s ease, background .18s ease, border-color .18s ease;
 }
-.btn:hover{ background: rgba(15,23,42,.03); }
+.btn:hover{
+  background: rgba(15,23,42,.03);
+}
+.btn:active{ transform: translateY(1px); }
+.btn:focus{
+  outline: none;
+  box-shadow: 0 0 0 4px var(--focus);
+}
 
+/* Primary = GOLD */
 .btn-primary{
   background: var(--btn);
   border-color: var(--btn);
   color: #fff;
   box-shadow: 0 14px 28px rgba(15,23,42,.10);
 }
-.btn-primary:hover{ background: var(--btn-hover); }
+.btn-primary:hover{
+  background: var(--btn-hover);
+  border-color: var(--btn-hover);
+}
+
+/* Outline button gets light-blue accent */
+.btn-outline{
+  background: rgba(134,197,232,.10);
+  border-color: rgba(90,166,214,.28);
+  color: rgba(15,23,42,.92);
+}
+.btn-outline:hover{
+  background: rgba(134,197,232,.16);
+  border-color: rgba(90,166,214,.38);
+}
 
 .btn-light{
   background: #fff;
@@ -127,15 +164,13 @@ p{
 }
 
 /* =========================
-   OPTIONAL TOP CONTACT BAR
-   (Only appears if you add .topbar HTML)
+   TOP CONTACT BAR
    ========================= */
-
 .topbar{
-  background: #0c1a2e; /* slightly softer than pure navy */
-  color: rgba(255,255,255,.85);
+  background: var(--navy);
+  color: rgba(255,255,255,.88);
   font-size: 11px;
-  letter-spacing: .1em;
+  letter-spacing: .10em;
   text-transform: uppercase;
 }
 .topbar-inner{
@@ -151,161 +186,187 @@ p{
   flex-wrap: wrap;
 }
 .topbar-item{
-  color: rgba(255,255,255,.85);
+  color: rgba(255,255,255,.88);
   font-weight: 500;
   transition: opacity .2s ease;
 }
 .topbar-item:hover{ opacity: 1; }
-.topbar-sep{ opacity: .5; }
+.topbar-sep{ opacity: .55; }
 
 /* =========================
-   HEADER (Single system)
-   Works with your HTML:
-   .header > .container.header-inner
-   brand + nav-desktop + #menuBtn
-   then .container > #mobileNav
+   HEADER SYSTEM (Single)
+   Matches your HTML exactly
    ========================= */
-
 .header{
   position: sticky;
   top: 0;
   z-index: 60;
-  background: rgba(251,251,249,.92);
+}
+
+/* Mainbar */
+.mainbar{
+  background: rgba(251,251,249,.96);
   border-bottom: 1px solid rgba(15,23,42,.10);
   backdrop-filter: blur(10px);
 }
 
-/* Grid fixes mobile clipping permanently */
-.header-inner{
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 14px;
-  padding: 16px 0;
+/* Mobile-first header inner (menu | brand | contact) */
+.mainbar .header-inner{
+  display:grid;
+  grid-template-columns: 44px minmax(0,1fr) 44px;
+  align-items:center;
+  gap:12px;
+  padding: 14px 0;
   min-width: 0;
 }
 
-/* Brand */
-.brand{
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-
-  min-width: 0;
-  max-width: 100%;
-  white-space: normal;
-  line-height: 1.1;
-
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: .06em;
-  text-transform: uppercase;
+/* Brand centered */
+.mainbar .brand{
+  justify-self:center;
+  text-align:center;
+  font-family:"Fraunces", ui-serif, Georgia, serif;
+  font-weight:600;
+  font-size:18px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
   color: var(--ink);
+
+  min-width:0;
+  max-width:100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }
 
-/* Brand mark (the “black spot”) */
-.brand-mark{
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  background:
-    radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), rgba(255,255,255,0) 55%),
-    linear-gradient(180deg, rgba(15,23,42,.95), rgba(15,23,42,.70));
-  box-shadow: 0 10px 18px rgba(15,23,42,.12);
-  flex: 0 0 auto;
+/* Icon buttons (hamburger + contact) */
+.mainbar .icon-btn{
+  width:44px;
+  height:44px;
+  border-radius:999px;
+  border:1px solid rgba(15,23,42,.18);
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  padding:0;
+  box-shadow: 0 10px 22px rgba(15,23,42,.07);
+  transition: background .18s ease, transform .08s ease;
+}
+.mainbar .icon-btn:hover{ background: rgba(15,23,42,.04); }
+.mainbar .icon-btn:active{ transform: translateY(1px); }
+.mainbar .icon-btn:focus{
+  outline:none;
+  box-shadow: 0 0 0 4px var(--focus), 0 10px 22px rgba(15,23,42,.07);
+}
+
+/* Hamburger lines */
+.mainbar .hamburger{
+  width:18px;
+  height:2px;
+  background:#0f172a;
+  border-radius:999px;
+  position:relative;
+  display:block;
+}
+.mainbar .hamburger::before,
+.mainbar .hamburger::after{
+  content:"";
+  position:absolute;
+  left:0;
+  width:18px;
+  height:2px;
+  background:#0f172a;
+  border-radius:999px;
+}
+.mainbar .hamburger::before{ top:-6px; }
+.mainbar .hamburger::after{ top:6px; }
+
+/* Contact icon (envelope) */
+.contact-icon{
+  font-size: 16px;
+  color: #0f172a;
 }
 
 /* Desktop nav */
 .nav-desktop{
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.nav-desktop a{
-  font-size: 14px;
-  color: rgba(15,23,42,.78);
-  padding: 10px 10px;
-  border-radius: 12px;
-}
-.nav-desktop a:hover{
-  background: rgba(15,23,42,.04);
-  color: var(--ink);
+  display:none; /* becomes visible on desktop via media query */
 }
 
-/* Active page highlight (your JS adds .active) */
-.nav-desktop a.active{
-  background: rgba(15,23,42,.06);
-  color: var(--ink);
-  font-weight: 700;
-}
-
-/* Mobile button (#menuBtn) */
-.menu-btn{
-  display: none;
-  border: 1px solid rgba(15,23,42,.14);
-  background: rgba(255,255,255,.78);
-  border-radius: 999px;
-  padding: 10px 14px;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--ink);
-  cursor: pointer;
-  transition: background .18s ease, box-shadow .18s ease;
-  white-space: nowrap;
-}
-.menu-btn:hover{ background: rgba(15,23,42,.04); }
-.menu-btn:focus{
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(15,23,42,.08);
-}
-
-/* Mobile nav panel (#mobileNav) */
+/* Mobile dropdown nav */
 .mobile-nav{
-  display: none;
-  padding: 12px 0 16px;
-  margin-top: 8px;
-  border-top: 1px solid rgba(15,23,42,.10);
+  display:none;
+  padding:12px 0 16px;
+  border-top: 1px solid rgba(15,23,42,.08);
 }
-.mobile-nav.open{ display: block; }
+.mobile-nav.open{ display:block; }
 
 .mobile-nav a{
-  display: block;
-  padding: 12px 12px;
-  border-radius: 14px;
-  font-size: 14px;
-  color: rgba(15,23,42,.86);
+  display:block;
+  padding:12px 12px;
+  border-radius:14px;
+  font-size:14px;
+  color: rgba(15,23,42,.88);
 }
-.mobile-nav a:hover{
-  background: rgba(15,23,42,.04);
-  color: var(--ink);
-}
+.mobile-nav a:hover{ background: rgba(15,23,42,.04); }
 .mobile-nav a.active{
   background: rgba(15,23,42,.06);
-  font-weight: 700;
+  font-weight:700;
 }
 .mobile-nav .btn.btn-primary{
-  margin-top: 10px;
-  width: 100%;
-  justify-content: center;
+  margin-top:10px;
+  width:100%;
+  justify-content:center;
 }
 
-/* Responsive */
-@media (max-width: 900px){
-  .nav-desktop{ display: none; }
-  .menu-btn{ display: inline-flex; align-items: center; gap: 10px; }
-  .brand{ font-size: 13px; letter-spacing: .05em; }
-}
-@media (max-width: 600px){
-  .header-inner{ padding: 12px 0; }
-  .brand{
-    font-size: 17px;
-    letter-spacing: .04em;
-    white-space: normal;
-    line-height: 1.2;
+/* Desktop layout: brand left, nav right */
+@media (min-width: 981px){
+  .mainbar .header-inner{
+    grid-template-columns: minmax(0, 340px) 1fr;
+    padding: 16px 0;
+  }
+  #menuBtn{ display:none !important; }
+  .contact-icon{ display:none !important; }
+
+  .mainbar .brand{
+    justify-self:start;
+    text-align:left;
+    font-size:18px;
+    white-space:nowrap;
+  }
+
+  .nav-desktop{
+    display:flex !important;
+    justify-content:flex-end;
+    align-items:center;
+    gap:16px;
+  }
+
+  .nav-desktop a{
+    font-size: 14px;
+    color: rgba(15,23,42,.78);
+    padding: 10px 10px;
+    border-radius: 12px;
+  }
+  .nav-desktop a:hover{
+    background: rgba(90,166,214,.10);
+    color: var(--ink);
+  }
+  .nav-desktop a.active{
+    background: rgba(90,166,214,.14);
+    color: var(--ink);
+    font-weight: 700;
   }
 }
+
+/* Tiny phones */
 @media (max-width: 420px){
-  .brand{ font-size: 16px; }
+  .mainbar .brand{
+    font-size:16px;
+    letter-spacing:.04em;
+    white-space:normal;
+    line-height:1.15;
+  }
 }
 
 /* --- Hero blocks --- */
@@ -324,9 +385,9 @@ p{
 }
 .pill{
   font-size: 13px;
-  color: rgba(15,23,42,.82);
-  background: rgba(138,106,47,.08);
-  border: 1px solid rgba(138,106,47,.18);
+  color: rgba(15,23,42,.86);
+  background: rgba(134,197,232,.12);
+  border: 1px solid rgba(90,166,214,.24);
   padding: 8px 12px;
   border-radius: 999px;
 }
@@ -350,7 +411,7 @@ p{
 
 /* --- Panels --- */
 .panel{
-  background: linear-gradient(180deg, rgba(15,23,42,.02), rgba(15,23,42,0));
+  background: linear-gradient(180deg, rgba(90,166,214,.06), rgba(15,23,42,0));
   border: 1px solid rgba(15,23,42,.08);
   border-radius: var(--radius-lg);
   padding: 22px;
@@ -369,7 +430,10 @@ p{
 
 /* --- CTA band --- */
 .cta{
-  background: linear-gradient(180deg, rgba(15,23,42,.98), rgba(15,23,42,.86));
+  background:
+    radial-gradient(900px 420px at 25% -10%, rgba(201,169,106,.22), transparent 60%),
+    radial-gradient(700px 420px at 90% 0%, rgba(134,197,232,.16), transparent 55%),
+    linear-gradient(180deg, rgba(12,26,46,.98), rgba(7,11,20,.94));
   border: 1px solid rgba(255,255,255,.10);
   border-radius: var(--radius-lg);
   padding: 26px;
@@ -395,7 +459,7 @@ p{
 .form-head{
   padding: 20px;
   border-bottom: 1px solid rgba(15,23,42,.08);
-  background: linear-gradient(180deg, rgba(15,23,42,.02), rgba(15,23,42,0));
+  background: linear-gradient(180deg, rgba(90,166,214,.06), rgba(15,23,42,0));
 }
 .form-body{ padding: 20px; }
 
@@ -418,8 +482,8 @@ input, select, textarea{
 }
 textarea{ min-height: 120px; resize: vertical; }
 input:focus, select:focus, textarea:focus{
-  border-color: rgba(15,23,42,.34);
-  box-shadow: 0 0 0 4px rgba(15,23,42,.06);
+  border-color: rgba(90,166,214,.55);
+  box-shadow: 0 0 0 4px var(--focus);
 }
 .hint{
   margin-top: 8px;
@@ -439,21 +503,6 @@ input:focus, select:focus, textarea:focus{
   line-height: 1.5;
 }
 
-/* --- Footer --- */
-.footer{
-  border-top: 1px solid var(--line);
-  padding: 30px 0;
-}
-.footer-grid{
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  gap: 18px;
-}
-.footer p{ font-size: 13px; }
-@media (max-width: 980px){
-  .footer-grid{ grid-template-columns: 1fr; }
-}
-
 /* --- Coverage map image --- */
 .coverage-map{
   width: 100%;
@@ -463,415 +512,19 @@ input:focus, select:focus, textarea:focus{
   border: 1px solid rgba(15,23,42,.08);
   box-shadow: 0 18px 45px rgba(15,23,42,.08);
 }
-/* =========================
-   FIX: Mobile Menu Button Visibility
-   Put this at the very bottom of style.css
-   ========================= */
 
-#menuBtn.menu-btn{
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-  padding: 12px 16px !important;
-  border-radius: 999px !important;
-
-  background: #ffffff !important;
-  border: 1px solid rgba(15,23,42,.18) !important;
-
-  color: #0f172a !important;
-  font-weight: 700 !important;
-  font-size: 14px !important;
-
-  line-height: 1 !important;
-  white-space: nowrap !important;
-
-  box-shadow: 0 10px 25px rgba(15,23,42,.08);
-}
-
-#menuBtn.menu-btn:hover{
-  background: rgba(15,23,42,.04) !important;
-}
-
-#menuBtn.menu-btn:focus{
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(15,23,42,.10), 0 10px 25px rgba(15,23,42,.08);
-}
-
-/* Make sure it's the only menu trigger visible on mobile */
-@media (max-width: 980px){
-  .nav-toggle,
-  .icon-btn{
-    display: none !important;
-  }
-}
-/* =========================================================
-   HEADER FIX (FINAL OVERRIDE)
-   Put this at the VERY BOTTOM of assets/css/style.css
-   Works with your current HTML exactly as-is.
-   ========================================================= */
-
-/* Topbar */
-.topbar{
-  background: #0c1a2e;
-  color: rgba(255,255,255,.9);
-  font-size: 11px;
-  letter-spacing: .10em;
-  text-transform: uppercase;
-}
-.topbar-inner{ padding: 10px 0; }
-.topbar-center{
-  display:flex;
-  gap:14px;
-  justify-content:center;
-  align-items:center;
-  flex-wrap:wrap;
-}
-.topbar-item{ color: rgba(255,255,255,.88); }
-.topbar-sep{ opacity:.55; }
-
-/* Mainbar */
-.mainbar{
-  background: rgba(251,251,249,.96);
-  border-bottom: 1px solid rgba(15,23,42,.08);
-  backdrop-filter: blur(10px);
-}
-
-/* Your header grid (left menu | brand | right icon) */
-.header .header-inner{
-  display:grid !important;
-  grid-template-columns: 44px minmax(0,1fr) 44px;
-  align-items:center;
-  gap: 12px;
-  padding: 14px 0;
-  min-width: 0;
-}
-
-/* Brand (centered, no clipping) */
-.header .brand{
-  justify-self:center;
-  text-align:center;
-  font-family: "Fraunces", ui-serif, Georgia, serif;
-  font-weight: 600;
-  font-size: 18px;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-
-  color:#0f172a;
-  min-width:0;
-  max-width:100%;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
-}
-
-/* Icon buttons (menu + mail) */
-.header .icon-btn{
-  width:44px;
-  height:44px;
-  border-radius:999px;
-  border:1px solid rgba(15,23,42,.18);
-  background:#fff;
-  display:flex !important;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  padding:0;
-  box-shadow: 0 10px 22px rgba(15,23,42,.07);
-}
-.header .icon-btn:hover{ background: rgba(15,23,42,.04); }
-.header .icon-btn:focus{
-  outline:none;
-  box-shadow: 0 0 0 4px rgba(15,23,42,.10), 0 10px 22px rgba(15,23,42,.07);
-}
-
-/* Make the hamburger ALWAYS visible/clear */
-.header .hamburger{
-  width:18px;
-  height:2px;
-  background:#0f172a;
-  border-radius:999px;
-  position:relative;
-  display:block;
-}
-.header .hamburger::before,
-.header .hamburger::after{
-  content:"";
-  position:absolute;
-  left:0;
-  width:18px;
-  height:2px;
-  background:#0f172a;
-  border-radius:999px;
-}
-.header .hamburger::before{ top:-6px; }
-.header .hamburger::after{ top:6px; }
-
-/* Desktop nav placement */
-.header .nav-desktop{
-  position:absolute;
-  right: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
-@media (max-width: 980px){
-  .header .nav-desktop{ display:none !important; }
-}
-
-/* Mobile dropdown */
-.header .mobile-nav{
-  display:none;
-  padding: 12px 0 16px;
-  border-top: 1px solid rgba(15,23,42,.08);
-}
-.header .mobile-nav.open{ display:block; }
-
-.header .mobile-nav a{
-  display:block;
-  padding:12px 12px;
-  border-radius:14px;
-  font-size:14px;
-  color: rgba(15,23,42,.88);
-}
-.header .mobile-nav a:hover{ background: rgba(15,23,42,.04); }
-.header .mobile-nav .btn.btn-primary{
-  margin-top:10px;
-  width:100%;
-  justify-content:center;
-}
-
-/* Small screens: allow brand to wrap slightly if needed */
-@media (max-width: 420px){
-  .header .brand{
-    font-size:16px;
-    letter-spacing:.04em;
-    white-space:normal;
-    line-height:1.15;
-  }
-}
-/* =========================
-   HEADER POLISH (FINAL)
-   ========================= */
-
-/* Stronger hamburger contrast */
-.hamburger,
-.hamburger::before,
-.hamburger::after{
-  background: #0f172a !important;
-}
-
-/* Sharper icon buttons */
-.icon-btn{
-  border: 1px solid rgba(15,23,42,.20) !important;
-  background: #ffffff !important;
-  box-shadow: 0 8px 18px rgba(15,23,42,.08) !important;
-}
-
-/* Make envelope darker */
-.contact-icon{
-  font-size: 16px;
-  color: #0f172a !important;
-}
-
-/* Slight brand refinement */
-.brand{
-  font-size: 19px;
-  letter-spacing: .05em;
-}
-/* =========================================================
-   HEADER SYSTEM (SINGLE SOURCE OF TRUTH)
-   Matches your HTML:
-   .header > .topbar + .mainbar
-   .mainbar .header-inner contains: #menuBtn, .brand, .contact-icon, .nav-desktop
-   Then: #mobileNav (.mobile-nav)
-   ========================================================= */
-
-/* Top bar */
-.topbar{
-  background:#0c1a2e;
-  color:rgba(255,255,255,.9);
-  font-size:11px;
-  letter-spacing:.10em;
-  text-transform:uppercase;
-}
-.topbar-inner{ padding:10px 0; }
-.topbar-center{
-  display:flex;
-  gap:14px;
-  justify-content:center;
-  align-items:center;
-  flex-wrap:wrap;
-}
-.topbar-item{ color:rgba(255,255,255,.88); }
-.topbar-sep{ opacity:.55; }
-
-/* Header wrapper */
-.header{
-  position: sticky;
-  top: 0;
-  z-index: 60;
-}
-
-/* Main bar */
-.mainbar{
-  background: rgba(251,251,249,.96);
-  border-bottom: 1px solid rgba(15,23,42,.10);
-  backdrop-filter: blur(10px);
-}
-
-/* MOBILE FIRST layout: 3 columns (menu | brand | contact) */
-.mainbar .header-inner{
-  display:grid;
-  grid-template-columns: 44px minmax(0,1fr) 44px;
-  align-items:center;
-  gap:12px;
-  padding:14px 0;
-  min-width:0;
-}
-
-/* Brand centered */
-.mainbar .brand{
-  justify-self:center;
-  text-align:center;
-  font-family:"Fraunces", ui-serif, Georgia, serif;
-  font-weight:600;
-  font-size:18px;
-  letter-spacing:.06em;
-  text-transform:uppercase;
-  color:#0f172a;
-
-  min-width:0;
-  max-width:100%;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
-}
-
-/* Icon buttons (hamburger + contact) */
-.mainbar .icon-btn{
-  width:44px;
-  height:44px;
-  border-radius:999px;
-  border:1px solid rgba(15,23,42,.18);
-  background:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  padding:0;
-  box-shadow:0 10px 22px rgba(15,23,42,.07);
-}
-.mainbar .icon-btn:hover{ background: rgba(15,23,42,.04); }
-.mainbar .icon-btn:focus{
-  outline:none;
-  box-shadow:0 0 0 4px rgba(15,23,42,.10), 0 10px 22px rgba(15,23,42,.07);
-}
-
-/* Hamburger lines */
-.mainbar .hamburger{
-  width:18px;
-  height:2px;
-  background:#0f172a;
-  border-radius:999px;
-  position:relative;
-  display:block;
-}
-.mainbar .hamburger::before,
-.mainbar .hamburger::after{
-  content:"";
-  position:absolute;
-  left:0;
-  width:18px;
-  height:2px;
-  background:#0f172a;
-  border-radius:999px;
-}
-.mainbar .hamburger::before{ top:-6px; }
-.mainbar .hamburger::after{ top:6px; }
-
-/* Mobile dropdown nav */
-.mobile-nav{
-  display:none;
-  padding:12px 0 16px;
-  border-top:1px solid rgba(15,23,42,.08);
-}
-.mobile-nav.open{ display:block; }
-
-.mobile-nav a{
-  display:block;
-  padding:12px 12px;
-  border-radius:14px;
-  font-size:14px;
-  color:rgba(15,23,42,.88);
-}
-.mobile-nav a:hover{ background:rgba(15,23,42,.04); }
-.mobile-nav .btn.btn-primary{
-  margin-top:10px;
-  width:100%;
-  justify-content:center;
-}
-
-/* =========================================================
-   DESKTOP LAYOUT (fixes your desktop menu)
-   ========================================================= */
-@media (min-width: 981px){
-  /* Desktop: brand left, nav right (no overlap) */
-  .mainbar .header-inner{
-    grid-template-columns: minmax(0, 320px) 1fr;
-    padding:16px 0;
-  }
-
-  /* Hide mobile icon buttons on desktop */
-  #menuBtn{ display:none !important; }
-  .contact-icon{ display:none !important; }
-
-  /* Brand left */
-  .mainbar .brand{
-    justify-self:start;
-    text-align:left;
-    font-size:18px;
-    white-space:nowrap;
-  }
-
-  /* Desktop nav sits on the right */
-  .nav-desktop{
-    display:flex !important;
-    justify-content:flex-end;
-    align-items:center;
-    gap:16px;
-
-    position:static !important;
-    transform:none !important;
-  }
-}
-
-/* Tiny phones: allow brand to wrap */
-@media (max-width: 420px){
-  .mainbar .brand{
-    font-size:16px;
-    letter-spacing:.04em;
-    white-space:normal;
-    line-height:1.15;
-  }
-}
 /* =========================
    ULTRA-PREMIUM FOOTER
    ========================= */
-
 .footer-ultra{
-  background: radial-gradient(1200px 500px at 20% -10%, rgba(200,167,90,.18), transparent 55%),
-              radial-gradient(900px 520px at 85% 0%, rgba(255,255,255,.08), transparent 60%),
-              linear-gradient(180deg, #0b1220, #070b14);
+  background:
+    radial-gradient(1200px 500px at 20% -10%, rgba(201,169,106,.18), transparent 55%),
+    radial-gradient(900px 520px at 85% 0%, rgba(134,197,232,.12), transparent 60%),
+    linear-gradient(180deg, var(--navy), var(--navy-2));
   border-top: 1px solid rgba(255,255,255,.10);
   color: rgba(255,255,255,.84);
   padding: 44px 0;
 }
-
-.footer-ultra-inner{ display:block; }
 
 .footer-ultra-top{
   display:flex;
@@ -895,8 +548,8 @@ input:focus, select:focus, textarea:focus{
   height: 44px;
   border-radius: 16px;
   background:
-    radial-gradient(circle at 30% 30%, rgba(255,255,255,.25), rgba(255,255,255,0) 55%),
-    linear-gradient(180deg, rgba(200,167,90,.95), rgba(120,86,34,.70));
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,.22), rgba(255,255,255,0) 55%),
+    linear-gradient(180deg, rgba(201,169,106,.95), rgba(120,86,34,.70));
   box-shadow: 0 18px 40px rgba(0,0,0,.35);
 }
 
@@ -929,10 +582,9 @@ input:focus, select:focus, textarea:focus{
   font-weight: 700;
   font-size: 14px;
   border: 1px solid rgba(255,255,255,.18);
-  color: #0b1220;
+  color: var(--navy);
   background: linear-gradient(180deg, #ffffff, rgba(255,255,255,.92));
 }
-
 .footer-ultra-btn:hover{ filter: brightness(.97); }
 
 .footer-ultra-btn-ghost{
@@ -941,11 +593,15 @@ input:focus, select:focus, textarea:focus{
   border: 1px solid rgba(255,255,255,.20);
 }
 
+/* Footer grids */
 .footer-ultra-grid{
   display:grid;
   grid-template-columns: 1.3fr 1fr 1fr;
   gap: 18px;
   padding-top: 20px;
+}
+.footer-ultra-grid--4{
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
 }
 
 .footer-ultra-title{
@@ -970,7 +626,7 @@ input:focus, select:focus, textarea:focus{
 }
 .footer-ultra-meta strong{ color: #fff; }
 
-/* Gold-toned HQ micro line */
+/* Gold + light-blue HQ micro line */
 .footer-ultra-hq{
   margin-top: 14px;
   display:flex;
@@ -981,11 +637,11 @@ input:focus, select:focus, textarea:focus{
   letter-spacing:.18em;
   text-transform:uppercase;
 
-  background: linear-gradient(90deg, #c8a75a, #e6cf8a, #b89142);
+  background: linear-gradient(90deg, var(--gold), var(--sky), var(--gold-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity:.85;
-  text-shadow: 0 0 12px rgba(200,167,90,.22);
+  opacity:.90;
+  text-shadow: 0 0 12px rgba(201,169,106,.16);
 }
 .footer-ultra-hq .footer-ultra-dot{ opacity:.6; }
 
@@ -1002,215 +658,14 @@ input:focus, select:focus, textarea:focus{
 }
 
 @media (max-width: 980px){
-  .footer-ultra-grid{ grid-template-columns: 1fr; }
+  .footer-ultra-grid,
+  .footer-ultra-grid--4{
+    grid-template-columns: 1fr;
+  }
   .footer-ultra-top{ align-items:flex-start; }
 }
-/* =========================================================
-   FOOTER CTA (Screenshot style) — Navy matches header + Gold line
-   Put this at the VERY BOTTOM of style.css
-   ========================================================= */
 
-.footer.footer-cta{
-  /* Match your header/topbar navy */
-  background: #0c1a2e;
-  border-top: 1px solid rgba(255,255,255,.10);
-  color: rgba(255,255,255,.86);
-  padding: 44px 0 28px;
-  position: relative;
-}
-
-/* Gold line inside footer (top accent) */
-.footer.footer-cta::before{
-  content:"";
-  display:block;
-  height:2px;
-  width:100%;
-  background: linear-gradient(
-    90deg,
-    rgba(217,187,110,0) 0%,
-    rgba(217,187,110,.85) 22%,
-    rgba(201,170,92,1) 50%,
-    rgba(217,187,110,.85) 78%,
-    rgba(217,187,110,0) 100%
-  );
-  margin-bottom: 22px;
-}
-
-/* Footer layout */
-.footer-cta__top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  flex-wrap:wrap;
-}
-
-.footer-cta__brandrow{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  min-width: 240px;
-}
-
-.footer-cta__mark{
-  width:44px;
-  height:44px;
-  border-radius:16px;
-  background:
-    radial-gradient(circle at 30% 30%, rgba(255,255,255,.22), rgba(255,255,255,0) 55%),
-    linear-gradient(180deg, rgba(200,167,90,.95), rgba(120,86,34,.72));
-  box-shadow: 0 18px 40px rgba(0,0,0,.35);
-}
-
-.footer-cta__brand{
-  font-family: "Fraunces", ui-serif, Georgia, serif;
-  font-weight: 600;
-  font-size: 18px;
-  color: #fff;
-}
-
-.footer-cta__sub{
-  margin-top: 4px;
-  font-size: 13px;
-  color: rgba(255,255,255,.70);
-}
-
-.footer-cta__dot{ opacity:.55; padding: 0 6px; }
-
-/* Gold HQ line */
-.footer-cta__hq{
-  background: linear-gradient(90deg, #c8a75a, #e6cf8a, #b89142);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  font-size: 12px;
-  opacity: .92;
-}
-
-/* Buttons */
-.footer-cta__actions{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
-
-.footer-cta__btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding: 12px 16px;
-  border-radius: 14px;
-  font-weight: 700;
-  font-size: 14px;
-  border: 1px solid rgba(255,255,255,.18);
-  text-decoration: none;
-}
-
-.footer-cta__btn--light{
-  background: linear-gradient(180deg, #ffffff, rgba(255,255,255,.92));
-  color: #0c1a2e;
-}
-
-.footer-cta__btn--ghost{
-  background: rgba(255,255,255,.06);
-  color: #fff;
-  border-color: rgba(255,255,255,.22);
-}
-
-.footer-cta__divider{
-  height:1px;
-  background: rgba(255,255,255,.10);
-  margin: 18px 0;
-}
-
-/* Lower grid */
-.footer-cta__grid{
-  display:grid;
-  grid-template-columns: 1.1fr 1fr 1fr 1fr;
-  gap: 18px;
-}
-
-.footer.footer-cta h3{
-  font-size: 12px;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.70);
-  margin: 0 0 10px;
-}
-
-.footer.footer-cta p{
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.7;
-  color: rgba(255,255,255,.78);
-}
-
-.footer.footer-cta a{
-  color: rgba(255,255,255,.84);
-}
-
-.footer.footer-cta a:hover{
-  color: #fff;
-}
-
-.footer-cta__bottom{
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255,255,255,.10);
-}
-
-.footer-cta__fineprint{
-  font-size: 12px;
-  color: rgba(255,255,255,.62);
-  line-height: 1.7;
-}
-
-@media (max-width: 980px){
-  .footer-cta__grid{ grid-template-columns: 1fr; }
-  .footer-cta__top{ align-items:flex-start; }
-}
-/* Footer grid: allow 4 columns when used */
-.footer-ultra-grid--4{
-  grid-template-columns: 1.3fr 1fr 1fr 1fr;
-}
-@media (max-width: 980px){
-  .footer-ultra-grid--4{ grid-template-columns: 1fr; }
-}
-/* HERO FONT SIZE REDUCTION (homepage + internal pages) */
-.hero h1{
-  font-size: clamp(28px, 3.6vw, 44px);
-  line-height: 1.12;
-}
-.hero .lead{
-  font-size: 17px;
-}
-/* CTA Button Styling */
-.btn-primary {
-  background: #c9a96a;
-  color: white;
-  font-weight: 600;
-  padding: 12px 22px;
-  border-radius: 6px;
-}
-
-.btn-primary:hover {
-  background: #b89655;
-   /* Request Quote Button */
-.btn-primary,
-.cta-button,
-.request-quote-btn {
-  background: #c9a96a;
-  color: #ffffff;
-  font-weight: 600;
-  padding: 12px 22px;
-  border-radius: 6px;
-  border: none;
-}
-
-.btn-primary:hover,
-.cta-button:hover,
-.request-quote-btn:hover {
-  background: #b89655;
-}
-}
+/* =========================
+   Safety: ensure NO default blue links ever
+   ========================= */
+a, a:visited { color: inherit; }
