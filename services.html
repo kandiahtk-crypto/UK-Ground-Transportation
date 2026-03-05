@@ -1,25 +1,85 @@
-<!-- services.html -->
+<!-- index.html (Redesigned Home - VisitBritain-aligned tone, single Quote CTA) -->
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Services | UK Inbound Ground Transport</title>
-  <meta name="description" content="Trade-only inbound ground transport services across the United Kingdom and Ireland for tour operators and DMCs. Structured operations, disciplined routing." />
+
+  <title>Inbound Ground Transport for UK &amp; Ireland Travel Programmes | UK Inbound Ground Transport</title>
+  <meta name="description" content="Inbound ground transport coordination for UK & Ireland travel programmes. Structured touring delivery, airport arrivals, and operational support for tour operators and DMCs." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.ukinboundgroundtransport.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Inbound Ground Transport for UK & Ireland Travel Programmes" />
+  <meta property="og:description" content="Structured touring delivery, airport arrivals, and operational support for UK & Ireland travel programmes." />
+  <meta property="og:url" content="https://www.ukinboundgroundtransport.com/" />
+  <meta property="og:site_name" content="UK Inbound Ground Transport" />
+  <!-- Update if your OG image filename differs -->
+  <meta property="og:image" content="https://www.ukinboundgroundtransport.com/assets/img/og/og-home.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="UK & Ireland inbound ground transport coordination for travel programmes" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Inbound Ground Transport for UK & Ireland Travel Programmes" />
+  <meta name="twitter:description" content="Structured touring delivery, airport arrivals, and operational support for UK & Ireland travel programmes." />
+  <meta name="twitter:image" content="https://www.ukinboundgroundtransport.com/assets/img/og/og-home.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Keep links premium (no default blue) -->
+  <style>
+    a { color: inherit; }
+  </style>
+
+  <!-- Schema: Organization + WebSite + WebPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://www.ukinboundgroundtransport.com/#organization",
+        "name":"Evershine Transport Limited",
+        "url":"https://www.ukinboundgroundtransport.com/",
+        "email":"info@ukinboundgroundtransport.com",
+        "telephone":"+44 20 8629 2776"
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://www.ukinboundgroundtransport.com/#website",
+        "url":"https://www.ukinboundgroundtransport.com/",
+        "name":"UK Inbound Ground Transport",
+        "publisher":{"@id":"https://www.ukinboundgroundtransport.com/#organization"},
+        "inLanguage":"en-GB"
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://www.ukinboundgroundtransport.com/#webpage",
+        "url":"https://www.ukinboundgroundtransport.com/",
+        "name":"Inbound Ground Transport for UK & Ireland Travel Programmes",
+        "description":"Inbound ground transport coordination for UK & Ireland travel programmes. Structured touring delivery, airport arrivals, and operational support for tour operators and DMCs.",
+        "inLanguage":"en-GB",
+        "isPartOf":{"@id":"https://www.ukinboundgroundtransport.com/#website"},
+        "about":{"@id":"https://www.ukinboundgroundtransport.com/#organization"}
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
-  <!-- Shared Header -->
+  <!-- Header (Homepage: NO Request-a-Quote button/link here to keep Quote CTA only once) -->
   <header class="header">
 
-    <!-- Top Contact Bar -->
     <div class="topbar">
       <div class="container topbar-inner">
         <div class="topbar-center">
@@ -30,53 +90,35 @@
       </div>
     </div>
 
-    <!-- Main Navigation Bar -->
     <div class="mainbar">
       <div class="container header-inner">
-
-        <!-- Mobile Menu Button -->
-        <button class="icon-btn menu-btn"
-                id="menuBtn"
-                type="button"
-                aria-expanded="false"
-                aria-controls="mobileNav"
-                aria-label="Open menu">
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
           <span class="hamburger"></span>
         </button>
 
-        <!-- Brand -->
-        <a href="index.html" class="brand" aria-label="Home">
-          UK Inbound Ground Transport
-        </a>
-
-        <!-- Right Icon (contact shortcut) -->
+        <a href="index.html" class="brand" aria-label="Home">UK Inbound Ground Transport</a>
         <a href="contact.html" class="icon-btn contact-icon" aria-label="Contact">✉</a>
 
-        <!-- Desktop Navigation -->
         <nav class="nav-desktop" aria-label="Primary">
-          <a href="index.html">Home</a>
-          <a href="services.html" aria-current="page">Services</a>
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="services.html">Services</a>
           <a href="fleet.html">Fleet</a>
           <a href="coverage.html">Coverage</a>
           <a href="trade-partners.html">Trade Partners</a>
           <a href="compliance-safety.html">Compliance</a>
           <a href="contact.html">Contact</a>
-          <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
         </nav>
-
       </div>
 
-      <!-- Mobile Navigation Dropdown -->
       <div class="container">
         <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
-          <a href="index.html">Home</a>
-          <a href="services.html" aria-current="page">Services</a>
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="services.html">Services</a>
           <a href="fleet.html">Fleet</a>
           <a href="coverage.html">Coverage</a>
           <a href="trade-partners.html">Trade Partners</a>
           <a href="compliance-safety.html">Compliance</a>
           <a href="contact.html">Contact</a>
-          <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
         </nav>
       </div>
     </div>
@@ -85,163 +127,189 @@
 
   <main class="container">
 
-    <!-- Hero -->
+    <!-- HERO (VisitBritain-aligned: calm, programme-led) -->
     <section class="hero">
-      <div class="kicker">Trade-only • Tour operators • DMCs</div>
-      <h1 style="margin-top:10px;">Services</h1>
+      <div class="kicker">UK &amp; Ireland travel programmes</div>
+
+      <h1 style="margin-top:10px;">
+        Inbound ground transport coordination for structured touring itineraries
+      </h1>
 
       <p class="lead" style="margin-top:14px; max-width: 92ch;">
-        Inbound programmes succeed when ground transport is planned with discipline.
-        We deliver structured coordination across the United Kingdom and Ireland — built for contracted departures,
-        complex itineraries, fixed times and high client expectations.
+        We support tour operators and destination management companies delivering UK and Ireland programmes —
+        with feasibility-led planning, reliable day-to-day delivery, and clear operational communication.
       </p>
 
-      <div class="pills" style="margin-top:18px;">
-        <span class="pill">UK • Ireland coverage</span>
-        <span class="pill">London movements supported</span>
-        <span class="pill">Multi-day touring + routing</span>
-        <span class="pill">Trade-only delivery</span>
+      <!-- No quote CTA here (per your request: quote only once on homepage) -->
+      <div class="cta-actions" style="margin-top:16px;">
+        <a class="btn btn-outline" href="contact.html">Contact Operations</a>
+        <a class="btn btn-outline" href="coverage.html">View Coverage</a>
       </div>
+
+      <div class="pills" style="margin-top:18px;">
+        <span class="pill">Touring itineraries</span>
+        <span class="pill">Airport arrivals &amp; departures</span>
+        <span class="pill">UK &amp; Ireland routing</span>
+        <span class="pill">Operational support</span>
+      </div>
+
+      <p style="margin-top:12px; font-size:14px; opacity:.85; max-width: 92ch;">
+        Transport planning and delivery for professional travel organisers — programme-led, not public hire.
+      </p>
     </section>
 
-    <!-- Core service blocks -->
+    <!-- SECTION: PROGRAMME SUPPORT -->
     <section class="section">
       <div class="panel">
-        <div class="kicker">Service categories</div>
-        <h2 style="margin-top:10px;">What we deliver</h2>
+        <div class="kicker">Programme support</div>
+        <h2 style="margin-top:10px;">What we coordinate</h2>
         <p style="margin-top:10px; max-width: 95ch;">
-          Services are delivered as structured operations — clear specification, disciplined timings, and consistent communication.
-          Share itinerary detail and we’ll return a feasibility review and quotation aligned to your programme.
+          Our focus is smooth programme delivery: realistic routing, practical access planning, and consistent daily execution —
+          across multi-city touring and time-fixed movements.
         </p>
-      </div>
 
-      <div class="grid grid-2" style="margin-top:16px;">
+        <div class="grid grid-3" style="margin-top:16px;">
+          <div class="card">
+            <h3>Airport arrivals</h3>
+            <p style="margin-top:10px;">
+              Heathrow and Gatwick gateways, regional airports, hotel transfers and scheduled series arrivals —
+              coordinated to match programme timings.
+            </p>
+          </div>
 
-        <div class="card">
-          <h3>Airport transfers + gateway coordination</h3>
-          <p style="margin-top:10px;">
-            Planned arrivals/departures with timing discipline and access planning — built around your hotel list,
-            group size and fixed times.
-          </p>
-          <ul class="list" style="margin-top:12px;">
-            <li>London Heathrow (LHR) • Gatwick (LGW) • Stansted (STN) • Luton (LTN) • City (LCY)</li>
-            <li>Meet-and-greet coordination and structured pickup windows</li>
-            <li>Hotel routing, venue access planning and baggage considerations</li>
-          </ul>
-        </div>
+          <div class="card">
+            <h3>Touring itineraries</h3>
+            <p style="margin-top:10px;">
+              Multi-day touring across England, Scotland, Wales and Ireland — with routing reviewed for travel time and itinerary flow.
+            </p>
+          </div>
 
-        <div class="card">
-          <h3>Multi-day touring programmes</h3>
-          <p style="margin-top:10px;">
-            Touring support across England, Scotland, Wales and Ireland — built with compliance, driver hours,
-            and realistic routing at the planning stage.
-          </p>
-          <ul class="list" style="margin-top:12px;">
-            <li>Multi-city programmes, hotel sequences and contracted touring</li>
-            <li>Fixed attraction times and timed entries accommodated</li>
-            <li>Disciplined daily structure to reduce late running</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>City movements + scheduled group logistics</h3>
-          <p style="margin-top:10px;">
-            City operating requires precision — set-down rules, access constraints and congestion timing
-            are accounted for early.
-          </p>
-          <ul class="list" style="margin-top:12px;">
-            <li>London movements (hotels, theatres, venues, dining, attractions)</li>
-            <li>High-density itineraries with tight windows</li>
-            <li>Driver briefings and on-the-day coordination</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Contracted departures + series operations</h3>
-          <p style="margin-top:10px;">
-            If you run repeating programmes, we support structured delivery — consistency of routing,
-            timings, and operational control across departures.
-          </p>
-          <ul class="list" style="margin-top:12px;">
-            <li>Series departures with fixed itineraries</li>
-            <li>Operational continuity across dates and group sizes</li>
-            <li>Clear escalation paths and reporting</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- How we work -->
-    <section class="section">
-      <div class="grid grid-2">
-
-        <div class="panel">
-          <div class="kicker">Method</div>
-          <h2 style="margin-top:10px;">How we work</h2>
-          <p style="margin-top:10px; max-width: 92ch;">
-            We treat ground transport as an operational system — not a loose set of transfers.
-            The goal is reliability: disciplined routing, predictable execution, and clear communication.
-          </p>
-
-          <div class="divider"></div>
-
-          <h3>What we need to quote accurately</h3>
-          <ul class="list">
-            <li>Dates + approximate operating windows</li>
-            <li>Passenger numbers and luggage profile</li>
-            <li>Pickup/drop-off postcodes + hotel list</li>
-            <li>Attractions with fixed entry times</li>
-            <li>Any must-use vehicle requirements (coach/minibus/executive)</li>
-          </ul>
-        </div>
-
-        <div class="panel">
-          <div class="kicker">Assurance</div>
-          <h2 style="margin-top:10px;">Operational standards</h2>
-          <p style="margin-top:10px; max-width: 92ch;">
-            Compliance and safety aren’t add-ons — they are built into touring structure, timings,
-            and driver-hour planning from the start.
-          </p>
-
-          <div class="divider"></div>
-
-          <h3>Included in planning</h3>
-          <ul class="list">
-            <li>Driver hours + touring feasibility review</li>
-            <li>Venue access constraints and city set-down rules</li>
-            <li>Contingency planning for high-density days</li>
-            <li>Clear comms with your operations team</li>
-          </ul>
-
-          <div style="margin-top:14px;">
-            <a class="btn btn-outline" href="compliance-safety.html">View compliance</a>
+          <div class="card">
+            <h3>Events &amp; conferences</h3>
+            <p style="margin-top:10px;">
+              MICE movements, venue transfers and delegate schedules — delivered with time-window discipline and clear comms.
+            </p>
           </div>
         </div>
 
+        <div class="cta-actions" style="margin-top:14px;">
+          <a class="btn btn-outline" href="services.html">View services</a>
+          <a class="btn btn-outline" href="fleet.html">View fleet</a>
+        </div>
       </div>
     </section>
 
-    <!-- Premium CTA (single place) -->
+    <!-- SECTION: WHO WE WORK WITH -->
+    <section class="section">
+      <div class="grid grid-2">
+        <div class="panel">
+          <div class="kicker">Partnership</div>
+          <h2 style="margin-top:10px;">Built for inbound travel planning</h2>
+          <p style="margin-top:10px; max-width: 92ch;">
+            We work with organisations managing planned, multi-service travel programmes and group movements into the UK and Ireland.
+          </p>
+
+          <ul class="list" style="margin-top:12px;">
+            <li>International tour operators</li>
+            <li>Destination management companies (DMCs)</li>
+            <li>Educational and cultural travel providers</li>
+            <li>Special interest and series departures</li>
+            <li>Incentive travel and conference organisers</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <div class="kicker">Operating approach</div>
+          <h2 style="margin-top:10px;">A calm, practical delivery framework</h2>
+          <p style="margin-top:10px; max-width: 92ch;">
+            Touring performance depends on the details. We prioritise feasibility and consistency so programmes run on time and feel well-managed.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="grid grid-3" style="margin-top:10px;">
+            <div class="card">
+              <h3>Feasibility review</h3>
+              <p style="margin-top:10px;">Routing and timings checked before confirmation.</p>
+            </div>
+            <div class="card">
+              <h3>Defined scope</h3>
+              <p style="margin-top:10px;">Vehicle type and inclusions clearly specified.</p>
+            </div>
+            <div class="card">
+              <h3>Operational control</h3>
+              <p style="margin-top:10px;">Clear comms throughout live movements.</p>
+            </div>
+          </div>
+
+          <div style="margin-top:14px;">
+            <a class="btn btn-outline" href="compliance-safety.html">Compliance &amp; safety</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: COVERAGE -->
+    <section class="section">
+      <div class="panel">
+        <div class="kicker">Coverage</div>
+        <h2 style="margin-top:10px;">UK &amp; Ireland touring coverage</h2>
+        <p style="margin-top:10px; max-width: 95ch;">
+          We coordinate movements across England, Scotland, Wales, Northern Ireland and the Republic of Ireland —
+          supporting touring programmes, extensions and regional routing.
+        </p>
+
+        <div class="grid grid-2" style="margin-top:16px;">
+          <div class="card">
+            <h3>Common routing patterns</h3>
+            <ul class="list" style="margin-top:12px;">
+              <li>London → Oxford → Bath → Stonehenge</li>
+              <li>London → Stratford → Liverpool → Manchester</li>
+              <li>Edinburgh → Highlands touring programmes</li>
+              <li>Belfast and Dublin touring extensions</li>
+              <li>UK touring with Ireland add-ons</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Key gateways</h3>
+            <ul class="list" style="margin-top:12px;">
+              <li>London Heathrow (LHR)</li>
+              <li>London Gatwick (LGW)</li>
+              <li>Manchester (MAN)</li>
+              <li>Edinburgh (EDI)</li>
+              <li>Belfast (BFS / BHD)</li>
+              <li>Dublin (DUB)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cta-actions" style="margin-top:14px;">
+          <a class="btn btn-outline" href="locations.html">Key touring areas</a>
+          <a class="btn btn-outline" href="coverage.html">Coverage detail</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SINGLE QUOTE CTA (ONLY ONCE ON HOMEPAGE) -->
     <section class="section">
       <div class="cta">
-        <div class="kicker" style="color:rgba(255,255,255,.65)">Trade enquiries</div>
-        <h2 style="margin-top:10px;">Share itinerary detail for a structured review</h2>
-        <p style="margin-top:10px;">
-          Send dates, passenger numbers, pickup/drop-off postcodes, hotel list and any fixed attraction times.
-          We’ll return a feasibility review and clear quotation with defined specification.
+        <div class="kicker" style="color:rgba(255,255,255,.70)">Enquiries</div>
+        <h2 style="margin-top:10px;">Request a quotation for an upcoming programme</h2>
+        <p style="margin-top:10px; max-width: 95ch;">
+          Share dates, passenger numbers, routing and any fixed entry times. We’ll review feasibility and return a clear quotation with defined scope.
         </p>
 
         <div class="cta-actions">
-          <a class="btn btn-light" href="request-a-quote.html">Request a Trade Quote</a>
-          <a class="btn btn-outline-light" href="contact.html">Speak to Operations</a>
+          <a class="btn btn-light" href="request-a-quote.html">Request a Quote</a>
+          <a class="btn btn-outline-light" href="contact.html">Contact Operations</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Ultra-Premium Footer (NO Request a Quote button + Legal links) -->
+  <!-- Footer (Homepage: no extra quote button to keep Quote CTA only once) -->
   <footer class="footer-ultra">
     <div class="container footer-ultra-inner">
 
@@ -250,7 +318,7 @@
           <div class="footer-ultra-mark" aria-hidden="true"></div>
           <div>
             <div class="footer-ultra-name">Evershine Transport Limited</div>
-            <div class="footer-ultra-sub">Inbound Ground Transport • Trade Partners • UK &amp; Ireland</div>
+            <div class="footer-ultra-sub">Inbound Ground Transport • UK &amp; Ireland</div>
           </div>
         </div>
 
@@ -260,6 +328,7 @@
       </div>
 
       <div class="footer-ultra-grid footer-ultra-grid--4">
+
         <div>
           <div class="footer-ultra-title">Contact</div>
           <div class="footer-ultra-links">
@@ -305,11 +374,12 @@
             <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
           </div>
         </div>
+
       </div>
 
       <div class="footer-ultra-bottom">
         <div class="footer-ultra-small">
-          Trade-only supplier for tour operators and DMCs. Structured operations and disciplined routing across the UK and Ireland.
+          Structured operations and disciplined routing across the UK and Ireland for travel programmes.
         </div>
       </div>
 
@@ -318,7 +388,6 @@
 
   <script src="assets/js/main.js"></script>
   <script>
-    // Footer year (safe even if main.js also sets it)
     const y = document.getElementById("year");
     if (y) y.textContent = new Date().getFullYear();
   </script>
