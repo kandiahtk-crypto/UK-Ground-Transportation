@@ -927,3 +927,19 @@ input:focus, select:focus, textarea:focus{
   .footer-ultra-grid--4{ grid-template-columns: 1fr; }
   .footer-ultra-top{ align-items:flex-start; }
 }
+.footer-ultra-cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-ultra-cta a {
+  flex: 1;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .footer-ultra-cta {
+    flex-wrap: nowrap;
+  }
+}
