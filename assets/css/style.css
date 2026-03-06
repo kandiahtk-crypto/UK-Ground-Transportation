@@ -351,8 +351,8 @@ p{
 
 @media (min-width: 981px){
   .mainbar .header-inner{
-    display: grid;
-    grid-template-columns: 260px 1fr;
+    display:grid;
+    grid-template-columns:340px 1fr;
     align-items: center;
     gap: 24px;
     padding: 16px 0;
@@ -362,17 +362,14 @@ p{
   .contact-icon{ display: none !important; }
 
   .mainbar .brand{
-    justify-self: start;
-    display: block;
-    max-width: 260px;
-    text-align: left;
-    font-size: 15px;
-    letter-spacing: .03em;
-    line-height: 1.1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  justify-self:start;
+  display:block;
+  text-align:left;
+  font-size:15px;
+  letter-spacing:.03em;
+  line-height:1.1;
+  white-space:nowrap;
+}
 
   .nav-desktop{
     display: flex !important;
