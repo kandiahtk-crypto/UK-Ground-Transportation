@@ -845,6 +845,10 @@ input:focus, select:focus, textarea:focus{
    PREMIUM HERO FIX
 ========================= */
 
+/* =========================
+   PREMIUM HERO - HOME PAGE ONLY
+========================= */
+
 .hero-premium{
   position: relative;
   min-height: 520px;
@@ -857,7 +861,7 @@ input:focus, select:focus, textarea:focus{
   background-position: center;
 }
 
-.hero-overlay{
+.hero-premium .hero-overlay{
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -868,7 +872,7 @@ input:focus, select:focus, textarea:focus{
   );
 }
 
-.hero-content{
+.hero-premium .hero-content{
   position: relative;
   z-index: 2;
   max-width: 560px;
@@ -907,23 +911,14 @@ input:focus, select:focus, textarea:focus{
   background: rgba(255,255,255,.16);
 }
 
-/* Stop old hero text styles from clashing */
-.hero-premium > .kicker,
-.hero-premium > h1,
-.hero-premium > .lead,
-.hero-premium > .hero-actions,
-.hero-premium > .pills{
-  display: none;
-}
-
-/* Mobile */
+/* mobile */
 @media (max-width: 768px){
   .hero-premium{
     min-height: 460px;
     border-radius: 18px;
   }
 
-  .hero-content{
+  .hero-premium .hero-content{
     max-width: 100%;
     padding: 34px 22px;
   }
