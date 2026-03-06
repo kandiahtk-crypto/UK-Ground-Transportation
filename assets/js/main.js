@@ -46,3 +46,35 @@
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 })();
+document.addEventListener("DOMContentLoaded", function () {
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+  const navLinks = document.querySelectorAll(".nav-desktop a, .mobile-nav a");
+
+  navLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+
+    if (!href) return;
+
+    // Ignore buttons / anchors / external links
+    if (
+      href.startsWith("#") ||
+      href.startsWith("http") ||
+      href.startsWith("mailto:") ||
+      href.startsWith("tel:")
+    ) {
+      return;
+    }
+
+    // Match homepage correctly
+    const normalizedHref = href === "/" ? "index.html" : href;
+
+    if (normalizedHref === currentPath) {
+      link.classList.add("active");
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.classList.remove("active");
+      link.removeAttribute("aria-current");
+    }
+  });
+});
