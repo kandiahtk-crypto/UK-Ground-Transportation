@@ -943,3 +943,72 @@ input:focus, select:focus, textarea:focus{
     flex-wrap: nowrap;
   }
 }
+/* =========================
+   DESKTOP ACTIVE MENU FIX
+   ========================= */
+
+.nav-desktop a.active,
+.nav-desktop a[aria-current="page"]{
+  background: none;
+  border-radius: 0;
+  padding: 0 0 6px 0;
+  border-bottom: 2px solid #c6a76a;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* Improve desktop menu spacing so header doesn't break */
+@media (min-width: 981px){
+
+  .nav-desktop{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-wrap:nowrap;
+  }
+
+  .nav-desktop a{
+    padding:8px 6px;
+    white-space:nowrap;
+  }
+
+  .brand{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    max-width:360px;
+  }
+
+}
+/* =========================
+   LUXURY HEADER NAV STYLE
+   ========================= */
+
+@media (min-width: 981px){
+
+  .nav-desktop{
+    gap:22px;
+  }
+
+  .nav-desktop a{
+    font-size:13px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:rgba(15,23,42,.78);
+    padding:6px 0;
+  }
+
+  .nav-desktop a:hover{
+    color:#0f172a;
+    background:none;
+  }
+
+  .nav-desktop a.active,
+  .nav-desktop a[aria-current="page"]{
+    border-bottom:2px solid #c9a96a;
+    padding-bottom:6px;
+    background:none;
+    border-radius:0;
+  }
+
+}
