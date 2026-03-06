@@ -253,8 +253,8 @@ p{
 }
 
 .mainbar .brand{
-  justify-self: center;
-  text-align: center;
+  justify-self: start;
+  text-align: left;
   font-family: "Fraunces", ui-serif, Georgia, serif;
   font-weight: 600;
   font-size: 18px;
@@ -262,7 +262,7 @@ p{
   text-transform: uppercase;
   color: var(--ink);
   min-width: 0;
-  max-width: 100%;
+  max-width: none;
   white-space: normal;
   line-height: 1.1;
 }
