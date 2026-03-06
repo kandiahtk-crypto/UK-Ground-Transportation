@@ -997,3 +997,14 @@ input:focus, select:focus, textarea:focus{
     justify-content: center;
   }
 }
+.route{
+margin-top:10px;
+font-weight:600;
+color:#0f172a;
+letter-spacing:.02em;
+}
+
+.route span{
+opacity:.6;
+margin:0 6px;
+}
