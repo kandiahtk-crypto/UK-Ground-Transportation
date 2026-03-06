@@ -805,3 +805,39 @@ input:focus, select:focus, textarea:focus{
     flex-wrap: nowrap;
   }
 }
+/* =========================
+   HOMEPAGE HERO IMAGE
+========================= */
+
+.hero{
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  border-radius: 22px;
+  overflow: hidden;
+
+  background-image: url("../img/hero-uk-touring.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* dark overlay for text */
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    90deg,
+    rgba(7,11,20,.85) 0%,
+    rgba(7,11,20,.65) 40%,
+    rgba(7,11,20,.25) 100%
+  );
+}
+
+.hero > *{
+  position:relative;
+  z-index:2;
+}
