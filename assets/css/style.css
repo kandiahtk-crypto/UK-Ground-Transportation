@@ -841,3 +841,110 @@ input:focus, select:focus, textarea:focus{
   position:relative;
   z-index:2;
 }
+/* =========================
+   PREMIUM HERO FIX
+========================= */
+
+.hero-premium{
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  border-radius: 22px;
+  overflow: hidden;
+  background-image: url("../img/hero-uk-touring.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(7,11,20,.82) 0%,
+    rgba(7,11,20,.58) 42%,
+    rgba(7,11,20,.18) 100%
+  );
+}
+
+.hero-content{
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
+  padding: 60px;
+  color: #ffffff;
+}
+
+.hero-premium h1{
+  color: #ffffff;
+  max-width: 12ch;
+}
+
+.hero-premium .lead{
+  color: rgba(255,255,255,.88);
+  max-width: 52ch;
+}
+
+.hero-premium .kicker{
+  color: rgba(255,255,255,.78);
+}
+
+.hero-premium .hero-actions{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-premium .btn-outline-light{
+  background: rgba(255,255,255,.10);
+  border-color: rgba(255,255,255,.28);
+  color: #ffffff;
+}
+
+.hero-premium .btn-outline-light:hover{
+  background: rgba(255,255,255,.16);
+}
+
+/* Stop old hero text styles from clashing */
+.hero-premium > .kicker,
+.hero-premium > h1,
+.hero-premium > .lead,
+.hero-premium > .hero-actions,
+.hero-premium > .pills{
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .hero-premium{
+    min-height: 460px;
+    border-radius: 18px;
+  }
+
+  .hero-content{
+    max-width: 100%;
+    padding: 34px 22px;
+  }
+
+  .hero-premium h1{
+    font-size: 30px;
+    line-height: 1.18;
+    max-width: 11ch;
+  }
+
+  .hero-premium .lead{
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .hero-premium .hero-actions{
+    flex-direction: column;
+  }
+
+  .hero-premium .hero-actions .btn{
+    width: 100%;
+    justify-content: center;
+  }
+}
