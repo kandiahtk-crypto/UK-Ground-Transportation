@@ -355,10 +355,12 @@ p{
 }
 
 @media (min-width: 981px){
+
   .mainbar .header-inner{
-   grid-template-columns: auto 1fr; 
+    display: grid;
+    grid-template-columns: 260px 1fr;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
     padding: 16px 0;
   }
 
@@ -366,66 +368,67 @@ p{
   .contact-icon{ display:none !important; }
 
   .mainbar .brand{
-    justify-self:start;
-    text-align:left;
-    font-size:16px;
-    letter-spacing:.05em;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    max-width:100%;
+    justify-self: start;
+    display: block;
+    max-width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    font-size: 15px;
+    letter-spacing: .03em;
+    line-height: 1.1;
   }
 
   .nav-desktop{
-    display:flex !important;
-    justify-content:flex-end;
-    align-items:center;
-    gap:18px;
-    flex-wrap:nowrap;
-    min-width:0;
+    display: flex !important;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+    flex-wrap: nowrap;
   }
 
   .nav-desktop a{
-    font-size:13px;
-    letter-spacing:.04em;
-    text-transform:uppercase;
+    font-size: 12px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
     color: rgba(15,23,42,.78);
     padding: 6px 0;
-    border-radius:0;
-    white-space:nowrap;
-    background:none;
-    transition: color .18s ease, border-color .18s ease;
-    border-bottom:2px solid transparent;
+    white-space: nowrap;
+    background: none;
+    border-radius: 0;
+    border-bottom: 2px solid transparent;
   }
 
   .nav-desktop a:hover{
-    background:none;
+    background: none;
     color: var(--ink);
     border-bottom-color: rgba(201,169,106,.45);
   }
 
   .nav-desktop a.active,
   .nav-desktop a[aria-current="page"]{
-    background:none;
+    background: none;
     color: var(--ink);
-    font-weight:700;
-    border-bottom:2px solid #c9a96a;
+    font-weight: 700;
+    border-bottom: 2px solid #c9a96a;
   }
 
   .nav-desktop .btn.btn-primary{
-    margin-left: 6px;
-    padding: 10px 14px;
-    border-radius: 14px;
-    text-transform:none;
-    letter-spacing:0;
-    border-bottom:none;
+    margin-left: 8px;
+    padding: 9px 12px;
+    font-size: 12px;
+    text-transform: none;
+    letter-spacing: 0;
+    border-bottom: none;
+    white-space: nowrap;
   }
 
   .nav-desktop .btn.btn-primary:hover{
-    border-bottom:none;
+    border-bottom: none;
   }
 }
-
 @media (max-width: 420px){
   .mainbar .brand{
     font-size:16px;
