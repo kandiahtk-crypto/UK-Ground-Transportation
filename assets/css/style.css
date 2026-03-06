@@ -1008,3 +1008,10 @@ letter-spacing:.02em;
 opacity:.6;
 margin:0 6px;
 }
+.kicker{
+font-size:12px;
+letter-spacing:.12em;
+text-transform:uppercase;
+font-weight:600;
+color:#64748b;
+}
