@@ -942,4 +942,58 @@ input:focus, select:focus, textarea:focus{
     width: 100%;
     justify-content: center;
   }
+   
+}
+/* Home hero styled like International Markets */
+.hero-visual{
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(15,23,42,.10);
+  box-shadow: 0 18px 50px rgba(15,23,42,.10);
+  background:
+    linear-gradient(90deg, rgba(7,11,20,.82), rgba(7,11,20,.34)),
+    url("assets/img/hero-uk-touring.png") center/cover no-repeat;
+  color: #fff;
+  padding: 42px 24px;
+}
+
+.hero-visual .kicker{ color: rgba(255,255,255,.78); }
+.hero-visual .lead{ color: rgba(255,255,255,.88); }
+.hero-visual h1{ color: #fff; }
+
+.hero-cta{
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-cta .btn{
+  border-color: rgba(255,255,255,.20);
+}
+
+.hero-cta .btn-outline-light{
+  background: rgba(255,255,255,.06);
+}
+
+.hero-visual .pill{
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  color: rgba(255,255,255,.88);
+}
+
+@media (max-width: 768px){
+  .hero-visual{
+    padding: 30px 18px;
+    border-radius: 18px;
+  }
+
+  .hero-cta{
+    flex-direction: column;
+  }
+
+  .hero-cta .btn{
+    width: 100%;
+    justify-content: center;
+  }
 }
