@@ -356,7 +356,7 @@ p{
 
 @media (min-width: 981px){
   .mainbar .header-inner{
-    grid-template-columns: minmax(260px, 320px) 1fr;
+   grid-template-columns: auto 1fr; 
     align-items: center;
     gap: 20px;
     padding: 16px 0;
@@ -368,7 +368,7 @@ p{
   .mainbar .brand{
     justify-self:start;
     text-align:left;
-    font-size:17px;
+    font-size:16px;
     letter-spacing:.05em;
     white-space:nowrap;
     overflow:hidden;
