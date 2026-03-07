@@ -912,4 +912,15 @@ margin-bottom:18px;
     justify-content:center;
   }
 }
+@keyframes heroFloat{
+  0%{
+    background-position:center center;
+  }
+  50%{
+    background-position:center 46%;
+  }
+  100%{
+    background-position:center center;
+  }
+}
  can you update it here please 
