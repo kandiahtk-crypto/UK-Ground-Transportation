@@ -571,8 +571,12 @@ p{
   background:#ffffff;
   border-radius:20px;
   padding:28px;
-  border:1px solid rgba(15,23,42,0.06);
-  box-shadow:0 10px 28px rgba(15,23,42,0.05);
+
+  border:1px solid rgba(201,169,106,.45); /* gold ring */
+
+  box-shadow:
+    0 10px 28px rgba(15,23,42,.05),
+    0 0 0 3px rgba(201,169,106,.08); /* soft outer gold glow */
 }
 
 .panel p{
