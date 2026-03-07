@@ -688,4 +688,26 @@ a:active{
   height:1px;
   background:linear-gradient(to right, transparent, rgba(15,23,42,.08), transparent);
 }
+   /* Premium info card upgrade */
+
+.panel{
+  background:#ffffff;
+  border-radius:20px;
+  padding:28px;
+  border:1px solid rgba(15,23,42,0.06);
+  box-shadow:0 10px 28px rgba(15,23,42,0.05);
+}
+
+/* improve readability inside cards */
+
+.panel p{
+  line-height:1.75;
+  color:rgba(55,65,81,.95);
+}
+
+/* small text tone */
+
+.panel small{
+  color:rgba(100,116,139,.9);
+}
    
