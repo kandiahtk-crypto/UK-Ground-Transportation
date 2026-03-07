@@ -731,4 +731,7 @@ a:active{
   z-index:2;
   color:#ffffff;
 }
+   .hero-content h1{
+  text-shadow:0 3px 14px rgba(0,0,0,.35);
+}
    
