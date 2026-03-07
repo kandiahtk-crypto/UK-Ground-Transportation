@@ -649,3 +649,9 @@ a:active{
     font-size: 15px !important;
   }
 }
+@media (max-width: 700px){
+  h1{
+    font-size: 46px !important;
+    line-height: 1.08 !important;
+  }
+}
