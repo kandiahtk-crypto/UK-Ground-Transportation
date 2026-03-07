@@ -511,6 +511,17 @@ p{
 /* =========================
    PILLS
 ========================= */
+/* =========================
+   PILLS
+========================= */
+
+.pills{
+  margin-top:16px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
 .pill{
   font-size:14px;
   padding:10px 16px;
@@ -532,42 +543,6 @@ p{
   color:#ffffff;
   backdrop-filter:blur(4px);
 }
-
-/* =========================
-   GRIDS
-========================= */
-
-.grid{
-  display:grid;
-  gap:16px;
-}
-
-.grid-2{
-  grid-template-columns:repeat(2,1fr);
-}
-
-.grid-3{
-  grid-template-columns:repeat(3,1fr);
-}
-
-@media (max-width:980px){
-  .grid-2,
-  .grid-3{
-    grid-template-columns:1fr;
-  }
-}
-
-/* =========================
-   CARDS
-========================= */
-
-.card{
-  background:#fff;
-  border:1px solid rgba(15,23,42,.08);
-  border-radius:16px;
-  padding:20px;
-}
-
 /* =========================
    PANELS
 ========================= */
