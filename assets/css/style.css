@@ -597,3 +597,55 @@ a:active{
     grid-template-columns: 1fr;
   }
 }
+/* ===== Mobile CTA fixes ===== */
+
+/* Make CTA buttons readable inside dark CTA blocks */
+.cta .btn-light{
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #ffffff !important;
+}
+
+.cta .btn-light:hover{
+  background: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Keep outline button readable */
+.cta .btn-outline-light{
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,.22) !important;
+  background: rgba(255,255,255,.08) !important;
+}
+
+/* Improve CTA spacing on mobile */
+@media (max-width: 700px){
+  .cta{
+    padding: 22px !important;
+    border-radius: 26px !important;
+  }
+
+  .cta h2{
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+  }
+
+  .cta p{
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+  }
+
+  .cta-actions{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: stretch !important;
+  }
+
+  .cta-actions .btn{
+    width: 100% !important;
+    justify-content: center !important;
+    min-height: 56px !important;
+    font-size: 15px !important;
+  }
+}
