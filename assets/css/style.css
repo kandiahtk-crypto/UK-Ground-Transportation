@@ -1249,3 +1249,12 @@ box-shadow:0 18px 50px rgba(2,6,23,.08);
     max-width: 28ch;
   }
 }
+.coverage-map{
+width:100%;
+max-width:900px;
+margin:auto;
+display:block;
+border-radius:18px;
+border:1px solid rgba(15,23,42,.08);
+box-shadow:0 18px 40px rgba(0,0,0,.10);
+}
