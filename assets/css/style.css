@@ -190,26 +190,27 @@ p{
 }
 
 .mainbar{
- background:#f8f7f4;
- border-bottom:1px solid rgba(15,23,42,.06); 
-  box-shadow:0 4px 18px rgba(15,23,42,.03);
-  backdrop-filter:blur(10px);
+  background:#f8f7f4;
+  border-bottom:1px solid rgba(15,23,42,.05);
+  box-shadow:0 10px 30px rgba(15,23,42,.05);
+  backdrop-filter:blur(12px);
 }
 
 .header-inner{
   display:grid;
-  grid-template-columns:64px 1fr 64px;
+  grid-template-columns:72px 1fr 72px;
   align-items:center;
-  gap:16px;
-  padding:18px 0;
+  gap:20px;
+  padding:22px 0;
+}
 }
 
 .brand{
   font-family:"Fraunces",serif;
   font-weight:600;
-  font-size:17px;
-  line-height:1.08;
-  letter-spacing:.04em;
+  font-size:19px;
+  line-height:1.1;
+  letter-spacing:.12em;
   text-transform:uppercase;
   text-align:center;
   color:#1f2937 !important;
@@ -219,15 +220,15 @@ p{
 }
 
 .icon-btn{
-  width:56px;
-  height:56px;
+  width:60px;
+  height:60px;
   border-radius:999px;
-  border:1px solid rgba(15,23,42,.14);
-  background:rgba(255,255,255,.78);
+  border:1px solid rgba(15,23,42,.10);
+  background:#ffffff;
   display:flex;
   align-items:center;
   justify-content:center;
-  box-shadow:0 6px 18px rgba(15,23,42,.04);
+  box-shadow:0 6px 20px rgba(15,23,42,.06);
 }
 
 .mainbar a,
