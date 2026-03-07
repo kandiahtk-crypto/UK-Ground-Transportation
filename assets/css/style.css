@@ -761,4 +761,17 @@ a:active{
       rgba(6,16,32,0.85)
     );
 }
+   .hero-content{
+  position:relative;
+  z-index:2;
+  color:#ffffff;
+}
+
+.hero-content h1{
+  text-shadow:0 4px 18px rgba(0,0,0,.45);
+}
+
+.hero-content .lead{
+  color:rgba(255,255,255,.92);
+}
    
