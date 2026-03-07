@@ -74,7 +74,7 @@ h1,h2,h3{
 
 h1{
   font-size:clamp(28px,3.6vw,44px);
-  line-height:1.1;
+  line-height:1.08;
   letter-spacing:-0.02em;
 }
 
@@ -333,7 +333,7 @@ p{
 }
 
 /* =========================
-   HERO
+   HERO BASE
 ========================= */
 
 .hero{
@@ -361,6 +361,10 @@ p{
   color:rgba(55,65,81,.92);
 }
 
+/* =========================
+   HOME HERO VISUAL
+========================= */
+
 .hero-visual{
   border-radius:22px;
   overflow:hidden;
@@ -369,6 +373,11 @@ p{
     url("../img/hero-uk-touring.png") center/cover no-repeat;
   color:#fff;
   padding:42px 24px;
+}
+
+.hero-visual h1{
+  color:#fff;
+  text-shadow:0 4px 18px rgba(0,0,0,.35);
 }
 
 .hero-visual .lead{
@@ -396,11 +405,19 @@ p{
   color:inherit;
 }
 
-/* Premium image hero system */
+/* =========================
+   PREMIUM IMAGE HERO
+========================= */
+
 .hero-premium{
   position:relative;
   overflow:hidden;
   border-radius:20px;
+  min-height:560px;
+  background-image:url("../img/hero-uk-touring.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 
 .hero-overlay{
@@ -408,8 +425,8 @@ p{
   inset:0;
   background:linear-gradient(
     to bottom,
-    rgba(6,16,32,0.65),
-    rgba(6,16,32,0.85)
+    rgba(6,16,32,0.70),
+    rgba(6,16,32,0.88)
   );
 }
 
@@ -417,6 +434,8 @@ p{
   position:relative;
   z-index:2;
   color:#ffffff;
+  padding:44px 28px;
+  max-width:760px;
 }
 
 .hero-content h1{
@@ -426,6 +445,10 @@ p{
 
 .hero-content .lead{
   color:rgba(255,255,255,.92);
+}
+
+.hero-content .kicker{
+  color:rgba(255,255,255,.78);
 }
 
 .hero-trust{
@@ -451,6 +474,7 @@ p{
   border-radius:999px;
   background:rgba(255,255,255,.10);
   border:1px solid rgba(255,255,255,.20);
+  color:inherit;
 }
 
 /* =========================
@@ -669,7 +693,7 @@ p{
   opacity:.7;
 }
 
-@media (max-width: 1100px){
+@media (max-width:1100px){
   .footer-ultra-grid--5{
     grid-template-columns:1fr 1fr;
   }
@@ -681,7 +705,7 @@ p{
   }
 }
 
-@media (max-width: 700px){
+@media (max-width:700px){
   .footer-ultra-grid--5{
     grid-template-columns:1fr;
   }
@@ -708,7 +732,75 @@ p{
   background:rgba(255,255,255,.08) !important;
 }
 
-@media (max-width: 700px){
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:700px){
+  h1{
+    font-size:46px !important;
+    line-height:1.08 !important;
+  }
+
+  .hero{
+    padding:34px 0 30px;
+  }
+
+  .hero-visual{
+    padding:28px 18px;
+  }
+
+  .hero-premium{
+    min-height:700px;
+    background-position:center;
+  }
+
+  .hero-content{
+    padding:28px 18px;
+    max-width:none;
+  }
+
+  .hero-content h1{
+    font-size:clamp(34px, 9vw, 52px) !important;
+    line-height:1.05 !important;
+  }
+
+  .hero-content .lead{
+    font-size:15px !important;
+    line-height:1.65 !important;
+    max-width:none;
+  }
+
+  .hero-actions,
+  .hero-cta{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:12px;
+  }
+
+  .hero-actions .btn,
+  .hero-cta .btn{
+    width:100%;
+    min-height:56px;
+    justify-content:center;
+  }
+
+  .pills{
+    gap:10px;
+  }
+
+  .pill{
+    width:100%;
+    justify-content:center;
+    text-align:center;
+  }
+
+  .panel{
+    padding:22px;
+    border-radius:20px;
+  }
+
   .cta{
     padding:22px !important;
     border-radius:26px !important;
@@ -738,9 +830,12 @@ p{
     font-size:15px !important;
   }
 
-  h1{
-    font-size:46px !important;
-    line-height:1.08 !important;
+  .brand{
+    font-size:16px;
+    line-height:1.15;
+  }
+
+  .topbar-center{
+    justify-content:center;
   }
 }
-    , can you fix the issues and return the whole css and tell me where exactly to paste it 
