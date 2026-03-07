@@ -262,9 +262,18 @@ p{
 
 .mobile-nav a{
   display:block;
-  padding:12px;
-  border-radius:10px;
+  padding:16px 18px;
+  border-radius:14px;
   color:#1f2937 !important;
+  font-weight:500;
+  border:1px solid rgba(15,23,42,.05);
+  background:#ffffff;
+  margin-bottom:10px;
+}
+
+.mobile-nav a:hover{
+  background:#f8f7f4;
+  border-color:rgba(15,23,42,.08);
 }
 
 .mobile-nav .btn{
