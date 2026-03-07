@@ -473,20 +473,25 @@ p{
 /* =========================
    PILLS
 ========================= */
-
-.pills{
-  margin-top:16px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
 .pill{
   font-size:14px;
   padding:10px 16px;
   border-radius:999px;
+  background:#f8fafc;
+  border:1px solid rgba(15,23,42,.08);
+  color:#0f172a;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Hero pills stay premium on dark/image backgrounds */
+.hero-visual .pill,
+.hero-premium .pill,
+.hero-content .pill{
   background:rgba(255,255,255,.10);
   border:1px solid rgba(255,255,255,.18);
+  color:#ffffff;
   backdrop-filter:blur(4px);
 }
 
