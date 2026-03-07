@@ -654,4 +654,38 @@ a:active{
     font-size: 46px !important;
     line-height: 1.08 !important;
   }
+/* ===== Premium Hero Upgrade ===== */
+
+.hero{
+  position: relative;
+  padding: 80px 0 70px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(15,23,42,0.05), transparent 60%),
+    radial-gradient(circle at 80% 0%, rgba(15,23,42,0.04), transparent 55%),
+    linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
 }
+
+/* Premium hero typography spacing */
+
+.hero h1{
+  letter-spacing: -0.02em;
+}
+
+.hero .lead{
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(55,65,81,.92);
+}
+
+/* subtle hero divider */
+
+.hero::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1px;
+  background:linear-gradient(to right, transparent, rgba(15,23,42,.08), transparent);
+}
+   
