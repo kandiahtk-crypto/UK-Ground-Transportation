@@ -842,8 +842,8 @@ p{
   }
 
   .pills{
-    gap:10px;
     margin-top:14px;
+margin-bottom:18px;
   }
 
   .pill{
