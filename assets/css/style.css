@@ -203,6 +203,21 @@ p{
   backdrop-filter:blur(10px);
   position:relative;
 }
+.mainbar::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    transparent,
+    #c9a96a,
+    transparent
+  );
+  opacity:.65;
+}
 
 .mainbar:after{
   content:"";
