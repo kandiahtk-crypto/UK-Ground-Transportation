@@ -1,203 +1,406 @@
 /* =========================
-   HERO VISUAL (Markets style)
+   UK INBOUND GROUND TRANSPORT
+   Base Theme
 ========================= */
 
-.hero-visual{
-  border-radius:22px;
-  overflow:hidden;
-  border:1px solid rgba(15,23,42,.10);
-  box-shadow:0 18px 50px rgba(15,23,42,.10);
-  background:
-    linear-gradient(90deg, rgba(7,11,20,.82), rgba(7,11,20,.34)),
-    url("../img/hero-uk-touring.png") center/cover no-repeat;
-  color:#fff;
-  padding:42px 24px;
+/* RESET */
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+background:#fbfbf9;
+color:#0f172a;
 }
 
-.hero-visual .kicker{ color:rgba(255,255,255,.78); }
-.hero-visual .lead{ color:rgba(255,255,255,.88); }
-.hero-visual h1{ color:#fff; }
-
-.hero-cta{
-  margin-top:18px;
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+/* LAYOUT */
+.container{
+max-width:1120px;
+margin:auto;
+padding:0 24px;
 }
 
-.hero-cta .btn{
-  border-color:rgba(255,255,255,.20);
+.section{
+padding:44px 0;
 }
 
-.hero-cta .btn-outline-light{
-  background:rgba(255,255,255,.06);
+main{
+padding:36px 0 70px;
 }
 
-.hero-visual .pill{
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.18);
-  color:rgba(255,255,255,.88);
+/* TYPOGRAPHY */
+
+h1,h2,h3{
+margin:0;
+font-family:"Fraunces",serif;
 }
 
-@media (max-width:768px){
-  .hero-visual{
-    padding:30px 18px;
-    border-radius:18px;
-  }
-
-  .hero-cta{
-    flex-direction:column;
-  }
-
-  .hero-cta .btn{
-    width:100%;
-    justify-content:center;
-  }
+h1{
+font-size:40px;
+line-height:1.1;
 }
 
-/* =========================
-   TOUR ROUTES
-========================= */
-
-.route{
-  margin-top:10px;
-  font-weight:600;
-  color:#0f172a;
-  letter-spacing:.02em;
+h2{
+font-size:30px;
 }
 
-.route span{
-  opacity:.6;
-  margin:0 6px;
+h3{
+font-size:18px;
+font-weight:600;
 }
 
-/* =========================
-   KICKER
-========================= */
+p{
+line-height:1.7;
+color:#475569;
+}
 
 .kicker{
-  font-size:12px;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  font-weight:600;
-  color:#64748b;
+font-size:12px;
+letter-spacing:.12em;
+text-transform:uppercase;
+font-weight:600;
+color:#64748b;
 }
 
-/* =========================
-   PREMIUM PANELS
-========================= */
+.lead{
+font-size:17px;
+max-width:70ch;
+}
+
+/* BUTTONS */
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:12px 16px;
+border-radius:14px;
+font-size:14px;
+font-weight:600;
+border:1px solid rgba(15,23,42,.14);
+background:#fff;
+cursor:pointer;
+}
+
+.btn-primary{
+background:#c9a96a;
+border:none;
+color:#fff;
+}
+
+.btn-outline{
+background:rgba(134,197,232,.12);
+border-color:rgba(90,166,214,.3);
+}
+
+.btn-outline-light{
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.25);
+color:#fff;
+}
+
+/* TOPBAR */
+
+.topbar{
+background:#0c1a2e;
+color:#fff;
+font-size:12px;
+}
+
+.topbar-inner{
+display:flex;
+justify-content:center;
+padding:10px 0;
+}
+
+.topbar-center{
+display:flex;
+gap:14px;
+}
+
+.topbar-item{
+color:#fff;
+}
+
+/* HEADER */
+
+.header{
+position:sticky;
+top:0;
+z-index:50;
+}
+
+.mainbar{
+background:#fbfbf9;
+border-bottom:1px solid rgba(15,23,42,.1);
+}
+
+.header-inner{
+display:grid;
+grid-template-columns:44px 1fr 44px;
+align-items:center;
+gap:10px;
+padding:14px 0;
+}
+
+.brand{
+font-family:"Fraunces",serif;
+font-weight:600;
+font-size:18px;
+letter-spacing:.05em;
+text-transform:uppercase;
+}
+
+.icon-btn{
+width:44px;
+height:44px;
+border-radius:999px;
+border:1px solid rgba(15,23,42,.2);
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* NAV */
+
+.nav-desktop{
+display:none;
+}
+
+.mobile-nav{
+display:none;
+padding:12px 0;
+border-top:1px solid rgba(15,23,42,.08);
+}
+
+.mobile-nav.open{
+display:block;
+}
+
+.mobile-nav a{
+display:block;
+padding:12px;
+border-radius:10px;
+}
+
+.mobile-nav .btn{
+margin-top:10px;
+width:100%;
+}
+
+/* DESKTOP NAV */
+
+@media(min-width:981px){
+
+#menuBtn{display:none}
+.contact-icon{display:none}
+
+.header-inner{
+grid-template-columns:340px 1fr;
+}
+
+.nav-desktop{
+display:flex;
+justify-content:flex-end;
+gap:16px;
+}
+
+.nav-desktop a{
+font-size:12px;
+text-transform:uppercase;
+}
+
+.mobile-nav{
+display:none!important;
+}
+
+}
+
+/* HERO */
+
+.hero{
+padding:30px 0;
+}
+
+.hero-visual{
+border-radius:22px;
+overflow:hidden;
+background:
+linear-gradient(90deg,rgba(7,11,20,.8),rgba(7,11,20,.3)),
+url("../img/hero-uk-touring.png") center/cover;
+color:#fff;
+padding:40px 24px;
+}
+
+.hero-cta{
+margin-top:18px;
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.pills{
+margin-top:16px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.pill{
+font-size:13px;
+padding:8px 12px;
+border-radius:999px;
+background:rgba(255,255,255,.1);
+border:1px solid rgba(255,255,255,.2);
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+gap:16px;
+}
+
+.grid-2{
+grid-template-columns:repeat(2,1fr);
+}
+
+.grid-3{
+grid-template-columns:repeat(3,1fr);
+}
+
+@media(max-width:980px){
+.grid-2,
+.grid-3{
+grid-template-columns:1fr;
+}
+}
+
+/* CARD */
+
+.card{
+background:#fff;
+border:1px solid rgba(15,23,42,.08);
+border-radius:16px;
+padding:20px;
+}
+
+/* PANEL */
 
 .panel{
-  background:#ffffff;
-  border-radius:22px;
-  padding:36px;
-  border:1px solid rgba(15,23,42,.08);
-  box-shadow:0 18px 50px rgba(2,6,23,.08);
+background:#fff;
+border-radius:22px;
+padding:36px;
+border:1px solid rgba(15,23,42,.08);
+box-shadow:0 18px 50px rgba(2,6,23,.08);
 }
 
-/* =========================
-   HERO PREMIUM FIX
-========================= */
+/* LIST */
 
-.hero-premium .pills{
-  margin-top:18px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
+.list{
+padding-left:18px;
+color:#475569;
 }
 
-.hero-premium .pill{
-  font-size:13px;
-  color:rgba(255,255,255,.88);
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.18);
-  padding:8px 12px;
-  border-radius:999px;
+.list li{
+margin:6px 0;
 }
 
-.hero-premium .btn-primary{
-  color:#fff;
+/* CTA */
+
+.cta{
+background:#0c1a2e;
+color:#fff;
+border-radius:22px;
+padding:26px;
 }
 
-.hero-premium .btn-outline-light{
-  background:rgba(255,255,255,.08);
-  border-color:rgba(255,255,255,.24);
-  color:#fff;
+.cta-actions{
+margin-top:18px;
+display:flex;
+gap:12px;
+flex-wrap:wrap;
 }
 
-.hero-premium .btn-outline-light:hover{
-  background:rgba(255,255,255,.14);
+/* FOOTER */
+
+.footer-ultra{
+background:#070b14;
+color:#fff;
+padding:50px 0 26px;
 }
 
-@media (max-width:768px){
-  .hero-premium{
-    min-height:auto;
-  }
-
-  .hero-premium .hero-content{
-    max-width:100%;
-    padding:28px 20px 30px;
-  }
-
-  .hero-premium h1{
-    font-size:26px;
-    line-height:1.14;
-    max-width:9ch;
-  }
-
-  .hero-premium .lead{
-    font-size:14px;
-    line-height:1.6;
-    max-width:30ch;
-  }
-
-  .hero-premium .hero-actions{
-    flex-direction:column;
-  }
-
-  .hero-premium .hero-actions .btn{
-    width:100%;
-    justify-content:center;
-  }
-
-  .hero-premium .pills{
-    margin-top:14px;
-    gap:10px;
-  }
-
-  .hero-premium .pill{
-    font-size:12px;
-    padding:7px 10px;
-    width:fit-content;
-  }
-
-  .hero-trust{
-    margin-top:14px;
-    font-size:13px;
-    line-height:1.5;
-    color:rgba(255,255,255,.82);
-    max-width:28ch;
-  }
+.footer-ultra-top{
+padding-bottom:20px;
+margin-bottom:20px;
+border-bottom:1px solid rgba(255,255,255,.1);
 }
 
-/* =========================
-   COVERAGE MAP
-========================= */
-
-.coverage-map{
-  width:100%;
-  max-width:900px;
-  margin:auto;
-  display:block;
-  border-radius:18px;
-  border:1px solid rgba(15,23,42,.08);
-  box-shadow:0 18px 40px rgba(0,0,0,.10);
+.footer-ultra-brand{
+display:flex;
+align-items:center;
+gap:12px;
 }
 
-/* =========================
-   5-COLUMN FOOTER
-========================= */
+.footer-ultra-name{
+font-family:"Fraunces",serif;
+font-size:18px;
+}
+
+.footer-ultra-sub{
+font-size:13px;
+opacity:.7;
+}
+
+.footer-ultra-grid{
+display:grid;
+gap:22px;
+grid-template-columns:1.3fr 1fr 1fr;
+}
 
 .footer-ultra-grid--5{
-  grid-template-columns:1.3fr 1fr 1fr 1fr 1fr;
+grid-template-columns:1.3fr 1fr 1fr 1fr 1fr;
+}
+
+.footer-ultra-title{
+font-size:11px;
+letter-spacing:.18em;
+text-transform:uppercase;
+opacity:.7;
+margin-bottom:10px;
+}
+
+.footer-ultra-links a{
+display:block;
+padding:6px 0;
+opacity:.9;
+}
+
+.footer-ultra-meta{
+font-size:13px;
+line-height:1.7;
+}
+
+.footer-ultra-hq{
+margin-top:10px;
+font-size:12px;
+text-transform:uppercase;
+}
+
+.footer-ultra-bottom{
+margin-top:20px;
+padding-top:16px;
+border-top:1px solid rgba(255,255,255,.1);
+}
+
+.footer-ultra-small{
+font-size:12px;
+opacity:.7;
+}
+
+@media(max-width:980px){
+.footer-ultra-grid,
+.footer-ultra-grid--5{
+grid-template-columns:1fr;
+}
 }
