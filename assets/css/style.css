@@ -710,4 +710,25 @@ a:active{
 .panel small{
   color:rgba(100,116,139,.9);
 }
+   .hero-premium{
+  position:relative;
+  overflow:hidden;
+  border-radius:20px;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(10,20,40,0.55),
+    rgba(10,20,40,0.75)
+  );
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  color:#ffffff;
+}
    
