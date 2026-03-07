@@ -448,3 +448,122 @@ opacity:.7;
 grid-template-columns:1fr;
 }
 }
+/* =========================
+   GLOBAL LINK FIX
+========================= */
+
+a,
+a:visited,
+a:hover,
+a:active{
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Keep footer links white */
+.footer-ultra a,
+.footer-ultra a:visited{
+  color: rgba(255,255,255,.85);
+}
+
+.footer-ultra a:hover{
+  color: #ffffff;
+}
+
+/* Keep topbar links white */
+.topbar a,
+.topbar a:visited{
+  color: rgba(255,255,255,.90);
+}
+
+/* Keep header/nav links dark */
+.mainbar a,
+.mainbar a:visited,
+.nav-desktop a,
+.nav-desktop a:visited,
+.mobile-nav a,
+.mobile-nav a:visited,
+.brand,
+.brand:visited{
+  color: #0f172a;
+}
+
+/* Hero buttons should not turn purple */
+.hero-cta a,
+.hero-cta a:visited,
+.hero-actions a,
+.hero-actions a:visited,
+.cta-actions a,
+.cta-actions a:visited{
+  color: inherit;
+}
+
+/* =========================
+   HAMBURGER ICON FIX
+========================= */
+
+.menu-btn{
+  position: relative;
+}
+
+.menu-btn .hamburger{
+  width: 18px;
+  height: 2px;
+  background: #0f172a;
+  border-radius: 999px;
+  position: relative;
+  display: block;
+}
+
+.menu-btn .hamburger::before,
+.menu-btn .hamburger::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: #0f172a;
+  border-radius: 999px;
+}
+
+.menu-btn .hamburger::before{
+  top: -6px;
+}
+
+.menu-btn .hamburger::after{
+  top: 6px;
+}
+
+/* =========================
+   HERO / CTA TEXT CONTRAST FIX
+========================= */
+
+.hero-visual .lead{
+  color: rgba(255,255,255,.92);
+}
+
+.hero-visual .kicker{
+  color: rgba(255,255,255,.82);
+}
+
+.cta p{
+  color: rgba(255,255,255,.90);
+}
+
+.cta .kicker{
+  color: rgba(255,255,255,.72);
+}
+
+/* Make dark-panel body text readable */
+.cta,
+.cta p,
+.cta h2{
+  color: #ffffff;
+}
+
+/* Optional: stronger overlay for hero readability */
+.hero-visual{
+  background:
+    linear-gradient(90deg, rgba(7,11,20,.88), rgba(7,11,20,.42)),
+    url("../img/hero-uk-touring.png") center/cover no-repeat;
+}
