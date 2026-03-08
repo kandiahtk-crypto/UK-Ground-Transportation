@@ -454,6 +454,10 @@ p{
    PREMIUM IMAGE HERO
 ========================= */
 
+/* =========================
+   PREMIUM IMAGE HERO
+========================= */
+
 .hero-premium{
   position:relative;
   overflow:hidden;
@@ -463,8 +467,9 @@ p{
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
-  animation: heroFloat 18s ease-in-out infinite; 
+  animation:heroFloat 18s ease-in-out infinite;
 }
+
 .hero-overlay{
   position:absolute;
   inset:0;
@@ -485,8 +490,6 @@ p{
       transparent 40%
     );
 }
-
-
 
 .hero-content{
   position:relative;
@@ -514,9 +517,6 @@ p{
   font-size:13px;
   color:rgba(255,255,255,.76);
 }
-
-/* =========================
-   PILLS
 ========================= */
 /* =========================
    PILLS
