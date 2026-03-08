@@ -605,24 +605,7 @@ p{
 .grid{
   display:grid;
   gap:18px;
-  align-items:start;   /* prevents stretching */
-}
-
-.grid-2{
-  grid-template-columns:repeat(2, minmax(0,1fr));
-}
-
-.grid-3{
-  grid-template-columns:repeat(3, minmax(0,1fr));
-}
-
-.card{
-  background:#fff;
-  border:1px solid rgba(15,23,42,.08);
-  border-radius:18px;
-  padding:22px;
-  align-self:start;  /* stops vertical stretching */
-}
+  align-items:start;   /* prevents 
 .panel:hover{
   transform:translateY(-4px);
   border-color:#c9a96a;
