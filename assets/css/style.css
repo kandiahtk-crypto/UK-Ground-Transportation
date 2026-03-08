@@ -839,6 +839,27 @@ p{
     padding:0 20px;
   }
 
+   .hero-visual{
+  overflow:hidden;
+  padding:34px 22px 28px !important;
+}
+
+.hero-visual h1,
+.hero-visual .lead,
+.hero-content h1,
+.hero-content .lead{
+  max-width:100% !important;
+  width:100%;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+
+.hero-visual h1,
+.hero-content h1{
+  font-size:clamp(28px, 9vw, 42px) !important;
+  line-height:1.05 !important;
+}
+
    .hero-content{
   padding:28px 18px 24px;
   max-width:100%;
