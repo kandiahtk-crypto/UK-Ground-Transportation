@@ -838,22 +838,31 @@ p{
 
 @media (max-width:700px){
 
+  .grid-2,
+  .grid-3{
+    grid-template-columns:1fr !important;
+  }
+
+  .grid{
+    gap:20px;
+  }
+
+  .card{
+    width:100%;
+    padding:18px;
+  }
+
+  .panel{
+    margin-bottom:18px;
+  }
+
   .footer-ultra{
     padding:38px 0 22px;
   }
 
   .footer-ultra-grid{
-    display:grid;
     grid-template-columns:1fr;
     gap:26px;
-  }
-
-  .footer-ultra-grid--5{
-    grid-template-columns:1fr;
-  }
-
-  .footer-ultra-brand{
-    align-items:flex-start;
   }
 
   .footer-ultra-title{
@@ -861,54 +870,10 @@ p{
     margin-bottom:8px;
   }
 
-  .footer-ultra-links{
-    margin-bottom:10px;
-  }
-
   .footer-ultra-links a{
     padding:8px 0;
   }
 
-  .footer-ultra-meta{
-    line-height:1.8;
-  }
-
-  .footer-ultra-bottom{
-    margin-top:28px;
-  }
-
-}
-
-/* =========================
-   MOBILE CTA FIXES
-========================= */
-
-.cta .btn-light{
-  background:#ffffff !important;
-  color:#0f172a !important;
-  border:1px solid #ffffff !important;
-}
-
-.cta .btn-light:hover{
-  background:#f8fafc !important;
-  color:#0f172a !important;
-}
-
-.cta .btn-outline-light{
-  color:#ffffff !important;
-  border:1px solid rgba(255,255,255,.22) !important;
-  background:rgba(255,255,255,.08) !important;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width:700px){
   h1{
     font-size:38px !important;
     line-height:1.06 !important;
@@ -930,6 +895,14 @@ p{
   .icon-btn{
     width:52px;
     height:52px;
+  }
+
+  
+  .cta-actions .btn{
+    width:100% !important;
+    justify-content:center !important;
+    min-height:56px !important;
+    font-size:15px !important;
   }
 
   .hero{
@@ -1052,6 +1025,247 @@ p{
     justify-content:center;
   }
 }
+
+
+  .footer-ultra-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:26px;
+  }
+
+  .footer-ultra-grid--5{
+    grid-template-columns:1fr;
+  }
+
+  .footer-ultra-brand{
+    align-items:flex-start;
+  }
+
+  
+/* =========================
+   MOBILE CTA FIXES
+========================= */
+
+.cta .btn-light{
+  background:#ffffff !important;
+  color:#0f172a !important;
+  border:1px solid #ffffff !important;
+}
+
+.cta .btn-light:hover{
+  background:#f8fafc !important;
+  color:#0f172a !important;
+}
+
+.cta .btn-outline-light{
+  color:#ffffff !important;
+  border:1px solid rgba(255,255,255,.22) !important;
+  background:rgba(255,255,255,.08) !important;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:700px){
+
+  .grid-2,
+  .grid-3{
+    grid-template-columns:1fr !important;
+  }
+
+  .grid{
+    gap:20px;
+  }
+
+  .card{
+    width:100%;
+    padding:18px;
+  }
+
+  .panel{
+    margin-bottom:18px;
+    padding:22px;
+    border-radius:20px;
+  }
+
+  .footer-ultra{
+    padding:38px 0 22px;
+  }
+
+  .footer-ultra-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:26px;
+  }
+
+  .footer-ultra-grid--5{
+    grid-template-columns:1fr;
+  }
+
+  .footer-ultra-brand{
+    align-items:flex-start;
+  }
+
+  .footer-ultra-title{
+    font-size:12px;
+    margin-bottom:8px;
+  }
+
+  .footer-ultra-links{
+    margin-bottom:10px;
+  }
+
+  .footer-ultra-links a{
+    padding:8px 0;
+  }
+
+  .footer-ultra-meta{
+    line-height:1.8;
+  }
+
+  .footer-ultra-bottom{
+    margin-top:28px;
+  }
+
+  h1{
+    font-size:38px !important;
+    line-height:1.06 !important;
+  }
+
+  .header-inner{
+    grid-template-columns:56px 1fr 56px;
+    gap:12px;
+    padding:16px 0;
+  }
+
+  .brand{
+    font-size:16px;
+    line-height:1.12;
+    letter-spacing:.035em;
+    max-width:320px;
+  }
+
+  .icon-btn{
+    width:52px;
+    height:52px;
+  }
+
+  .hero{
+    padding:22px 0 22px;
+  }
+
+  .hero-visual{
+    padding:24px 18px 22px !important;
+    border-radius:20px !important;
+  }
+
+  .hero-visual h1{
+    font-size:clamp(24px, 8vw, 38px) !important;
+    line-height:1.04 !important;
+    margin-top:8px !important;
+  }
+
+  .hero-visual .lead{
+    font-size:14px !important;
+    line-height:1.62 !important;
+    margin-top:12px !important;
+    max-width:none !important;
+  }
+
+  .hero-premium{
+    min-height:auto;
+    background-position:center;
+    border-radius:20px;
+    animation:none;
+  }
+
+  .hero-content{
+    padding:26px 18px 24px;
+    max-width:none;
+  }
+
+  .hero-content h1{
+    font-size:clamp(26px, 8vw, 40px) !important;
+    line-height:1.04 !important;
+    margin-top:8px;
+  }
+
+  .hero-content .lead{
+    font-size:14px !important;
+    line-height:1.6 !important;
+    max-width:none;
+    margin-top:12px !important;
+  }
+
+  .hero-actions,
+  .hero-cta{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:10px;
+    margin-top:16px;
+  }
+
+  .hero-actions .btn,
+  .hero-cta .btn{
+    width:100%;
+    min-height:54px;
+    justify-content:center;
+    font-size:15px;
+  }
+
+  .pills{
+    margin-top:14px;
+    margin-bottom:18px;
+  }
+
+  .pill{
+    width:100%;
+    text-align:center;
+    justify-content:center;
+    font-size:14px;
+    padding:10px 12px;
+  }
+
+  .hero-trust{
+    margin-top:12px;
+    font-size:12px;
+  }
+
+  .cta{
+    padding:22px !important;
+    border-radius:26px !important;
+  }
+
+  .cta h2{
+    font-size:22px !important;
+    line-height:1.2 !important;
+  }
+
+  .cta p{
+    font-size:15px !important;
+    line-height:1.7 !important;
+  }
+
+  .cta-actions{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:12px !important;
+    align-items:stretch !important;
+  }
+
+  .cta-actions .btn{
+    width:100% !important;
+    justify-content:center !important;
+    min-height:56px !important;
+    font-size:15px !important;
+  }
+
+  .topbar-center{
+    justify-content:center;
+  }
+}
 @keyframes heroFloat{
   0%{
     background-position:center 52%;
@@ -1063,4 +1277,4 @@ p{
     background-position:center 52%;
   }
 }
- can you update it here please 
+ 
