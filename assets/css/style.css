@@ -848,9 +848,9 @@ p{
 .hero-visual .lead,
 .hero-content h1,
 .hero-content .lead{
-  max-width:100% !important;
   width:100%;
-  overflow-wrap:anywhere;
+  max-width:100% !important;
+  overflow-wrap:break-word;
   word-break:normal;
 }
 
