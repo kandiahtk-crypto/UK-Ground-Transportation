@@ -522,6 +522,10 @@ p{
    PILLS
 ========================= */
 
+/* =========================
+   PILLS
+========================= */
+
 .pills{
   margin-top:16px;
   display:flex;
@@ -554,20 +558,20 @@ p{
    PANELS
 ========================= */
 
+/* =========================
+   PANELS
+========================= */
+
 .panel{
   position:relative;
-
   background:#ffffff;
   border-radius:20px;
   padding:28px;
-
   border:1px solid rgba(201,169,106,.45);
-
   box-shadow:
     0 10px 28px rgba(15,23,42,.05),
     0 0 0 3px rgba(201,169,106,.08);
 }
-
 
 .panel::before{
   content:"";
@@ -594,7 +598,6 @@ p{
 .panel small{
   color:rgba(100,116,139,.9);
 }
-
 /* =========================
    LISTS
 ========================= */
@@ -798,6 +801,10 @@ p{
    MOBILE
 ========================= */
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width:700px){
   h1{
     font-size:38px !important;
@@ -848,6 +855,7 @@ p{
     min-height:auto;
     background-position:center;
     border-radius:20px;
+    animation:none;
   }
 
   .hero-content{
@@ -887,7 +895,7 @@ p{
 
   .pills{
     margin-top:14px;
-margin-bottom:18px;
+    margin-bottom:18px;
   }
 
   .pill{
@@ -941,21 +949,6 @@ margin-bottom:18px;
     justify-content:center;
   }
 }
-@keyframes heroFloat{
-  0%{
-    background-position:center center;
-  }
-  50%{
-    background-position:center 46%;
-  }
-  100%{
-    background-position:center center;
-  }
-}
-@media (max-width:700px){
-  ...
-}
-
 @keyframes heroFloat{
   0%{
     background-position:center center;
