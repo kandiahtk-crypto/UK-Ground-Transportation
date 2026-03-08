@@ -488,6 +488,11 @@ p{
       circle at 80% 85%,
       rgba(201,169,106,0.14),
       transparent 40%
+    ),
+    radial-gradient(
+      circle at center,
+      transparent 40%,
+      rgba(6,16,32,0.35) 100%
     );
 }
 
