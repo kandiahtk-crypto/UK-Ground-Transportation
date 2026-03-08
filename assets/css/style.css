@@ -882,7 +882,7 @@ p{
 .hero-content .lead{
   width:100%;
   max-width:100% !important;
-  overflow-wrap:anywhere;
+  overflow-wrap:break-word;
   word-break:normal;
 }
 
