@@ -839,25 +839,65 @@ p{
     padding:0 20px;
   }
 
-   .hero-visual{
+   .home-page .hero-visual{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-end;
   overflow:hidden;
-  padding:34px 22px 28px !important;
+  padding:34px 22px 24px !important;
+  border-radius:26px !important;
+  min-height:auto;
 }
 
-.hero-visual h1,
-.hero-visual .lead,
-.hero-content h1,
-.hero-content .lead{
+.home-page .hero-visual .kicker,
+.home-page .hero-visual h1,
+.home-page .hero-visual .lead,
+.home-page .hero-visual .hero-cta,
+.home-page .hero-visual .pills{
   width:100%;
   max-width:100% !important;
+}
+
+.home-page .hero-visual h1{
+  font-size:clamp(28px, 9vw, 42px) !important;
+  line-height:1.05 !important;
+  margin-top:8px !important;
+  max-width:none !important;
+  white-space:normal;
   overflow-wrap:break-word;
   word-break:normal;
 }
 
-.hero-visual h1,
-.hero-content h1{
-  font-size:clamp(28px, 9vw, 42px) !important;
-  line-height:1.05 !important;
+.home-page .hero-visual .lead{
+  font-size:15px !important;
+  line-height:1.72 !important;
+  margin-top:12px !important;
+  max-width:none !important;
+  white-space:normal;
+  overflow-wrap:break-word;
+  word-break:normal;
+}
+
+.home-page .hero-visual .hero-cta{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-items:stretch;
+}
+
+.home-page .hero-visual .hero-cta .btn{
+  width:100%;
+}
+
+.home-page .hero-visual .pills{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.home-page .hero-visual .pill{
+  width:100%;
 }
 
    .hero{
