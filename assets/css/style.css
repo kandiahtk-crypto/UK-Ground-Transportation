@@ -542,10 +542,6 @@ p{
   font-size:13px;
   color:rgba(255,255,255,.76);
 }
-========================= */
-/* =========================
-   PILLS
-========================= */
 
 /* =========================
    PILLS
@@ -579,9 +575,6 @@ p{
   color:#ffffff;
   backdrop-filter:blur(4px);
 }
-/* =========================
-   PANELS
-========================= */
 
 /* =========================
    PANELS
@@ -596,16 +589,9 @@ p{
   box-shadow:
     0 10px 28px rgba(15,23,42,.05),
     0 0 0 3px rgba(201,169,106,.08);
-   margin-bottom:20px;
+  margin-bottom:20px;
 }
-/* =========================
-   GRID + CARD FIX
-========================= */
 
-.grid{
-  display:grid;
-  gap:18px;
-  align-items:start;   /* prevents 
 .panel:hover{
   transform:translateY(-4px);
   border-color:#c9a96a;
@@ -614,6 +600,7 @@ p{
     0 0 0 4px rgba(201,169,106,.14);
   transition:all .25s ease;
 }
+
 .panel::before{
   content:"";
   position:absolute;
@@ -639,6 +626,48 @@ p{
 .panel small{
   color:rgba(100,116,139,.9);
 }
+
+/* =========================
+   GRID + CARD FIX
+========================= */
+
+.grid{
+  display:grid;
+  gap:18px;
+  align-items:start;
+}
+
+.grid-2{
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+}
+
+.grid-3{
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+}
+
+.card{
+  background:#fff;
+  border:1px solid rgba(15,23,42,.08);
+  border-radius:18px;
+  padding:22px;
+  align-self:start;
+  display:flex;
+  flex-direction:column;
+}
+
+.card .btn{
+  align-self:flex-start;
+}
+
+.route{
+  margin-top:12px;
+  font-weight:600;
+  line-height:1.6;
+  color:#0f172a;
+}
+
+
+
 /* =========================
    LISTS
 ========================= */
