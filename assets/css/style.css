@@ -983,13 +983,13 @@ p{
 }
 @keyframes heroFloat{
   0%{
-    background-position:center center;
+    background-position:center 52%;
   }
   50%{
     background-position:center 46%;
   }
   100%{
-    background-position:center center;
+    background-position:center 52%;
   }
 }
  can you update it here please 
