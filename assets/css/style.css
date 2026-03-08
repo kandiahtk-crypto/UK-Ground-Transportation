@@ -598,6 +598,31 @@ p{
     0 0 0 3px rgba(201,169,106,.08);
    margin-bottom:20px;
 }
+/* =========================
+   GRID + CARD FIX
+========================= */
+
+.grid{
+  display:grid;
+  gap:18px;
+  align-items:start;   /* prevents stretching */
+}
+
+.grid-2{
+  grid-template-columns:repeat(2, minmax(0,1fr));
+}
+
+.grid-3{
+  grid-template-columns:repeat(3, minmax(0,1fr));
+}
+
+.card{
+  background:#fff;
+  border:1px solid rgba(15,23,42,.08);
+  border-radius:18px;
+  padding:22px;
+  align-self:start;  /* stops vertical stretching */
+}
 .panel:hover{
   transform:translateY(-4px);
   border-color:#c9a96a;
