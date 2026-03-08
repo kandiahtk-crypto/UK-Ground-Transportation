@@ -507,14 +507,16 @@ p{
     radial-gradient(circle at 25% 10%, rgba(201,169,106,.18), transparent 40%);
 }
 
+
 .hero-content{
   position:relative;
   z-index:2;
   color:#ffffff;
-  padding:56px 40px 42px;
+  padding:44px 28px;
   max-width:760px;
+  width:100%;
+  overflow-wrap:break-word;
 }
-
 .hero-content h1{
   color:#ffffff;
   letter-spacing:-0.045em;
