@@ -524,7 +524,9 @@ p{
 
 .hero-content h1{
   color:#ffffff;
-  text-shadow:0 4px 18px rgba(0,0,0,.45);
+  text-shadow:
+    0 6px 28px rgba(0,0,0,.55),
+    0 0 40px rgba(201,169,106,.15);
 }
 
 .hero-content .lead{
