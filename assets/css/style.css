@@ -8,13 +8,14 @@
   box-sizing:border-box;
 }
 
-html, body{
+html,
+body{
   margin:0;
   padding:0;
 }
 
 body{
-  font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background:
     radial-gradient(circle at 20% 0%, rgba(15,23,42,.04), transparent 55%),
     radial-gradient(circle at 80% 10%, rgba(15,23,42,.03), transparent 55%),
@@ -70,20 +71,22 @@ main{
    TYPOGRAPHY
 ========================= */
 
-h1,h2,h3{
+h1,
+h2,
+h3{
   margin:0;
-  font-family:"Fraunces",serif;
+  font-family:"Fraunces", serif;
   color:#0f172a;
 }
 
 h1{
-  font-size:clamp(28px,3.6vw,44px);
+  font-size:clamp(28px, 3.6vw, 44px);
   line-height:1.08;
   letter-spacing:-0.02em;
 }
 
 h2{
-  font-size:clamp(22px,2.6vw,32px);
+  font-size:clamp(22px, 2.6vw, 32px);
   line-height:1.2;
 }
 
@@ -152,6 +155,23 @@ p{
   color:#fff !important;
 }
 
+.cta .btn-light{
+  background:#ffffff !important;
+  color:#0f172a !important;
+  border:1px solid #ffffff !important;
+}
+
+.cta .btn-light:hover{
+  background:#f8fafc !important;
+  color:#0f172a !important;
+}
+
+.cta .btn-outline-light{
+  color:#ffffff !important;
+  border:1px solid rgba(255,255,255,.22) !important;
+  background:rgba(255,255,255,.08) !important;
+}
+
 /* =========================
    TOPBAR
 ========================= */
@@ -187,7 +207,6 @@ p{
    HEADER
 ========================= */
 
-
 .header{
   position:sticky;
   top:0;
@@ -209,12 +228,7 @@ p{
   left:0;
   width:100%;
   height:1px;
-  background:linear-gradient(
-    to right,
-    transparent,
-    #c9a96a,
-    transparent
-  );
+  background:linear-gradient(to right, transparent, #c9a96a, transparent);
   opacity:.65;
 }
 
@@ -227,7 +241,7 @@ p{
 }
 
 .brand{
-  font-family:"Fraunces",serif;
+  font-family:"Fraunces", serif;
   font-weight:600;
   font-size:19px;
   line-height:1.1;
@@ -308,10 +322,18 @@ p{
   width:100%;
 }
 
-/* DESKTOP NAV */
+/* =========================
+   DESKTOP NAV
+========================= */
+
 @media (min-width:981px){
-  #menuBtn{ display:none; }
-  .contact-icon{ display:none; }
+  #menuBtn{
+    display:none;
+  }
+
+  .contact-icon{
+    display:none;
+  }
 
   .header-inner{
     grid-template-columns:340px 1fr;
@@ -331,26 +353,26 @@ p{
   }
 
   .nav-desktop a{
-  font-size:12px;
-  text-transform:uppercase;
-  position:relative;
-  padding-bottom:4px;
-}
+    font-size:12px;
+    text-transform:uppercase;
+    position:relative;
+    padding-bottom:4px;
+  }
 
-.nav-desktop a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:0;
-  width:0;
-  height:1px;
-  background:#c9a96a;
-  transition:width .25s ease;
-}
+  .nav-desktop a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:1px;
+    background:#c9a96a;
+    transition:width .25s ease;
+  }
 
-.nav-desktop a:hover::after{
-  width:100%;
-}
+  .nav-desktop a:hover::after{
+    width:100%;
+  }
 
   .mobile-nav{
     display:none !important;
@@ -358,7 +380,7 @@ p{
 }
 
 /* =========================
-   HAMBURGER ICON FIX
+   HAMBURGER ICON
 ========================= */
 
 .menu-btn{
@@ -470,8 +492,6 @@ p{
    PREMIUM IMAGE HERO
 ========================= */
 
-
-
 .hero-premium{
   position:relative;
   overflow:hidden;
@@ -488,26 +508,10 @@ p{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(
-      to bottom,
-      rgba(6,16,32,0.60),
-      rgba(6,16,32,0.92)
-    ),
-    radial-gradient(
-      circle at 25% 10%,
-      rgba(201,169,106,0.25),
-      transparent 45%
-    ),
-    radial-gradient(
-      circle at 80% 85%,
-      rgba(201,169,106,0.14),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at center,
-      transparent 40%,
-      rgba(6,16,32,0.35) 100%
-    );
+    linear-gradient(to bottom, rgba(6,16,32,0.60), rgba(6,16,32,0.92)),
+    radial-gradient(circle at 25% 10%, rgba(201,169,106,0.25), transparent 45%),
+    radial-gradient(circle at 80% 85%, rgba(201,169,106,0.14), transparent 40%),
+    radial-gradient(circle at center, transparent 40%, rgba(6,16,32,0.35) 100%);
 }
 
 .hero-content{
@@ -562,7 +566,6 @@ p{
   justify-content:center;
 }
 
-/* Hero pills stay premium on dark/image backgrounds */
 .hero-visual .pill,
 .hero-premium .pill,
 .hero-content .pill{
@@ -605,12 +608,7 @@ p{
   right:20px;
   height:3px;
   border-radius:2px;
-  background:linear-gradient(
-    to right,
-    transparent,
-    #c9a96a,
-    transparent
-  );
+  background:linear-gradient(to right, transparent, #c9a96a, transparent);
   opacity:.9;
 }
 
@@ -624,7 +622,7 @@ p{
 }
 
 /* =========================
-   GRID + CARD FIX
+   GRID + CARDS
 ========================= */
 
 .grid{
@@ -661,8 +659,6 @@ p{
   line-height:1.6;
   color:#0f172a;
 }
-
-
 
 /* =========================
    LISTS
@@ -762,7 +758,7 @@ p{
 }
 
 .footer-ultra-name{
-  font-family:"Fraunces",serif;
+  font-family:"Fraunces", serif;
   font-size:18px;
   color:#ffffff;
 }
@@ -836,239 +832,11 @@ p{
   }
 }
 
-@media (max-width:700px){
-
-  .grid-2,
-  .grid-3{
-    grid-template-columns:1fr !important;
-  }
-
-  .grid{
-    gap:20px;
-  }
-
-  .card{
-    width:100%;
-    padding:18px;
-  }
-
-  .panel{
-    margin-bottom:18px;
-  }
-
-  .footer-ultra{
-    padding:38px 0 22px;
-  }
-
-  .footer-ultra-grid{
-    grid-template-columns:1fr;
-    gap:26px;
-  }
-
-  .footer-ultra-title{
-    font-size:12px;
-    margin-bottom:8px;
-  }
-
-  .footer-ultra-links a{
-    padding:8px 0;
-  }
-
-  h1{
-    font-size:38px !important;
-    line-height:1.06 !important;
-  }
-
-  .header-inner{
-    grid-template-columns:56px 1fr 56px;
-    gap:12px;
-    padding:16px 0;
-  }
-
-  .brand{
-    font-size:16px;
-    line-height:1.12;
-    letter-spacing:.035em;
-    max-width:320px;
-  }
-
-  .icon-btn{
-    width:52px;
-    height:52px;
-  }
-
-  
-  .cta-actions .btn{
-    width:100% !important;
-    justify-content:center !important;
-    min-height:56px !important;
-    font-size:15px !important;
-  }
-
-  .hero{
-    padding:22px 0 22px;
-  }
-
-  .hero-visual{
-    padding:24px 18px 22px !important;
-    border-radius:20px !important;
-  }
-
-  .hero-visual h1{
-    font-size:clamp(24px, 8vw, 38px) !important;
-    line-height:1.04 !important;
-    margin-top:8px !important;
-  }
-
-  .hero-visual .lead{
-    font-size:14px !important;
-    line-height:1.62 !important;
-    margin-top:12px !important;
-    max-width:none !important;
-  }
-
-  .hero-premium{
-    min-height:auto;
-    background-position:center;
-    border-radius:20px;
-    animation:none;
-  }
-
-  .hero-content{
-    padding:26px 18px 24px;
-    max-width:none;
-  }
-
-  .hero-content h1{
-    font-size:clamp(26px, 8vw, 40px) !important;
-    line-height:1.04 !important;
-    margin-top:8px;
-  }
-
-  .hero-content .lead{
-    font-size:14px !important;
-    line-height:1.6 !important;
-    max-width:none;
-    margin-top:12px !important;
-  }
-
-  .hero-actions,
-  .hero-cta{
-    display:flex;
-    flex-direction:column;
-    align-items:stretch;
-    gap:10px;
-    margin-top:16px;
-  }
-
-  .hero-actions .btn,
-  .hero-cta .btn{
-    width:100%;
-    min-height:54px;
-    justify-content:center;
-    font-size:15px;
-  }
-
-  .pills{
-    margin-top:14px;
-    margin-bottom:18px;
-  }
-
-  .pill{
-    width:100%;
-    text-align:center;
-    justify-content:center;
-    font-size:14px;
-    padding:10px 12px;
-  }
-
-  .hero-trust{
-    margin-top:12px;
-    font-size:12px;
-  }
-
-  .panel{
-    padding:22px;
-    border-radius:20px;
-  }
-
-  .cta{
-    padding:22px !important;
-    border-radius:26px !important;
-  }
-
-  .cta h2{
-    font-size:22px !important;
-    line-height:1.2 !important;
-  }
-
-  .cta p{
-    font-size:15px !important;
-    line-height:1.7 !important;
-  }
-
-  .cta-actions{
-    display:flex !important;
-    flex-direction:column !important;
-    gap:12px !important;
-    align-items:stretch !important;
-  }
-
-  .cta-actions .btn{
-    width:100% !important;
-    justify-content:center !important;
-    min-height:56px !important;
-    font-size:15px !important;
-  }
-
-  .topbar-center{
-    justify-content:center;
-  }
-}
-
-
-  .footer-ultra-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:26px;
-  }
-
-  .footer-ultra-grid--5{
-    grid-template-columns:1fr;
-  }
-
-  .footer-ultra-brand{
-    align-items:flex-start;
-  }
-
-  
-/* =========================
-   MOBILE CTA FIXES
-========================= */
-
-.cta .btn-light{
-  background:#ffffff !important;
-  color:#0f172a !important;
-  border:1px solid #ffffff !important;
-}
-
-.cta .btn-light:hover{
-  background:#f8fafc !important;
-  color:#0f172a !important;
-}
-
-.cta .btn-outline-light{
-  color:#ffffff !important;
-  border:1px solid rgba(255,255,255,.22) !important;
-  background:rgba(255,255,255,.08) !important;
-}
-
 /* =========================
    MOBILE
 ========================= */
 
 @media (max-width:700px){
-
   .grid-2,
   .grid-3{
     grid-template-columns:1fr !important;
@@ -1266,6 +1034,7 @@ p{
     justify-content:center;
   }
 }
+
 @keyframes heroFloat{
   0%{
     background-position:center 52%;
@@ -1277,4 +1046,3 @@ p{
     background-position:center 52%;
   }
 }
- 
