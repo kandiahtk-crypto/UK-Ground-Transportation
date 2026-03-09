@@ -297,14 +297,13 @@ p{
 /* =========================
    NAVIGATION
 ========================= */
-
-.nav-desktop{
-  display:none;
-}
+/* =========================
+   MOBILE NAV PREMIUM TIDY
+========================= */
 
 .mobile-nav{
   display:none;
-  padding:14px 0;
+  padding:12px 0 0;
   border-top:1px solid rgba(15,23,42,.08);
 }
 
@@ -314,13 +313,15 @@ p{
 
 .mobile-nav a{
   display:block;
-  padding:16px 18px;
-  border-radius:16px;
+  padding:14px 18px;
+  margin-bottom:8px;
+  border-radius:14px;
+  border:1px solid rgba(15,23,42,.06);
+  background:rgba(255,255,255,.72);
   color:#172033 !important;
   font-weight:500;
-  border:1px solid rgba(15,23,42,.06);
-  background:#ffffff;
-  margin-bottom:10px;
+  font-size:16px;
+  box-shadow:none;
 }
 
 .mobile-nav a:hover{
@@ -328,8 +329,8 @@ p{
 }
 
 .mobile-nav .btn{
-  margin-top:10px;
   width:100%;
+  margin-top:10px;
 }
 
 /* DESKTOP NAV */
