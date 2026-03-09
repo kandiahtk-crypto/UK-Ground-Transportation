@@ -1,436 +1,143 @@
-<!doctype html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Request a Quote | UK Inbound Ground Transport</title>
-  <meta name="description" content="Request a quote for UK inbound ground transport. Feasibility review, clear quotation and professional delivery for tour operators and DMCs." />
-  <link rel="canonical" href="https://ukinboundgroundtransport.com/request-a-quote.html" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-
-  <style>
-    a { color: inherit; }
-    #errorMsg a { text-decoration: underline; }
-  </style>
-</head>
-
-<body>
-
-  <header class="header">
-
-    <div class="topbar">
-      <div class="container topbar-inner">
-        <div class="topbar-center">
-          <a class="topbar-item" href="tel:+442086292776">+44 20 8629 2776</a>
-          <span class="topbar-sep">•</span>
-          <a class="topbar-item" href="mailto:info@ukinboundgroundtransport.com">info@ukinboundgroundtransport.com</a>
-        </div>
-      </div>
+<section class="enquiry-shell">
+  <div class="enquiry-wrap">
+    <div class="enquiry-header">
+      <span class="eyebrow">Ground Transport</span>
+      <h1>Enquiry details</h1>
+      <p>
+        Quotations are reviewed against timing realism, access, luggage profile,
+        and vehicle suitability. The more complete the information, the more
+        accurate the quotation.
+      </p>
     </div>
 
-    <div class="mainbar">
-      <div class="container header-inner">
-        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
-          <span class="hamburger"></span>
-        </button>
-
-        <a href="index.html" class="brand" aria-label="Home">UK Inbound Ground Transport</a>
-        <a href="contact.html" class="icon-btn contact-icon" aria-label="Contact">✉</a>
-
-        <nav class="nav-desktop" aria-label="Primary">
-          <a href="index.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="fleet.html">Fleet</a>
-          <a href="coverage.html">Coverage</a>
-          <a href="trade-partners.html">Trade Partners</a>
-          <a href="trade-markets.html">International Markets</a>
-          <a href="contact.html">Contact</a>
-          <a class="btn btn-primary" href="request-a-quote.html" aria-current="page">Request a Quote</a>
-        </nav>
-      </div>
-
-      <div class="container">
-        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
-          <a href="index.html">Home</a>
-          <a href="services.html">Services</a>
-          <a href="fleet.html">Fleet</a>
-          <a href="coverage.html">Coverage</a>
-          <a href="trade-partners.html">Trade Partners</a>
-          <a href="trade-markets.html">International Markets</a>
-          <a href="contact.html">Contact</a>
-          <a class="btn btn-primary" href="request-a-quote.html" aria-current="page">Request a Quote</a>
-        </nav>
-      </div>
-    </div>
-
-  </header>
-
-  <main class="container">
-
-    <!-- HERO -->
-    <section class="hero hero-premium">
-
-      <div class="hero-overlay"></div>
-
-      <div class="hero-content">
-
-        <div class="kicker">
-          Quotations • feasibility review • programme planning
+    <form class="lux-form">
+      <!-- Contact -->
+      <div class="form-card">
+        <div class="card-head">
+          <h2>Contact details</h2>
+          <p>Who should receive the quotation and any clarifications.</p>
         </div>
 
-        <h1>
-          Request a quote for structured UK &amp; Ireland programme transport
-        </h1>
+        <div class="form-grid two">
+          <div class="field">
+            <label for="company_name">Company name</label>
+            <input id="company_name" name="company_name" type="text" placeholder="Tour operator / DMC name">
+          </div>
 
-        <p class="lead">
-          Share your routing, dates, passenger numbers and operational requirements.
-          We review feasibility, vehicle suitability and programme structure before
-          returning a clear quotation with defined scope.
-        </p>
+          <div class="field">
+            <label for="contact_name">Contact name</label>
+            <input id="contact_name" name="contact_name" type="text" placeholder="Full name">
+          </div>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#quoteForm">
-            Start enquiry
-          </a>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="name@company.com">
+          </div>
 
-          <a class="btn btn-outline-light" href="contact.html">
-            Contact Operations
-          </a>
+          <div class="field">
+            <label for="phone">Phone / WhatsApp</label>
+            <input id="phone" name="phone" type="text" placeholder="+44 … / international number">
+            <small>Recommended for time-sensitive clarification.</small>
+          </div>
         </div>
-
-        <div class="pills">
-          <span class="pill">Feasibility review</span>
-          <span class="pill">Defined specification</span>
-          <span class="pill">Trade-only enquiries</span>
-          <span class="pill">UK &amp; Ireland coverage</span>
-        </div>
-
       </div>
 
-    </section>
+      <!-- Trip -->
+      <div class="form-card">
+        <div class="card-head">
+          <h2>Trip details</h2>
+          <p>Core journey information for pricing and suitability.</p>
+        </div>
 
-    <!-- FORM INTRO -->
-    <section class="section">
-      <div class="panel">
-        <div class="kicker">Before you submit</div>
-        <h2 style="margin-top:10px;">Send enough detail for a meaningful review</h2>
-        <p style="margin-top:10px; max-width:95ch;">
-          For multi-day programmes, a short itinerary summary is usually enough to begin review.
-          If you have a full itinerary PDF, you can email it after submitting the form using the
-          same company name and travel date so it can be matched quickly.
-        </p>
-        <p style="margin-top:10px; font-size:13px; color:rgba(100,116,139,.95);">
-          Typical response: <strong>24 hours</strong>. For urgent movement coordination,
-          use the contact page or WhatsApp Ops.
-        </p>
+        <div class="form-grid three">
+          <div class="field">
+            <label for="service_type">Service type</label>
+            <select id="service_type" name="service_type">
+              <option value="">Select</option>
+              <option>Airport transfer</option>
+              <option>Station transfer</option>
+              <option>Day hire</option>
+              <option>Multi-day tour</option>
+              <option>Event transport</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="dates">Date(s)</label>
+            <input id="dates" name="dates" type="text" placeholder="e.g., 12–18 May 2026">
+          </div>
+
+          <div class="field">
+            <label for="pickup_times">Preferred pickup time(s)</label>
+            <input id="pickup_times" name="pickup_times" type="text" placeholder="e.g., 09:00 / TBC">
+          </div>
+
+          <div class="field">
+            <label for="pickup_location">Pickup location</label>
+            <input id="pickup_location" name="pickup_location" type="text" placeholder="Airport / hotel / venue (postcode if known)">
+          </div>
+
+          <div class="field">
+            <label for="dropoff_location">Drop-off location</label>
+            <input id="dropoff_location" name="dropoff_location" type="text" placeholder="Hotel / venue / city (postcode if known)">
+          </div>
+
+          <div class="field">
+            <label for="vehicle_preference">Vehicle preference</label>
+            <select id="vehicle_preference" name="vehicle_preference">
+              <option value="">Optional</option>
+              <option>Executive sedan</option>
+              <option>MPV</option>
+              <option>Minicoach</option>
+              <option>Coach</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="passengers">Passengers</label>
+            <input id="passengers" name="passengers" type="text" placeholder="e.g., 45">
+          </div>
+
+          <div class="field">
+            <label for="luggage_estimate">Luggage estimate</label>
+            <input id="luggage_estimate" name="luggage_estimate" type="text" placeholder="e.g., 45 suitcases + carry-ons">
+          </div>
+
+          <div class="field field-span-1">
+            <label for="itinerary_link">Itinerary PDF link <span>(optional)</span></label>
+            <input id="itinerary_link" name="itinerary_link" type="url" placeholder="Paste Google Drive / OneDrive / Dropbox link">
+            <small>Or email the PDF after submitting.</small>
+          </div>
+        </div>
       </div>
-    </section>
 
-    <!-- FORM -->
-    <section class="section">
-      <div class="form">
-        <div class="form-head">
-          <h2>Enquiry details</h2>
-          <p style="margin-top:10px; max-width:90ch;">
-            Quotations are reviewed against timing realism, access, luggage profile and vehicle
-            suitability. The more complete the information, the more accurate the quotation.
+      <!-- Notes -->
+      <div class="form-card">
+        <div class="card-head">
+          <h2>Programme notes</h2>
+          <p>
+            Include key cities, number of days, hotels, access notes, or timing flexibility.
           </p>
         </div>
 
-        <div class="form-body">
-
-          <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-            <input type="hidden" name="access_key" value="b9845288-9bd0-4bb7-9d28-a25ec854b65a">
-            <input type="hidden" name="from_name" value="UK Inbound Ground Transport Website">
-            <input type="hidden" name="subject" value="New Quote Request — UK Inbound Ground Transport">
-            <input type="hidden" name="replyto" id="replyto">
-            <input type="hidden" name="page_url" id="page_url">
-            <input type="hidden" name="referrer" id="referrer">
-            <input type="hidden" name="timestamp" id="timestamp">
-            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none;">
-
-            <div class="grid grid-2">
-              <div>
-                <label for="company">Company name</label>
-                <input id="company" name="company" type="text" placeholder="Tour operator / DMC name" required>
-              </div>
-
-              <div>
-                <label for="contact">Contact name</label>
-                <input id="contact" name="contact" type="text" placeholder="Full name" required>
-              </div>
-
-              <div>
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="name@company.com" required>
-              </div>
-
-              <div>
-                <label for="phone">Phone / WhatsApp</label>
-                <input id="phone" name="phone" type="text" placeholder="+44 … / international number">
-                <div class="hint">Recommended for time-sensitive clarification.</div>
-              </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <div class="grid grid-3">
-              <div>
-                <label for="service">Service type</label>
-                <select id="service" name="service" required>
-                  <option value="" selected disabled>Select</option>
-                  <option>Airport / Port transfer</option>
-                  <option>Multi-day UK touring</option>
-                  <option>MICE / Conference movements</option>
-                  <option>London touring / excursions</option>
-                  <option>Series departures</option>
-                  <option>Other</option>
-                </select>
-              </div>
-
-              <div>
-                <label for="dates">Date(s)</label>
-                <input id="dates" name="dates" type="text" placeholder="e.g., 12–18 May 2026" required>
-              </div>
-
-              <div>
-                <label for="time">Preferred pickup time(s)</label>
-                <input id="time" name="time" type="text" placeholder="e.g., 09:00 / TBC">
-              </div>
-            </div>
-
-            <div class="grid grid-2" style="margin-top:16px;">
-              <div>
-                <label for="pickup">Pickup location</label>
-                <input id="pickup" name="pickup" type="text" placeholder="Airport / hotel / venue (postcode if available)" required>
-              </div>
-
-              <div>
-                <label for="dropoff">Drop-off location</label>
-                <input id="dropoff" name="dropoff" type="text" placeholder="Hotel / venue / city (postcode if available)" required>
-              </div>
-            </div>
-
-            <div class="grid grid-3" style="margin-top:16px;">
-              <div>
-                <label for="pax">Passengers</label>
-                <input id="pax" name="pax" type="number" min="1" placeholder="e.g., 45" required>
-              </div>
-
-              <div>
-                <label for="luggage">Luggage estimate</label>
-                <input id="luggage" name="luggage" type="text" placeholder="e.g., 45 suitcases + carry-ons">
-              </div>
-
-              <div>
-                <label for="vehicle">Vehicle preference</label>
-                <select id="vehicle" name="vehicle">
-                  <option value="" selected>Optional</option>
-                  <option>Mini coach</option>
-                  <option>Midi coach</option>
-                  <option>Full-size coach</option>
-                  <option>Executive coach</option>
-                  <option>Not specified</option>
-                </select>
-              </div>
-            </div>
-
-            <div style="margin-top:16px;">
-              <label for="itinerary_link">Itinerary PDF link (optional)</label>
-              <input id="itinerary_link" name="itinerary_link" type="url" placeholder="Paste Google Drive / OneDrive link">
-              <div class="hint">Or email the PDF to <strong>info@ukinboundgroundtransport.com</strong> after submitting.</div>
-            </div>
-
-            <div style="margin-top:16px;">
-              <label for="notes">Programme notes / itinerary summary</label>
-              <textarea id="notes" name="notes" placeholder="Key cities, number of days, hotels (if known), guide seat requirement, accessibility needs, fixed timings."></textarea>
-              <div class="hint">If dates or timings may change, note this here.</div>
-            </div>
-
-            <div class="hero-actions" style="justify-content:space-between; align-items:center; margin-top:16px;">
-              <p style="font-size:12px; color:rgba(100,116,139,.95); max-width:68ch;">
-                Submit once. Your enquiry will be reviewed and returned with a clear specification.
-              </p>
-
-              <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                <button class="btn btn-primary" id="submitBtn" type="submit">Submit enquiry</button>
-                <a class="btn" href="contact.html">Contact Operations</a>
-              </div>
-            </div>
-
-            <div id="successMsg" class="success" role="status" aria-live="polite" style="display:none; margin-top:14px;">
-              Thank you. Your enquiry has been received. If you have an itinerary PDF, you can email it now using the same company name and date.
-            </div>
-
-            <div id="errorMsg" class="success" role="status" aria-live="polite" style="display:none; margin-top:14px;">
-              Sorry — something went wrong sending the form. Please try again, or email us directly at
-              <a href="mailto:info@ukinboundgroundtransport.com">info@ukinboundgroundtransport.com</a>.
-            </div>
-
-          </form>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer-ultra">
-    <div class="container footer-ultra-inner">
-
-      <div class="footer-ultra-top">
-        <div class="footer-ultra-brand">
-          <div class="footer-ultra-mark" aria-hidden="true"></div>
-          <div>
-            <div class="footer-ultra-name">Evershine Transport Limited</div>
-            <div class="footer-ultra-sub">Inbound Ground Transport • Trade Partners • UK &amp; Ireland</div>
+        <div class="form-grid one">
+          <div class="field">
+            <label for="programme_notes">Programme notes / itinerary summary</label>
+            <textarea id="programme_notes" name="programme_notes" rows="6" placeholder="Key cities, number of days, hotels, venue names, access constraints, special requirements, and whether dates or timings may change."></textarea>
           </div>
         </div>
       </div>
 
-      <div class="footer-ultra-grid footer-ultra-grid--4">
+      <div class="form-footer">
+        <p class="submit-note">
+          Submit once. Your enquiry will be reviewed and returned with a clear specification.
+        </p>
 
-        <div>
-          <div class="footer-ultra-title">Contact</div>
-          <div class="footer-ultra-links">
-            <a href="mailto:info@ukinboundgroundtransport.com">info@ukinboundgroundtransport.com</a>
-            <a href="tel:+442086292776">+44 20 8629 2776</a>
-          </div>
-
-          <div class="footer-ultra-hq">
-            <span>UK</span><span class="footer-ultra-dot">•</span>
-            <span>Ireland</span><span class="footer-ultra-dot">•</span>
-            <span>London movements</span>
-          </div>
-        </div>
-
-        <div>
-          <div class="footer-ultra-title">Company</div>
-          <div class="footer-ultra-meta">
-            Company Reg: <strong>13507458</strong><br>
-            VAT: <strong>388919914</strong><br>
-            © <span id="year"></span> Evershine Transport Limited
-          </div>
-        </div>
-
-        <div>
-          <div class="footer-ultra-title">Navigation</div>
-          <div class="footer-ultra-links">
-            <a href="services.html">Services</a>
-            <a href="fleet.html">Fleet</a>
-            <a href="coverage.html">Coverage</a>
-            <a href="trade-partners.html">Trade Partners</a>
-            <a href="trade-markets.html">International Markets</a>
-            <a href="contact.html">Contact</a>
-          </div>
-        </div>
-
-        <div>
-          <div class="footer-ultra-title">Legal</div>
-          <div class="footer-ultra-links">
-            <a href="procurement.html">Procurement &amp; Compliance</a>
-            <a href="gdpr-data-protection.html">GDPR &amp; Data Protection</a>
-            <a href="modern-slavery-statement.html">Modern Slavery Statement</a>
-            <a href="cookie-policy.html">Cookie Policy</a>
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="footer-ultra-bottom">
-        <div class="footer-ultra-small">
-          Trade-only supplier for tour operators and DMCs. Structured routing, disciplined touring delivery, and calm operational control.
+        <div class="form-actions">
+          <a href="/contact-operations" class="btn btn-secondary">Contact Operations</a>
+          <button type="submit" class="btn btn-primary">Submit enquiry</button>
         </div>
       </div>
-
-    </div>
-  </footer>
-
-  <a class="wa-float"
-     href="https://wa.me/447957776778?text=Hello%20UK%20Inbound%20Ground%20Transport%20—%20I%20need%20help%20with%20a%20movement."
-     target="_blank" rel="noopener"
-     aria-label="WhatsApp Operations">
-    WhatsApp Ops
-  </a>
-
-  <style>
-    .wa-float{
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 9999;
-      background: #111827;
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 14px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 14px;
-      box-shadow: 0 10px 22px rgba(0,0,0,.18);
-    }
-    .wa-float:hover{ opacity: .92; }
-  </style>
-
-  <script src="assets/js/main.js"></script>
-
-  <script>
-    const y = document.getElementById("year");
-    if (y) y.textContent = new Date().getFullYear();
-
-    const pageUrlEl = document.getElementById("page_url");
-    const refEl = document.getElementById("referrer");
-    const tsEl = document.getElementById("timestamp");
-    if (pageUrlEl) pageUrlEl.value = window.location.href;
-    if (refEl) refEl.value = document.referrer || "Direct / none";
-    if (tsEl) tsEl.value = new Date().toISOString();
-
-    const form = document.getElementById("quoteForm");
-    const successMsg = document.getElementById("successMsg");
-    const errorMsg = document.getElementById("errorMsg");
-    const submitBtn = document.getElementById("submitBtn");
-
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-
-      const visitorEmail = (document.getElementById("email")?.value || "").trim();
-      const replyto = document.getElementById("replyto");
-      if (replyto) replyto.value = visitorEmail;
-
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-
-      submitBtn.disabled = true;
-      successMsg.style.display = "none";
-      errorMsg.style.display = "none";
-
-      try {
-        const formData = new FormData(form);
-        const res = await fetch(form.action, { method: "POST", body: formData });
-        const data = await res.json();
-
-        if (data && data.success) {
-          successMsg.style.display = "block";
-          form.reset();
-          if (pageUrlEl) pageUrlEl.value = window.location.href;
-          if (refEl) refEl.value = document.referrer || "Direct / none";
-          if (tsEl) tsEl.value = new Date().toISOString();
-          successMsg.scrollIntoView({ behavior: "smooth", block: "start" });
-        } else {
-          errorMsg.style.display = "block";
-          errorMsg.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      } catch (e) {
-        errorMsg.style.display = "block";
-        errorMsg.scrollIntoView({ behavior: "smooth", block: "start" });
-      } finally {
-        submitBtn.disabled = false;
-      }
-    });
-  </script>
-
-</body>
-</html>
+    </form>
+  </div>
+</section>
