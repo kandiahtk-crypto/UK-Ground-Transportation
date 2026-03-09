@@ -4,27 +4,27 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>UK & Ireland Inbound Ground Transport for Tour Operators | UK Inbound Ground Transport</title>
-  <meta name="description" content="Inbound ground transport coordination for tour operators and DMCs across the UK & Ireland. Programme-led planning, disciplined delivery, and compliance-first touring operations." />
+  <title>UK Inbound Ground Transport for Tour Operators & DMCs | UK & Ireland Programmes</title>
+  <meta name="description" content="Inbound ground transport for tour operators, DMCs and group travel organisers across the UK and Ireland. Multi-day touring, airport transfers, cruise excursions and programme-led transport planning." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://ukinboundgroundtransport.com/" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="UK & Ireland Inbound Ground Transport for Tour Operators" />
-  <meta property="og:description" content="Programme-led inbound transport coordination across the UK & Ireland for tour operators and DMCs." />
+  <meta property="og:title" content="UK Inbound Ground Transport for Tour Operators & DMCs" />
+  <meta property="og:description" content="Programme-led inbound ground transport across the UK and Ireland for tour operators, DMCs and organised group travel." />
   <meta property="og:url" content="https://ukinboundgroundtransport.com/" />
   <meta property="og:site_name" content="UK Inbound Ground Transport" />
 
-  <!-- Fonts -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="UK Inbound Ground Transport for Tour Operators & DMCs" />
+  <meta name="twitter:description" content="Inbound ground transport for structured UK and Ireland touring programmes." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Main CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Schema: Organization + WebSite + WebPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,52 +33,51 @@
         "@type": "Organization",
         "@id": "https://ukinboundgroundtransport.com/#organization",
         "name": "UK Inbound Ground Transport",
-    
         "url": "https://ukinboundgroundtransport.com/",
         "email": "info@ukinboundgroundtransport.com",
         "telephone": "+44 20 8629 2776"
       },
-    {
- "@type": "Service",
- "name": "Inbound ground transport for tour operators and DMCs",
- "provider": {
-   "@id": "https://ukinboundgroundtransport.com/#organization"
- },
- "serviceType": "Inbound group transport coordination",
- "areaServed": [
-   {
-     "@type": "Country",
-     "name": "United Kingdom"
-   },
-   {
-     "@type": "Country",
-     "name": "Ireland"
-   }
- ],
- "audience": {
-   "@type": "Audience",
-   "audienceType": "Tour operators and destination management companies"
- },
- "description": "Inbound ground transport coordination for structured travel programmes across the UK and Ireland, supporting tour operators, DMCs and organised group travel."
-},
-    
-    {
+      {
+        "@type": "Service",
+        "@id": "https://ukinboundgroundtransport.com/#service",
+        "name": "Inbound ground transport for tour operators and DMCs",
+        "provider": {
+          "@id": "https://ukinboundgroundtransport.com/#organization"
+        },
+        "serviceType": "Inbound group transport coordination",
+        "areaServed": [
+          { "@type": "Country", "name": "United Kingdom" },
+          { "@type": "Country", "name": "Ireland" }
+        ],
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Tour operators, destination management companies and group travel organisers"
+        },
+        "description": "Inbound ground transport coordination for structured travel programmes across the UK and Ireland, supporting tour operators, DMCs and organised group travel."
+      },
+      {
         "@type": "WebSite",
         "@id": "https://ukinboundgroundtransport.com/#website",
         "url": "https://ukinboundgroundtransport.com/",
         "name": "UK Inbound Ground Transport",
-        "publisher": { "@id": "https://ukinboundgroundtransport.com/#organization" },
+        "publisher": {
+          "@id": "https://ukinboundgroundtransport.com/#organization"
+        },
         "inLanguage": "en-GB"
       },
       {
         "@type": "WebPage",
         "@id": "https://ukinboundgroundtransport.com/#webpage",
         "url": "https://ukinboundgroundtransport.com/",
-        "name": "UK & Ireland Inbound Ground Transport for Tour Operators",
-        "description": "Inbound ground transport coordination for tour operators and DMCs across the UK & Ireland. Programme-led planning, disciplined delivery, and compliance-first touring operations.",
+        "name": "UK Inbound Ground Transport for Tour Operators & DMCs",
+        "description": "Inbound ground transport for tour operators, DMCs and group travel organisers across the UK and Ireland.",
         "inLanguage": "en-GB",
-        "isPartOf": { "@id": "https://ukinboundgroundtransport.com/#website" },
-        "about": { "@id": "https://ukinboundgroundtransport.com/#organization" }
+        "isPartOf": {
+          "@id": "https://ukinboundgroundtransport.com/#website"
+        },
+        "about": {
+          "@id": "https://ukinboundgroundtransport.com/#organization"
+        }
       }
     ]
   }
@@ -87,10 +86,8 @@
 
 <body class="home-page">
 
-  <!-- Header -->
   <header class="header">
 
-    <!-- Topbar -->
     <div class="topbar">
       <div class="container topbar-inner">
         <div class="topbar-center">
@@ -101,7 +98,6 @@
       </div>
     </div>
 
-    <!-- Mainbar -->
     <div class="mainbar">
       <div class="container header-inner">
         <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
@@ -125,7 +121,7 @@
       </div>
 
       <div class="container">
-        <nav class="mobile-nav" id="mobileNav">
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
           <a href="index.html">Home</a>
           <a href="services.html">Services</a>
           <a href="fleet.html">Fleet</a>
@@ -147,13 +143,13 @@
         <div class="kicker">Tour operators • DMCs • UK &amp; Ireland touring</div>
 
         <h1 style="margin-top:10px;">
-          Programme-led ground transport for UK &amp; Ireland itineraries
+          Inbound ground transport for UK &amp; Ireland touring programmes
         </h1>
 
         <p class="lead" style="margin-top:14px;">
-          We support professional travel organisers delivering multi-city itineraries
-          across the UK and Ireland. Every movement is planned around feasibility,
-          access, luggage capacity and disciplined touring delivery.
+          We support tour operators, destination management companies and group travel organisers
+          delivering structured itineraries across England, Scotland, Wales and Ireland.
+          Every movement is planned around feasibility, access, luggage profile and disciplined day-to-day delivery.
         </p>
 
         <div class="hero-cta">
@@ -162,110 +158,121 @@
         </div>
 
         <div class="pills" style="margin-top:18px;">
-          <span class="pill">Feasibility-first planning</span>
+          <span class="pill">Multi-day touring</span>
           <span class="pill">UK &amp; Ireland coverage</span>
-          <span class="pill">Touring + routing discipline</span>
-          <span class="pill">Compliance-led operations</span>
+          <span class="pill">Cruise &amp; gateway support</span>
+          <span class="pill">Compliance-led planning</span>
         </div>
       </div>
     </section>
 
+    <!-- DESTINATIONS -->
     <section class="section">
-  <div class="panel">
+      <div class="panel">
 
-    <div class="kicker">Touring destinations</div>
+        <div class="kicker">Touring destinations</div>
 
-    <h2 style="margin-top:10px;">
-      UK & Ireland touring regions
-    </h2>
+        <h2 style="margin-top:10px;">
+          Britain and Ireland routes international groups return to again and again
+        </h2>
 
-    <p style="margin-top:10px; max-width:90ch;">
-      Inbound touring programmes frequently combine major gateway cities,
-      historic regions and scenic landscapes across the United Kingdom and Ireland.
-      These destinations form the backbone of many international itineraries.
-    </p>
-
-    <div class="grid grid-3" style="margin-top:24px;">
-
-      <div class="card">
-        <h3>Scotland & Highlands</h3>
-        <p style="margin-top:10px;">
-          Edinburgh, the Highlands, Loch Ness and the Isle of Skye remain
-          among the most requested destinations for international touring groups.
+        <p style="margin-top:10px; max-width:90ch;">
+          Many inbound programmes combine gateway cities, heritage destinations and scenic touring regions
+          across the United Kingdom and Ireland. These routes form the backbone of many international itineraries
+          and require transport planning built around timing realism, access and operational continuity.
         </p>
+
+        <div class="grid grid-3" style="margin-top:24px;">
+
+          <div class="card">
+            <h3>Scotland &amp; Highlands</h3>
+            <p style="margin-top:10px;">
+              Edinburgh, the Highlands, Loch Ness and the Isle of Skye remain among the most requested
+              destinations for international touring groups visiting Britain.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>England Heritage Cities</h3>
+            <p style="margin-top:10px;">
+              Oxford, Bath, York, Cambridge and the Lake District continue to feature strongly
+              in structured touring programmes across England.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Ireland Touring Routes</h3>
+            <p style="margin-top:10px;">
+              Dublin, Galway, the Cliffs of Moher, Killarney and the Ring of Kerry
+              form the classic Ireland touring circuit for many group itineraries.
+            </p>
+          </div>
+
+        </div>
+
       </div>
+    </section>
 
-      <div class="card">
-        <h3>England Heritage Cities</h3>
-        <p style="margin-top:10px;">
-          Oxford, Bath, York and Cambridge form key heritage stops
-          for structured UK touring programmes.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Ireland Touring Routes</h3>
-        <p style="margin-top:10px;">
-          Dublin, Galway, the Cliffs of Moher and the Ring of Kerry
-          form the classic Ireland touring circuit.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-    <!-- TRUST / POSITIONING -->
+    <!-- HOW WE WORK -->
     <section class="section">
       <div class="panel">
         <div class="kicker">How we work</div>
-        <h2 style="margin-top:10px;">A touring delivery partner — built around programme reality</h2>
-        <p style="margin-top:10px; max-width: 95ch;">
-          Touring fails on small details: unrealistic timing, poor access planning, luggage mismatch, and pressure points around fixed-entry venues.
-          Our work protects programme delivery through structured planning and calm operational control.
+        <h2 style="margin-top:10px;">A touring delivery partner built around programme reality</h2>
+        <p style="margin-top:10px; max-width:95ch;">
+          Touring fails on small details: unrealistic timings, poor access planning, luggage mismatch
+          and pressure points around fixed-entry venues. Our work protects programme delivery through
+          structured planning, clear specification and calm operational control.
         </p>
 
         <div class="grid grid-3" style="margin-top:16px;">
           <div class="card">
             <h3>Feasibility review</h3>
-            <p style="margin-top:10px;">Routing, timings and high-risk days reviewed before confirmation.</p>
+            <p style="margin-top:10px;">
+              Routing, timings and operational pressure points reviewed before confirmation.
+            </p>
           </div>
           <div class="card">
             <h3>Defined specification</h3>
-            <p style="margin-top:10px;">Vehicle type, luggage suitability and scope clearly outlined.</p>
+            <p style="margin-top:10px;">
+              Vehicle type, luggage suitability and service scope clearly outlined from the start.
+            </p>
           </div>
           <div class="card">
             <h3>Disciplined delivery</h3>
-            <p style="margin-top:10px;">Stable daily touring support with clear operational communication.</p>
+            <p style="margin-top:10px;">
+              Stable day-to-day touring support with clear communication throughout the programme.
+            </p>
           </div>
         </div>
       </div>
 
       <div class="pills" style="margin-top:18px;">
         <span class="pill">Feasibility-first planning</span>
-        <span class="pill">UK & Ireland coverage</span>
-        <span class="pill">Touring + routing discipline</span>
-        <span class="pill">Compliance-led operations</span>
+        <span class="pill">Access-aware routing</span>
+        <span class="pill">Luggage &amp; vehicle suitability</span>
+        <span class="pill">Operational clarity</span>
       </div>
     </section>
 
-    <!-- SERVICES PREVIEW -->
+    <!-- SERVICES -->
     <section class="section">
       <div class="panel">
         <div class="kicker">Services</div>
-        <h2 style="margin-top:10px;">Transport for inbound touring programmes</h2>
-        <p style="margin-top:10px; max-width: 95ch;">
-          We support the core movement patterns used by international tour operators and destination management companies.
+        <h2 style="margin-top:10px;">Transport for inbound touring programmes across the UK and Ireland</h2>
+        <p style="margin-top:10px; max-width:95ch;">
+          We support a range of transport movements including multi-day touring programmes,
+          airport transfers and
+          <a href="cruise-shore-excursion-transport-uk.html">cruise shore excursion transport</a>
+          from major UK cruise ports.
         </p>
 
         <div class="grid grid-2" style="margin-top:16px;">
           <div class="card">
             <h3>Multi-day touring</h3>
             <ul class="list" style="margin-top:12px;">
-              <li>Multi-city itineraries and touring delivery</li>
+              <li>Multi-city itineraries and structured touring delivery</li>
               <li>Hotel-to-hotel routing discipline</li>
-              <li>Guide/escort touring requirements</li>
+              <li>Guide and escort touring requirements</li>
               <li>Access planning for city centres and attractions</li>
             </ul>
             <div style="margin-top:14px;">
@@ -274,12 +281,12 @@
           </div>
 
           <div class="card">
-            <h3>Gateways & fixed-time movements</h3>
+            <h3>Gateways, ports &amp; fixed-time movements</h3>
             <ul class="list" style="margin-top:12px;">
-              <li>Airport arrivals (LHR/LGW/MAN/EDI) and touring departures</li>
+              <li>Airport arrivals and departures across major gateways</li>
+              <li>Cruise port transfers and shore excursion support</li>
               <li>MICE and time-fixed venue movements</li>
-              <li>Series departures and repeat touring patterns</li>
-              <li>Programme-led coordination and contingency awareness</li>
+              <li>Series departures and repeat programme patterns</li>
             </ul>
             <div style="margin-top:14px;">
               <a class="btn btn-outline" href="contact.html">Speak to ops</a>
@@ -289,60 +296,51 @@
       </div>
     </section>
 
-    <!-- COVERAGE PREVIEW -->
+    <!-- ROUTES -->
     <section class="section">
       <div class="panel">
         <div class="kicker">Example programmes</div>
 
         <h2 style="margin-top:10px;">
-          Typical UK & Ireland touring routes
+          Typical UK &amp; Ireland touring routes
         </h2>
 
         <p style="margin-top:10px; max-width:95ch;">
-          Many itineraries follow established touring routes linking major
-          gateways, regional highlights and overnight cities. Below are
-          examples of programmes frequently delivered by international
-          tour operators and DMC partners.
+          Many itineraries follow established touring routes linking major gateways,
+          regional highlights and overnight cities. Below are examples of programmes
+          frequently delivered by international tour operators and DMC partners.
         </p>
 
         <div class="grid grid-3" style="margin-top:24px;">
 
           <div class="card">
-            <h3>England & Scotland</h3>
-
+            <h3>England &amp; Scotland</h3>
             <div class="route">
               London → Oxford → York → Lake District → Edinburgh → Highlands
             </div>
-
             <p style="margin-top:12px;">
-              Classic touring route combining England’s historic cities
-              with Scotland’s capital and Highlands landscapes.
+              A classic touring route combining England’s heritage cities with Scotland’s capital
+              and Highland landscapes.
             </p>
           </div>
 
           <div class="card">
             <h3>Classic Ireland</h3>
-
             <div class="route">
               Dublin → Galway → Cliffs of Moher → Killarney → Ring of Kerry → Cork
             </div>
-
             <p style="margin-top:12px;">
-              A popular Ireland circuit linking Dublin with the west coast
-              and southern scenic regions.
+              A popular Ireland circuit linking Dublin with the west coast and southern scenic regions.
             </p>
           </div>
 
           <div class="card">
             <h3>UK Grand Tour</h3>
-
             <div class="route">
               London → Bath → Wales → Liverpool → Lake District → Edinburgh
             </div>
-
             <p style="margin-top:12px;">
-              Extended touring programme combining southern England,
-              Wales and northern Britain.
+              An extended touring programme combining southern England, Wales and northern Britain.
             </p>
           </div>
 
@@ -357,8 +355,8 @@
         <div class="kicker">Trade partners</div>
         <h2 style="margin-top:10px;">Built for tour operators and destination management companies</h2>
         <p style="margin-top:10px; max-width:95ch;">
-          Our site and operations are structured to match inbound travel workflows — itinerary-led planning, service scope clarity,
-          and steady delivery across multi-day touring.
+          Our site and operations are structured to match inbound travel workflows:
+          itinerary-led planning, clear service scope and steady delivery across multi-day touring.
         </p>
 
         <div class="grid grid-2" style="margin-top:16px;">
@@ -376,7 +374,7 @@
             <h3>How we protect delivery</h3>
             <ul class="list" style="margin-top:12px;">
               <li>Feasibility checks before confirmation</li>
-              <li>Access awareness (hotels, venues, city centres)</li>
+              <li>Access awareness for hotels, venues and city centres</li>
               <li>Luggage capacity and vehicle suitability</li>
               <li>Clear operational communication during touring</li>
             </ul>
@@ -389,42 +387,39 @@
       </div>
     </section>
 
+    <!-- EXPERTISE -->
     <section class="section">
-  <div class="panel">
+      <div class="panel">
+        <div class="kicker">Trade transport expertise</div>
 
-    <div class="kicker">Trade transport expertise</div>
+        <h2 style="margin-top:10px;">
+          Designed for international tour operators, DMCs and organised group travel
+        </h2>
 
-    <h2 style="margin-top:10px;">
-      Designed for international tour operators and DMCs
-    </h2>
+        <p style="margin-top:10px; max-width:90ch;">
+          UK Inbound Ground Transport supports international tour operators, destination management companies
+          and travel organisers delivering structured programmes across the United Kingdom and Ireland.
+          Our transport planning focuses on feasibility, routing efficiency, vehicle suitability
+          and operational reliability across complex touring itineraries.
+        </p>
 
-    <p style="margin-top:10px; max-width:90ch;">
-      UK Inbound Ground Transport specialises in supporting international
-      tour operators, destination management companies and travel organisers
-      delivering structured travel programmes across the United Kingdom and
-      Ireland. Our transport planning focuses on feasibility, routing
-      efficiency, vehicle suitability and operational reliability across
-      complex multi-day touring itineraries.
-    </p>
+        <ul class="list" style="margin-top:14px;">
+          <li>Multi-day touring programmes across the UK and Ireland</li>
+          <li>Airport arrivals, cruise shore excursions and touring circuits</li>
+          <li>Vehicle selection aligned to group size and luggage capacity</li>
+          <li>Operational coordination with tour directors and travel planners</li>
+        </ul>
+      </div>
+    </section>
 
-    <ul class="list" style="margin-top:14px;">
-      <li>Multi-day touring programmes across the UK and Ireland</li>
-      <li>Airport arrivals, cruise shore excursions and touring circuits</li>
-      <li>Vehicle selection aligned to group size and luggage capacity</li>
-      <li>Operational coordination with tour directors and travel planners</li>
-    </ul>
-
-  </div>
-</section>
-
-    <!-- COMPLIANCE CTA -->
+    <!-- CTA -->
     <section class="section">
       <div class="cta">
-        <div class="kicker" style="color:rgba(255,255,255,.65)">Compliance & safety</div>
+        <div class="kicker" style="color:rgba(255,255,255,.65)">Compliance &amp; safety</div>
         <h2 style="margin-top:10px;">Confidence for professional organisers</h2>
-        <p style="margin-top:10px; max-width: 92ch;">
-          Compliance matters in inbound programmes. Our delivery planning accounts for operational realities and touring discipline,
-          with standards that support professional travel organisers.
+        <p style="margin-top:10px; max-width:92ch;">
+          Compliance matters in inbound programmes. Our delivery planning accounts for operational realities,
+          route discipline and service standards that support professional travel organisers.
         </p>
         <div class="cta-actions">
           <a class="btn btn-light" href="compliance-safety.html">View compliance</a>
@@ -435,11 +430,9 @@
 
   </main>
 
-  <!-- Ultra Premium Footer -->
   <footer class="footer-ultra">
     <div class="container footer-ultra-inner">
 
-      <!-- Top Brand -->
       <div class="footer-ultra-top">
         <div class="footer-ultra-brand">
           <div class="footer-ultra-mark" aria-hidden="true"></div>
@@ -452,10 +445,8 @@
         </div>
       </div>
 
-      <!-- Footer Grid -->
       <div class="footer-ultra-grid footer-ultra-grid--5">
 
-        <!-- Contact -->
         <div>
           <div class="footer-ultra-title">Contact</div>
           <div class="footer-ultra-links">
@@ -472,7 +463,6 @@
           </div>
         </div>
 
-        <!-- Company -->
         <div>
           <div class="footer-ultra-title">Company</div>
           <div class="footer-ultra-meta">
@@ -482,7 +472,6 @@
           </div>
         </div>
 
-        <!-- Navigation -->
         <div>
           <div class="footer-ultra-title">Navigation</div>
           <div class="footer-ultra-links">
@@ -495,7 +484,6 @@
           </div>
         </div>
 
-        <!-- Resources -->
         <div>
           <div class="footer-ultra-title">Resources</div>
           <div class="footer-ultra-links">
@@ -503,10 +491,10 @@
             <a href="how-we-work.html">How We Work</a>
             <a href="uk-touring-routes.html">UK Touring Routes</a>
             <a href="procurement.html">Procurement &amp; Compliance</a>
+            <a href="cruise-shore-excursion-transport-uk.html">Cruise Shore Excursions</a>
           </div>
         </div>
 
-        <!-- Legal -->
         <div>
           <div class="footer-ultra-title">Legal</div>
           <div class="footer-ultra-links">
@@ -520,11 +508,9 @@
 
       </div>
 
-      <!-- Bottom -->
       <div class="footer-ultra-bottom">
         <div class="footer-ultra-small">
-          Trade-only supplier for tour operators and DMCs.
-          Structured operations and disciplined routing across the UK and Ireland.
+          Trade-only supplier for tour operators and DMCs. Structured operations and disciplined routing across the UK and Ireland.
         </div>
       </div>
 
