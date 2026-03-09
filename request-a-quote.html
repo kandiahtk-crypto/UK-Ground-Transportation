@@ -1,143 +1,334 @@
-<section class="enquiry-shell">
-  <div class="enquiry-wrap">
-    <div class="enquiry-header">
-      <span class="eyebrow">Ground Transport</span>
-      <h1>Enquiry details</h1>
-      <p>
-        Quotations are reviewed against timing realism, access, luggage profile,
-        and vehicle suitability. The more complete the information, the more
-        accurate the quotation.
-      </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request a Quote | UK Inbound Ground Transport</title>
+  <meta
+    name="description"
+    content="Request a ground transport quotation for UK and Ireland touring programmes, airport transfers, event transport, and multi-day movements."
+  />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-center">
+        <a class="topbar-item" href="tel:+442086292776">+44 20 8629 2776</a>
+        <span class="topbar-sep">•</span>
+        <a class="topbar-item" href="mailto:info@ukinboundgroundtransport.com">info@ukinboundgroundtransport.com</a>
+      </div>
     </div>
+  </div>
 
-    <form class="lux-form">
-      <!-- Contact -->
-      <div class="form-card">
-        <div class="card-head">
-          <h2>Contact details</h2>
-          <p>Who should receive the quotation and any clarifications.</p>
-        </div>
+  <header class="header">
+    <div class="mainbar">
+      <div class="container">
+        <div class="header-inner">
+          <button
+            id="menuBtn"
+            class="icon-btn menu-btn"
+            aria-label="Open menu"
+            aria-expanded="false"
+            type="button"
+          >
+            <span class="hamburger"></span>
+          </button>
 
-        <div class="form-grid two">
-          <div class="field">
-            <label for="company_name">Company name</label>
-            <input id="company_name" name="company_name" type="text" placeholder="Tour operator / DMC name">
-          </div>
+          <a href="index.html" class="brand">UK INBOUND GROUND TRANSPORT</a>
 
-          <div class="field">
-            <label for="contact_name">Contact name</label>
-            <input id="contact_name" name="contact_name" type="text" placeholder="Full name">
-          </div>
+          <a href="contact.html" class="icon-btn contact-icon" aria-label="Contact">
+            ✉
+          </a>
 
-          <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="name@company.com">
-          </div>
-
-          <div class="field">
-            <label for="phone">Phone / WhatsApp</label>
-            <input id="phone" name="phone" type="text" placeholder="+44 … / international number">
-            <small>Recommended for time-sensitive clarification.</small>
-          </div>
-        </div>
-      </div>
-
-      <!-- Trip -->
-      <div class="form-card">
-        <div class="card-head">
-          <h2>Trip details</h2>
-          <p>Core journey information for pricing and suitability.</p>
-        </div>
-
-        <div class="form-grid three">
-          <div class="field">
-            <label for="service_type">Service type</label>
-            <select id="service_type" name="service_type">
-              <option value="">Select</option>
-              <option>Airport transfer</option>
-              <option>Station transfer</option>
-              <option>Day hire</option>
-              <option>Multi-day tour</option>
-              <option>Event transport</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="dates">Date(s)</label>
-            <input id="dates" name="dates" type="text" placeholder="e.g., 12–18 May 2026">
-          </div>
-
-          <div class="field">
-            <label for="pickup_times">Preferred pickup time(s)</label>
-            <input id="pickup_times" name="pickup_times" type="text" placeholder="e.g., 09:00 / TBC">
-          </div>
-
-          <div class="field">
-            <label for="pickup_location">Pickup location</label>
-            <input id="pickup_location" name="pickup_location" type="text" placeholder="Airport / hotel / venue (postcode if known)">
-          </div>
-
-          <div class="field">
-            <label for="dropoff_location">Drop-off location</label>
-            <input id="dropoff_location" name="dropoff_location" type="text" placeholder="Hotel / venue / city (postcode if known)">
-          </div>
-
-          <div class="field">
-            <label for="vehicle_preference">Vehicle preference</label>
-            <select id="vehicle_preference" name="vehicle_preference">
-              <option value="">Optional</option>
-              <option>Executive sedan</option>
-              <option>MPV</option>
-              <option>Minicoach</option>
-              <option>Coach</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="passengers">Passengers</label>
-            <input id="passengers" name="passengers" type="text" placeholder="e.g., 45">
-          </div>
-
-          <div class="field">
-            <label for="luggage_estimate">Luggage estimate</label>
-            <input id="luggage_estimate" name="luggage_estimate" type="text" placeholder="e.g., 45 suitcases + carry-ons">
-          </div>
-
-          <div class="field field-span-1">
-            <label for="itinerary_link">Itinerary PDF link <span>(optional)</span></label>
-            <input id="itinerary_link" name="itinerary_link" type="url" placeholder="Paste Google Drive / OneDrive / Dropbox link">
-            <small>Or email the PDF after submitting.</small>
-          </div>
+          <nav class="nav-desktop" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="fleet.html">Fleet</a>
+            <a href="coverage.html">Coverage</a>
+            <a href="trade-partners.html">Trade Partners</a>
+            <a href="international-markets.html">International Markets</a>
+            <a href="contact.html">Contact</a>
+            <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
+          </nav>
         </div>
       </div>
 
-      <!-- Notes -->
-      <div class="form-card">
-        <div class="card-head">
-          <h2>Programme notes</h2>
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <div class="container">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="fleet.html">Fleet</a>
+          <a href="coverage.html">Coverage</a>
+          <a href="trade-partners.html">Trade Partners</a>
+          <a href="international-markets.html">International Markets</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn btn-primary" href="request-a-quote.html">Request a Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="enquiry-shell">
+      <div class="enquiry-wrap">
+        <div class="enquiry-header">
+          <span class="eyebrow">Ground Transport</span>
+          <h1>Enquiry details</h1>
           <p>
-            Include key cities, number of days, hotels, access notes, or timing flexibility.
+            Quotations are reviewed against timing realism, access, luggage profile,
+            and vehicle suitability. The more complete the information, the more
+            accurate the quotation.
           </p>
         </div>
 
-        <div class="form-grid one">
-          <div class="field">
-            <label for="programme_notes">Programme notes / itinerary summary</label>
-            <textarea id="programme_notes" name="programme_notes" rows="6" placeholder="Key cities, number of days, hotels, venue names, access constraints, special requirements, and whether dates or timings may change."></textarea>
+        <form class="lux-form" action="#" method="post">
+          <div class="form-card">
+            <div class="card-head">
+              <h2>Contact details</h2>
+              <p>Who should receive the quotation and any clarifications.</p>
+            </div>
+
+            <div class="form-grid two">
+              <div class="field">
+                <label for="company_name">Company name</label>
+                <input
+                  id="company_name"
+                  name="company_name"
+                  type="text"
+                  placeholder="Tour operator / DMC name"
+                />
+              </div>
+
+              <div class="field">
+                <label for="contact_name">Contact name</label>
+                <input
+                  id="contact_name"
+                  name="contact_name"
+                  type="text"
+                  placeholder="Full name"
+                />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="name@company.com"
+                />
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone / WhatsApp</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="text"
+                  placeholder="+44 … / international number"
+                />
+                <small>Recommended for time-sensitive clarification.</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <div class="card-head">
+              <h2>Trip details</h2>
+              <p>Core journey information for pricing and suitability.</p>
+            </div>
+
+            <div class="form-grid three">
+              <div class="field">
+                <label for="service_type">Service type</label>
+                <select id="service_type" name="service_type">
+                  <option value="">Select</option>
+                  <option>Airport transfer</option>
+                  <option>Station transfer</option>
+                  <option>Day hire</option>
+                  <option>Multi-day tour</option>
+                  <option>Event transport</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="dates">Date(s)</label>
+                <input
+                  id="dates"
+                  name="dates"
+                  type="text"
+                  placeholder="e.g., 12–18 May 2026"
+                />
+              </div>
+
+              <div class="field">
+                <label for="pickup_times">Preferred pickup time(s)</label>
+                <input
+                  id="pickup_times"
+                  name="pickup_times"
+                  type="text"
+                  placeholder="e.g., 09:00 / TBC"
+                />
+              </div>
+
+              <div class="field">
+                <label for="pickup_location">Pickup location</label>
+                <input
+                  id="pickup_location"
+                  name="pickup_location"
+                  type="text"
+                  placeholder="Airport / hotel / venue (postcode if known)"
+                />
+              </div>
+
+              <div class="field">
+                <label for="dropoff_location">Drop-off location</label>
+                <input
+                  id="dropoff_location"
+                  name="dropoff_location"
+                  type="text"
+                  placeholder="Hotel / venue / city (postcode if known)"
+                />
+              </div>
+
+              <div class="field">
+                <label for="vehicle_preference">Vehicle preference</label>
+                <select id="vehicle_preference" name="vehicle_preference">
+                  <option value="">Optional</option>
+                  <option>Executive sedan</option>
+                  <option>MPV</option>
+                  <option>Minicoach</option>
+                  <option>Coach</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="passengers">Passengers</label>
+                <input
+                  id="passengers"
+                  name="passengers"
+                  type="text"
+                  placeholder="e.g., 45"
+                />
+              </div>
+
+              <div class="field">
+                <label for="luggage_estimate">Luggage estimate</label>
+                <input
+                  id="luggage_estimate"
+                  name="luggage_estimate"
+                  type="text"
+                  placeholder="e.g., 45 suitcases + carry-ons"
+                />
+              </div>
+
+              <div class="field field-span-1">
+                <label for="itinerary_link">Itinerary PDF link <span>(optional)</span></label>
+                <input
+                  id="itinerary_link"
+                  name="itinerary_link"
+                  type="url"
+                  placeholder="Paste Google Drive / OneDrive / Dropbox link"
+                />
+                <small>Or email the PDF after submitting.</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <div class="card-head">
+              <h2>Programme notes</h2>
+              <p>
+                Include key cities, number of days, hotels, access notes, or timing flexibility.
+              </p>
+            </div>
+
+            <div class="form-grid one">
+              <div class="field">
+                <label for="programme_notes">Programme notes / itinerary summary</label>
+                <textarea
+                  id="programme_notes"
+                  name="programme_notes"
+                  rows="6"
+                  placeholder="Key cities, number of days, hotels, venue names, access constraints, special requirements, and whether dates or timings may change."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <p class="submit-note">
+              Submit once. Your enquiry will be reviewed and returned with a clear specification.
+            </p>
+
+            <div class="form-actions">
+              <a href="contact.html" class="btn btn-secondary">Contact Operations</a>
+              <button type="submit" class="btn btn-primary">Submit enquiry</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-ultra">
+    <div class="container">
+      <div class="footer-ultra-top">
+        <div>
+          <div class="footer-ultra-brand">
+            <span class="footer-ultra-mark"></span>
+            <div>
+              <div class="footer-ultra-name">UK Inbound Ground Transport</div>
+              <div class="footer-ultra-sub">Trade partner support for UK &amp; Ireland touring</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="form-footer">
-        <p class="submit-note">
-          Submit once. Your enquiry will be reviewed and returned with a clear specification.
-        </p>
+      <div class="footer-ultra-grid footer-ultra-grid--4">
+        <div>
+          <div class="footer-ultra-title">Contact</div>
+          <div class="footer-ultra-meta">
+            <div><a href="tel:+442086292776">+44 20 8629 2776</a></div>
+            <div><a href="mailto:info@ukinboundgroundtransport.com">info@ukinboundgroundtransport.com</a></div>
+          </div>
+        </div>
 
-        <div class="form-actions">
-          <a href="/contact-operations" class="btn btn-secondary">Contact Operations</a>
-          <button type="submit" class="btn btn-primary">Submit enquiry</button>
+        <div>
+          <div class="footer-ultra-title">Company</div>
+          <div class="footer-ultra-links">
+            <a href="services.html">Services</a>
+            <a href="fleet.html">Fleet</a>
+            <a href="coverage.html">Coverage</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-ultra-title">Trade</div>
+          <div class="footer-ultra-links">
+            <a href="trade-partners.html">Trade Partners</a>
+            <a href="international-markets.html">International Markets</a>
+            <a href="request-a-quote.html">Request a Quote</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-ultra-title">Support</div>
+          <div class="footer-ultra-links">
+            <a href="contact.html">Contact</a>
+          </div>
         </div>
       </div>
-    </form>
-  </div>
-</section>
+
+      <div class="footer-ultra-bottom">
+        <div class="footer-ultra-small">
+          © <span id="year"></span> UK Inbound Ground Transport. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
