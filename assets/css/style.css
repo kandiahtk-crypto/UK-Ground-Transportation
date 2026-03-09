@@ -1208,3 +1208,20 @@ p{
     background-position:center 52%;
   }
 }
+
+.hero-visual{
+  position:relative;
+}
+
+.hero-visual::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(7,11,20,.58), rgba(7,11,20,.08));
+  pointer-events:none;
+}
+
+.hero-visual > *{
+  position:relative;
+  z-index:1;
+}
