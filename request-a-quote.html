@@ -83,10 +83,11 @@
         </div>
 
         <form class="lux-form" action="https://api.web3forms.com/submit" method="POST">
-         <input type="hidden" name="access_key" value="b9845288-9bd0-4bb7-9d28-a25ec854b65a">
-         <input type="hidden" name="subject" value="New UK Inbound Transport Enquiry"> 
-          
-          
+          <input type="hidden" name="access_key" value="YOUR_NEW_WEB3FORMS_KEY" />
+          <input type="hidden" name="subject" value="New UK Inbound Transport Enquiry" />
+          <input type="hidden" name="redirect" value="https://ukinboundgroundtransport.com/thank-you.html" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none;" tabindex="-1" autocomplete="off" />
+
           <div class="form-card">
             <div class="card-head">
               <h2>Contact details</h2>
@@ -101,6 +102,7 @@
                   name="company_name"
                   type="text"
                   placeholder="Tour operator / DMC name"
+                  required
                 />
               </div>
 
@@ -111,6 +113,7 @@
                   name="contact_name"
                   type="text"
                   placeholder="Full name"
+                  required
                 />
               </div>
 
@@ -121,6 +124,7 @@
                   name="email"
                   type="email"
                   placeholder="name@company.com"
+                  required
                 />
               </div>
 
@@ -146,7 +150,7 @@
             <div class="form-grid three">
               <div class="field">
                 <label for="service_type">Service type</label>
-                <select id="service_type" name="service_type">
+                <select id="service_type" name="service_type" required>
                   <option value="">Select</option>
                   <option>Airport transfer</option>
                   <option>Station transfer</option>
@@ -163,6 +167,7 @@
                   name="dates"
                   type="text"
                   placeholder="e.g., 12–18 May 2026"
+                  required
                 />
               </div>
 
@@ -183,6 +188,7 @@
                   name="pickup_location"
                   type="text"
                   placeholder="Airport / hotel / venue (postcode if known)"
+                  required
                 />
               </div>
 
@@ -193,6 +199,7 @@
                   name="dropoff_location"
                   type="text"
                   placeholder="Hotel / venue / city (postcode if known)"
+                  required
                 />
               </div>
 
@@ -214,6 +221,7 @@
                   name="passengers"
                   type="text"
                   placeholder="e.g., 45"
+                  required
                 />
               </div>
 
@@ -256,6 +264,7 @@
                   name="programme_notes"
                   rows="6"
                   placeholder="Key cities, number of days, hotels, venue names, access constraints, special requirements, and whether dates or timings may change."
+                  required
                 ></textarea>
               </div>
             </div>
