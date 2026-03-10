@@ -6,7 +6,7 @@
   <title>Thank You | UK Inbound Ground Transport</title>
   <meta
     name="description"
-    content="Thank you for your enquiry. Our operations team will review your transport request and respond shortly."
+    content="Thank you for your enquiry. Our operations team will review your request and respond shortly."
   />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -71,12 +71,20 @@
 
   <main class="container">
     <section class="section">
-      <div class="panel" style="max-width: 760px; margin: 0 auto; text-align: center;">
+      <div class="panel" style="max-width:760px; margin:0 auto; text-align:center;">
         <span class="eyebrow">Enquiry received</span>
-        <h1 style="margin-top: 14px;">Thank you</h1>
-        <p class="lead" style="margin: 18px auto 28px;">
+        <h1 style="margin-top:14px;">Thank you</h1>
+
+        <p class="lead" style="margin:18px auto 18px;">
           Your enquiry has been submitted successfully. Our operations team will
           review the details and respond shortly.
+        </p>
+
+        <p id="reference" style="margin: 0 auto 26px; font-size: 16px; color: #475569;"></p>
+
+        <p style="margin: 0 auto 28px; max-width: 58ch; color: #475569; line-height: 1.8;">
+          If you have an itinerary document, you can email it to
+          <strong>info@ukinboundgroundtransport.com</strong>.
         </p>
 
         <div class="cta-actions" style="justify-content:center;">
@@ -145,5 +153,23 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      const now = new Date();
+      const ref =
+        "UKGT-ENQ-" +
+        now.getFullYear() +
+        String(now.getMonth() + 1).padStart(2, "0") +
+        String(now.getDate()).padStart(2, "0") +
+        "-" +
+        String(now.getHours()).padStart(2, "0") +
+        String(now.getMinutes()).padStart(2, "0");
+
+      const refEl = document.getElementById("reference");
+      if (refEl) {
+        refEl.innerHTML = 'Reference: <strong>' + ref + "</strong>";
+      }
+    })();
+  </script>
 </body>
 </html>
