@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You | UK Inbound Ground Transport</title>
+  <title>Request a Quote | UK Inbound Ground Transport</title>
   <meta
     name="description"
-    content="Thank you for your enquiry. Our operations team will review your request and respond shortly."
+    content="Request a ground transport quotation for UK and Ireland touring programmes, airport transfers, event transport, and multi-day movements."
   />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -70,27 +70,225 @@
   </header>
 
   <main class="container">
-    <section class="section">
-      <div class="panel" style="max-width:760px; margin:0 auto; text-align:center;">
-        <span class="eyebrow">Enquiry received</span>
-        <h1 style="margin-top:14px;">Thank you</h1>
-
-        <p class="lead" style="margin:18px auto 18px;">
-          Your enquiry has been submitted successfully. Our operations team will
-          review the details and respond shortly.
-        </p>
-
-        <p id="reference" style="margin: 0 auto 26px; font-size: 16px; color: #475569;"></p>
-
-        <p style="margin: 0 auto 28px; max-width: 58ch; color: #475569; line-height: 1.8;">
-          If you have an itinerary document, you can email it to
-          <strong>info@ukinboundgroundtransport.com</strong>.
-        </p>
-
-        <div class="cta-actions" style="justify-content:center;">
-          <a href="request-a-quote.html" class="btn btn-outline">Submit another enquiry</a>
-          <a href="index.html" class="btn btn-primary">Return to homepage</a>
+    <section class="enquiry-shell">
+      <div class="enquiry-wrap">
+        <div class="enquiry-header">
+          <span class="eyebrow">Ground Transport</span>
+          <h1>Enquiry details</h1>
+          <p>
+            Quotations are reviewed against timing realism, access, luggage profile,
+            and vehicle suitability. The more complete the information, the more
+            accurate the quotation.
+          </p>
         </div>
+
+        <form class="lux-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_NEW_WEB3FORMS_KEY" />
+          <input type="hidden" name="subject" value="New UK Inbound Transport Enquiry" />
+          <input type="hidden" name="from_name" value="UK Inbound Ground Transport" />
+          <input type="hidden" name="redirect" value="https://ukinboundgroundtransport.com/thank-you.html" />
+          <input
+            type="checkbox"
+            name="botcheck"
+            class="hidden"
+            style="display:none;"
+            tabindex="-1"
+            autocomplete="off"
+          />
+
+          <div class="form-card">
+            <div class="card-head">
+              <h2>Contact details</h2>
+              <p>Who should receive the quotation and any clarifications.</p>
+            </div>
+
+            <div class="form-grid two">
+              <div class="field">
+                <label for="company_name">Company name</label>
+                <input
+                  id="company_name"
+                  name="company_name"
+                  type="text"
+                  placeholder="Tour operator / DMC name"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="contact_name">Contact name</label>
+                <input
+                  id="contact_name"
+                  name="contact_name"
+                  type="text"
+                  placeholder="Full name"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="name@company.com"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone / WhatsApp</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="text"
+                  placeholder="+44 … / international number"
+                />
+                <small>Recommended for time-sensitive clarification.</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <div class="card-head">
+              <h2>Trip details</h2>
+              <p>Core journey information for pricing and suitability.</p>
+            </div>
+
+            <div class="form-grid three">
+              <div class="field">
+                <label for="service_type">Service type</label>
+                <select id="service_type" name="service_type" required>
+                  <option value="">Select</option>
+                  <option>Airport transfer</option>
+                  <option>Station transfer</option>
+                  <option>Day hire</option>
+                  <option>Multi-day tour</option>
+                  <option>Event transport</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="dates">Date(s)</label>
+                <input
+                  id="dates"
+                  name="dates"
+                  type="text"
+                  placeholder="e.g., 12–18 May 2026"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="pickup_times">Preferred pickup time(s)</label>
+                <input
+                  id="pickup_times"
+                  name="pickup_times"
+                  type="text"
+                  placeholder="e.g., 09:00 / TBC"
+                />
+              </div>
+
+              <div class="field">
+                <label for="pickup_location">Pickup location</label>
+                <input
+                  id="pickup_location"
+                  name="pickup_location"
+                  type="text"
+                  placeholder="Airport / hotel / venue (postcode if known)"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="dropoff_location">Drop-off location</label>
+                <input
+                  id="dropoff_location"
+                  name="dropoff_location"
+                  type="text"
+                  placeholder="Hotel / venue / city (postcode if known)"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="vehicle_preference">Vehicle preference</label>
+                <select id="vehicle_preference" name="vehicle_preference">
+                  <option value="">Optional</option>
+                  <option>Executive sedan</option>
+                  <option>MPV</option>
+                  <option>Minicoach</option>
+                  <option>Coach</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="passengers">Passengers</label>
+                <input
+                  id="passengers"
+                  name="passengers"
+                  type="text"
+                  placeholder="e.g., 45"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="luggage_estimate">Luggage estimate</label>
+                <input
+                  id="luggage_estimate"
+                  name="luggage_estimate"
+                  type="text"
+                  placeholder="e.g., 45 suitcases + carry-ons"
+                />
+              </div>
+
+              <div class="field field-span-1">
+                <label for="itinerary_link">Itinerary PDF link <span>(optional)</span></label>
+                <input
+                  id="itinerary_link"
+                  name="itinerary_link"
+                  type="url"
+                  placeholder="Paste Google Drive / OneDrive / Dropbox link"
+                />
+                <small>Or email the PDF after submitting.</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <div class="card-head">
+              <h2>Programme notes</h2>
+              <p>
+                Include key cities, number of days, hotels, access notes, or timing flexibility.
+              </p>
+            </div>
+
+            <div class="form-grid one">
+              <div class="field">
+                <label for="programme_notes">Programme notes / itinerary summary</label>
+                <textarea
+                  id="programme_notes"
+                  name="programme_notes"
+                  rows="6"
+                  placeholder="Key cities, number of days, hotels, venue names, access constraints, special requirements, and whether dates or timings may change."
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <p class="submit-note">
+              Submit once. Your enquiry will be reviewed and returned with a clear specification.
+            </p>
+
+            <div class="form-actions">
+              <a href="contact.html" class="btn btn-secondary">Contact Operations</a>
+              <button type="submit" class="btn btn-primary">Submit enquiry</button>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
   </main>
@@ -153,23 +351,5 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
-  <script>
-    (function () {
-      const now = new Date();
-      const ref =
-        "UKGT-ENQ-" +
-        now.getFullYear() +
-        String(now.getMonth() + 1).padStart(2, "0") +
-        String(now.getDate()).padStart(2, "0") +
-        "-" +
-        String(now.getHours()).padStart(2, "0") +
-        String(now.getMinutes()).padStart(2, "0");
-
-      const refEl = document.getElementById("reference");
-      if (refEl) {
-        refEl.innerHTML = 'Reference: <strong>' + ref + "</strong>";
-      }
-    })();
-  </script>
 </body>
 </html>
