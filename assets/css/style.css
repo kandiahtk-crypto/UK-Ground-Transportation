@@ -1533,3 +1533,128 @@ main form button{
     justify-content: center;
   }
 }
+/* =========================
+   COLOUR SYSTEM
+   VisitBritain-inspired palette
+========================= */
+
+:root {
+
+  /* Backgrounds */
+
+  --bg: #f3f3f3;
+  --panel: #ffffff;
+  --panel-soft: #f7f7f7;
+
+  /* Text */
+
+  --text: #0b0b5a;
+  --text-soft: #4b5563;
+
+  /* Lines */
+
+  --line: #e5e7eb;
+
+  /* Brand colours */
+
+  --brand-navy: #0b0b5a;
+  --brand-red: #cf2027;
+  --brand-red-dark: #b51b21;
+
+  /* Buttons */
+
+  --btn-primary-bg: #cf2027;
+  --btn-primary-bg-hover: #b51b21;
+  --btn-primary-text: #ffffff;
+
+  --btn-secondary-bg: #ffffff;
+  --btn-secondary-text: #0b0b5a;
+  --btn-secondary-border: #d1d5db;
+
+  /* Shadow */
+
+  --shadow: 0 18px 40px rgba(0,0,0,0.08);
+
+}
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+body{
+  background: var(--bg);
+  color: var(--text);
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1,
+h2,
+h3,
+.brand{
+  color: var(--brand-navy);
+}
+
+
+/* =========================
+   PANELS / CARDS
+========================= */
+
+.panel,
+.form-card{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary{
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text) !important;
+  border: none;
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover{
+  background: var(--btn-primary-bg-hover);
+}
+
+
+.btn-secondary,
+.btn-outline{
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text) !important;
+  border: 1px solid var(--btn-secondary-border);
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar{
+  background: var(--brand-navy);
+  color: #ffffff;
+}
+
+.topbar a{
+  color: #ffffff !important;
+}
+
+
+/* =========================
+   KICKER / LABEL
+========================= */
+
+.kicker,
+.eyebrow{
+  color: var(--brand-red);
+}
