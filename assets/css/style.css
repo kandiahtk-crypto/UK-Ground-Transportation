@@ -722,9 +722,7 @@ p{
 ========================= */
 
 .footer-ultra{
-  background:
-    radial-gradient(circle at top, rgba(201,169,106,.10), transparent 32%),
-    #070c15;
+  background:#0b0b5a;
   color:#fff;
   padding:74px 0 34px;
 }
