@@ -1522,3 +1522,45 @@ main form button{
 .btn:hover{
   box-shadow:0 10px 22px rgba(15,23,42,.12);
 }
+
+/* =========================
+   TRUST STRIP
+========================= */
+
+.trust-strip{
+  background:#ffffff;
+  border-top:1px solid rgba(15,23,42,.05);
+  border-bottom:1px solid rgba(15,23,42,.05);
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+  padding:24px 0;
+  text-align:center;
+}
+
+.trust-item strong{
+  display:block;
+  font-size:16px;
+  font-weight:600;
+  color:#0b0b5a;
+  margin-bottom:4px;
+}
+
+.trust-item span{
+  font-size:13px;
+  color:#6b7280;
+}
+
+@media (max-width:700px){
+  .trust-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+  }
+
+  .trust-item strong{
+    font-size:15px;
+  }
+}
