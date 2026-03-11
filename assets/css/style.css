@@ -479,7 +479,7 @@ p{
   overflow:hidden;
   background:
     linear-gradient(180deg, rgba(6,16,32,.18), rgba(6,16,32,.82)),
-    url("../img/hero-uk-touring.png") center/cover no-repeat;
+    url("/assets/img/hero-uk-touring.png")
   color:#fff;
   padding:86px 54px 54px;
   box-shadow:
