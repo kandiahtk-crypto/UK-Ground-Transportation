@@ -1541,3 +1541,42 @@ main form button{
     justify-content:center;
   }
 }
+.card,
+.panel,
+.btn{
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease;
+}
+
+.card:hover,
+.panel:hover{
+  transform: translateY(-3px);
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+}
+
+.hero-visual{
+  position:relative;
+  animation: heroFade 1.2s ease forwards;
+  opacity:0;
+}
+
+.hero-visual::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(7,11,20,.58), rgba(7,11,20,.08));
+  pointer-events:none;
+}
+
+.hero-visual > *{
+  position:relative;
+  z-index:1;
+}
+
+@keyframes heroFade{
+  to{
+    opacity:1;
+  }
+}
