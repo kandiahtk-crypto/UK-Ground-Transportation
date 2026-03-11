@@ -1600,3 +1600,52 @@ main form button{
     line-height: 1.75 !important;
   }
 }
+
+@media (min-width: 981px){
+  .international-page .hero-visual{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:40px;
+    align-items:end;
+  }
+
+  .international-page .hero-copy-left{
+    align-self:end;
+  }
+
+  .international-page .hero-copy-right{
+    align-self:center;
+    justify-self:start;
+    max-width:460px;
+  }
+
+  .international-page .hero-meta-tag{
+    position:static;
+    display:block;
+    margin-bottom:16px;
+    padding:0;
+    border:0;
+    background:none;
+    backdrop-filter:none;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.78);
+  }
+
+  .international-page .hero-visual h1{
+    font-size:clamp(36px, 4vw, 54px) !important;
+    line-height:1.06 !important;
+    max-width:9ch !important;
+  }
+
+  .international-page .hero-visual .lead{
+    max-width:30ch !important;
+    font-size:16px !important;
+    line-height:1.75 !important;
+  }
+
+  .international-page .hero-copy-right .pills{
+    max-width:360px;
+  }
+}
