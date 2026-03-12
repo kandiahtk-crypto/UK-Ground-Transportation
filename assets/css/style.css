@@ -4,33 +4,28 @@
 ========================= */
 
 :root{
---bg:#f6f3ee;
---panel:#fcfaf6;
---panel-soft:#f7f3ed;
-
---text:#142235;
---text-soft:#5f6b7a;
---line:#e7dfd2;
-
---brand-navy:#142235;
---brand-red:#b76e4d;
---brand-red-dark:#9f5b3d;
-
---btn-primary-bg:#b76e4d;
---btn-primary-bg-hover:#9f5b3d;
---btn-primary-text:#ffffff;
-
---btn-secondary-bg:#ffffff;
---btn-secondary-text:#142235;
---btn-secondary-border:#d8d2c7;
-
---shadow:0 18px 40px rgba(20,34,53,0.08);
+  --bg:#f6f3ee;
+  --panel:#fcfaf6;
+  --panel-soft:#f7f3ed;
+  --text:#142235;
+  --text-soft:#5f6b7a;
+  --line:#e7dfd2;
+  --brand-navy:#142235;
+  --brand-red:#b76e4d;
+  --brand-red-dark:#9f5b3d;
+  --btn-primary-bg:#b76e4d;
+  --btn-primary-bg-hover:#9f5b3d;
+  --btn-primary-text:#ffffff;
+  --btn-secondary-bg:#ffffff;
+  --btn-secondary-text:#142235;
+  --btn-secondary-border:#d8d2c7;
+  --shadow:0 18px 40px rgba(20,34,53,0.08);
 }
 
 
 
 
-}
+
 
 /* RESET */
 *{ box-sizing:border-box; }
