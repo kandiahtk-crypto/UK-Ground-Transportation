@@ -2140,3 +2140,15 @@ footer{
   color:#ffffff;
 }
 
+/* Footer links formatting */
+.footer-ultra a{
+  display:block;
+  padding:6px 0;
+  color:rgba(255,255,255,0.85);
+  text-decoration:none;
+}
+
+.footer-ultra a:hover{
+  color:#cf2027;
+}
+
