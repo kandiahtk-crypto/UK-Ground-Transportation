@@ -4,27 +4,32 @@
 ========================= */
 
 :root{
-  --bg:#f3f3f3;
-  --panel:#fbfaf7;
-  --panel-soft:#f7f7f7;
+--bg:#f6f3ee;
+--panel:#fcfaf6;
+--panel-soft:#f7f3ed;
 
-  --text:#0b0b5a;
-  --text-soft:#4b5563;
-  --line:#e5e7eb;
+--text:#142235;
+--text-soft:#5f6b7a;
+--line:#e7dfd2;
 
-  --brand-navy:#0b0b5a;
-  --brand-red:#cf2027;
-  --brand-red-dark:#b51b21;
+--brand-navy:#142235;
+--brand-red:#b76e4d;
+--brand-red-dark:#9f5b3d;
 
-  --btn-primary-bg:#cf2027;
-  --btn-primary-bg-hover:#b51b21;
-  --btn-primary-text:#ffffff;
+--btn-primary-bg:#b76e4d;
+--btn-primary-bg-hover:#9f5b3d;
+--btn-primary-text:#ffffff;
 
-  --btn-secondary-bg:#ffffff;
-  --btn-secondary-text:#0b0b5a;
-  --btn-secondary-border:#d1d5db;
+--btn-secondary-bg:#ffffff;
+--btn-secondary-text:#142235;
+--btn-secondary-border:#d8d2c7;
 
-  --shadow:0 18px 40px rgba(0,0,0,0.08);
+--shadow:0 18px 40px rgba(20,34,53,0.08);
+}
+
+
+null
+
 }
 
 /* RESET */
