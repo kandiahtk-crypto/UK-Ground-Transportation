@@ -1955,3 +1955,88 @@ main form button{
     line-height:1.6 !important;
   }
 }
+
+/* =========================
+   FINAL MOBILE HERO TIGHTEN
+========================= */
+@media (max-width:700px){
+
+  .hero{
+    padding:12px 0 18px !important;
+  }
+
+  .hero::after{
+    margin-top:16px !important;
+  }
+
+  .hero-visual,
+  .hero-premium{
+    min-height:auto !important;
+    height:auto !important;
+    padding:24px 18px 22px !important;
+    border-radius:24px !important;
+  }
+
+  .hero-copy,
+  .hero-copy-left,
+  .hero-copy-right,
+  .hero-content{
+    max-width:100% !important;
+    width:100% !important;
+  }
+
+  .hero-meta-tag,
+  .hero-visual .kicker,
+  .hero-content .kicker{
+    font-size:11px !important;
+    line-height:1.45 !important;
+    letter-spacing:.14em !important;
+    margin-bottom:10px !important;
+  }
+
+  .hero-visual h1,
+  .hero-premium h1,
+  .hero-content h1{
+    font-size:clamp(24px, 8vw, 36px) !important;
+    line-height:1.06 !important;
+    max-width:100% !important;
+    margin:0 0 12px !important;
+  }
+
+  .hero-visual .lead,
+  .hero-premium .lead,
+  .hero-content .lead{
+    font-size:14px !important;
+    line-height:1.65 !important;
+    max-width:100% !important;
+    margin-top:0 !important;
+  }
+
+  .hero-cta,
+  .hero-actions{
+    margin-top:16px !important;
+    gap:10px !important;
+  }
+
+  .hero-cta .btn,
+  .hero-actions .btn{
+    min-height:52px !important;
+    font-size:15px !important;
+  }
+
+  .hero-trust{
+    font-size:12px !important;
+    line-height:1.5 !important;
+    margin-top:12px !important;
+  }
+
+  .pills{
+    gap:10px !important;
+    margin-top:14px !important;
+  }
+
+  .pill{
+    padding:11px 14px !important;
+    font-size:14px !important;
+  }
+}
