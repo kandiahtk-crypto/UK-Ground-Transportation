@@ -2152,13 +2152,7 @@ footer{
   color:#cf2027;
 }
 
-@media (max-width:700px){
 
-  .footer-ultra-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:28px;
-  }
 
-}
+  
 
