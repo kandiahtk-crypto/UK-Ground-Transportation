@@ -736,11 +736,9 @@ p{
 }
 
 /* =========================
-   FOOTER
-========================= */
 
 .footer-ultra{
-  background:#0b0b5a;
+  background:var(--brand-navy);
   color:#ffffff;
   padding:74px 0 34px;
 }
