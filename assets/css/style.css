@@ -1564,6 +1564,7 @@ main form button{
     grid-template-columns:repeat(2,1fr);
     gap:18px;
   }
+}
 
   .trust-item strong{
     font-size:15px;
