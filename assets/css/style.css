@@ -449,6 +449,7 @@ background:#0f172a;
 border-radius:999px;
 position:relative;
 display:block;
+transition:all .25s ease;
 }
 
 .menu-btn .hamburger::before,
