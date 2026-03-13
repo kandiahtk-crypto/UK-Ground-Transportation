@@ -2189,6 +2189,19 @@ footer{
   margin-bottom:10px;
 }
 
+/* MOBILE FOOTER FIX */
+@media (max-width:700px){
+
+  .footer-ultra-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .footer-ultra{
+    overflow-x:hidden;
+  }
+
+}
+
 
 
   
