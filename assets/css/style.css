@@ -2163,6 +2163,17 @@ footer{
 
 }
 
+.footer-ultra-grid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr 1fr 1fr;
+  gap:40px;
+}
+
+.footer-ultra-links a{
+  display:block;
+  padding:6px 0;
+}
+
 
 
   
