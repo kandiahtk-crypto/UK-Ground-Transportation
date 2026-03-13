@@ -323,24 +323,29 @@ NAVIGATION
 ========================= */
 
 .mobile-nav{
-  display:none;
-  position:absolute;
-  top:100%;
-  left:50%;
-  transform:translateX(-50%);
-  width:calc(100% - 32px);
-  max-width:420px;
+position:absolute;
+top:100%;
+left:50%;
+transform:translateX(-50%) translateY(-10px);
+width:calc(100% - 32px);
+max-width:420px;
 
-  margin-top:10px;
-  padding:16px;
-  border-radius:20px;
-  background:#ffffff;
-  box-shadow:0 18px 40px rgba(15,23,42,.12);
-  z-index:100;
+margin-top:10px;
+padding:16px;
+border-radius:20px;
+background:#ffffff;
+box-shadow:0 18px 40px rgba(15,23,42,.12);
+z-index:100;
+
+opacity:0;
+pointer-events:none;
+transition:opacity .25s ease, transform .25s ease;
 }
 
 .mobile-nav.open{
-display:block;
+opacity:1;
+transform:translateX(-50%) translateY(0);
+pointer-events:auto;
 }
 
 .mobile-nav a{
