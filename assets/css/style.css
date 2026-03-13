@@ -2174,6 +2174,21 @@ footer{
   padding:6px 0;
 }
 
+/* MOBILE FOOTER FIX */
+@media (max-width:700px){
+
+  .footer-ultra-grid{
+    grid-template-columns:1fr !important;
+    gap:28px;
+  }
+
+}
+
+.footer-ultra-title{
+  font-weight:600;
+  margin-bottom:10px;
+}
+
 
 
   
