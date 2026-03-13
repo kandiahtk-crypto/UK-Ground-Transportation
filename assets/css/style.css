@@ -357,11 +357,6 @@ font-weight:500;
 line-height:1.35;
 }
 
-.mobile-nav{
-  max-width:980px;
-  left:50%;
-  transform:translateX(-50%);
-}
 
 .mobile-nav .btn{
 display:flex !important;
