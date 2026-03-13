@@ -324,8 +324,11 @@ NAVIGATION
 
 .mobile-nav{
 display:none;
-padding:12px 0 0;
-border-top:1px solid rgba(15,23,42,.08);
+margin-top:12px;
+padding:16px;
+border-radius:20px;
+background:#ffffff;
+box-shadow:0 18px 40px rgba(15,23,42,.10);
 }
 
 .mobile-nav.open{
@@ -334,16 +337,28 @@ display:block;
 
 .mobile-nav a{
 display:block;
+width:100%;
 padding:14px 18px;
-margin-bottom:8px;
+margin-bottom:10px;
 border-radius:14px;
-border:1px solid rgba(15,23,42,.06);
-background:rgba(255,255,255,.72);
+border:1px solid rgba(15,23,42,.08);
+background:#ffffff;
 color:#172033 !important;
+font-size:18px;
 font-weight:500;
-font-size:16px;
-box-shadow:none;
+line-height:1.35;
 }
+
+.mobile-nav .btn{
+display:flex !important;
+width:100%;
+justify-content:center;
+min-height:54px;
+margin-top:8px;
+}
+
+
+
 
 .mobile-nav a:hover{
 background:#fbfaf7;
