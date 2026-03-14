@@ -1946,4 +1946,8 @@ line-height:1.6;
 font-size:15px;
 }
 
+.grid.grid-3{
+grid-template-columns:repeat(3,1fr);
+gap:32px;
+}
 
