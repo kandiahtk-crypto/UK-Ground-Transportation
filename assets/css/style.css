@@ -1937,3 +1937,13 @@ margin-bottom:10px;
 line-height:1.6;
 font-size:15px;
 }
+
+/* Fix vertical text in cards */
+.card p{
+max-width:260px;
+margin:10px auto 0 auto;
+line-height:1.6;
+font-size:15px;
+}
+
+
